@@ -1,6 +1,56 @@
 @import url(http://fonts.googleapis.com/css?family=Lato|Bree+Serif);
 
-body {color: #333; 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    color: #333;
     font-family: 'Lato', sans-serif;
     padding-top: 66px;
 }
@@ -10,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
     line-height: 20px;
 }
-nav {
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -18,21 +68,24 @@ nav {
     border-bottom: 2px solid #ccc;
     height: 66px;
     width: 100%;
+	z-index: 1;
 }
 nav ul {
 	float: right;
 }
 nav li {
     float: left;
-    width: auto;
+    /* width: auto; */
+    /* display: inline; */
 }
 nav li a {
     padding: 25px 10px;
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: #333;
+    /* line-height: 66px; */
 }
-nav li a:hover {
+nav li:hover {
     background: #e5e5e5;
 }
 #brand {
@@ -75,12 +128,12 @@ nav li a:hover {
     margin-top: 10px;
     font-size: 150%;
 }
-#main-content{
+#about{
     text-align: center;
     padding: 25px 0;
     overflow: hidden;
 }
-#main-content h3{
+#about h3{
     font-size: 250%;
     margin: 20px 0;
 }
@@ -111,7 +164,7 @@ nav li a:hover {
     color: #8a80c3;
 }
 
-#social {
+#contact {
     background: #8a80c3;
     color: #fafafa;
     padding: 25px 0;
@@ -121,7 +174,7 @@ nav li a:hover {
     width: 100%;
     position: relative;
 }
-#social ul {
+#contact ul {
     clear:left;
     float:left;
     list-style:none;
@@ -131,7 +184,7 @@ nav li a:hover {
     left:50%;
     text-align:center;
 }
-#social li {
+#contact li {
 	display:block;
     float:left;
     list-style:none;
@@ -140,7 +193,7 @@ nav li a:hover {
     position:relative;
     right:50%;
 }
-#social ul li img
+#contact ul li img
 {
     margin: 20px;
 }
@@ -150,6 +203,55 @@ footer
     text-align: center;
 }
 
+
+
+/* Added CSS */
+
+section h3{
+	transition: all 1s ease;
+}
+#about:target h3 {
+	
+	font-size:300%;
+}
+
+
+.card-container {
+  cursor: pointer;
+  height: 150px;
+  perspective: 600;
+  position: relative;
+  width: 150px;
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.card .back {
+  background: #eaeaed;
+  color: #0087cc;
+  line-height: 150px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+
+
+
 @media only screen and (max-width: 901px)
 {
     .column {
@@ -158,7 +260,7 @@ footer
     #hero h2 {
         font-size: 200%;
     }
-    #main-content h3{
+    #about h3{
         font-size: 150%;
     }   
 }
