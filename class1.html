@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Girl Develop It - Intermediate HTML + CSS, Class 1</title>
+
+    <meta name="description" content="Girl Develop It's Intermediate HTML and CSS course, customized by Liz Shaw">
+    <meta name="author" content="Liz Shaw">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+    <!-- dark editor-->
+    <link rel="stylesheet" href="lib/css/dark.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!-- If use the PDF print sheet so students can print slides-->
+
+    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+            <!-- Code Your Own Website -->
+            <section>
+                <h2>Code Your Own Website</h2>
+                <img src="img/circle-gdi-logo.png" alt="GDI Logo" />
+                <h3>Intermediate HTML + CSS</h3>
+                <p>
+                    <small>Class 1</small>
+                </p>
+            </section>
+
+			<!-- Welcome! -->
+            <section class="hide-pdf">
+                <h2>Welcome!</h2>
+                <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+                <p>&nbsp;</p>
+                <p class="green">Some "rules"</p>
+                <ul>
+                    <li>We are here for you!</li>
+                    <li>Every question is important</li>
+                    <li>Help each other</li>
+                    <li>Have fun</li>
+                </ul>
+            </section>
+
+			<!-- First Things First -->
+            <section class="hide-pdf">
+                <h2>First Things First</h2>
+                <p class="blue">Tell us about yourself.</p>
+                <ul>
+                    <li>Who are you?</li>
+                    <li>What do you hope to get out of the class?</li>
+                    <li>Who is your hero, and why?</li>
+                </ul>
+            </section>
+			<section>
+				<h2>First Things First</h2>
+				<p>&nbsp;</p>
+				<p><strong>Thank you to our wonderful TAs!</strong></p>
+				<p>&nbsp;</p>
+				<p>Course website: <a href="http://anything.codes" target="_blank">http://anything.codes</a></p>
+				<p>Instructor contact info: <a href="mailto:lizs@girldevelopit.com">lizs@girldevelopit.com</a></p>
+			</section>
+
+			<!-- Today's Project -->
+			<section>
+                <h3>Today's Project</h3>
+                <p>We'll be jumping into HTML/CSS right where the beginner class left off</p>
+                <p class="fragment"><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
+            </section>
+
+            <!-- CSS Reset -->
+            <section>
+                <h3>CSS Reset</h3>
+                <p class="fragment">A block of CSS rules that <span class="green">reset all default styles</span></p>
+                <p class="fragment blue"><br />Why?</p>
+                <ul>
+                    <li class="fragment">Some HTML elements have default styles</li>
+                    <li class="fragment">Sometimes these default styles interfere with how we'd like our pages to look</li>
+                    <li class="fragment">Different browsers have different default styles</li>
+                    <li class="fragment">A reset gets rid of these inconsistencies, and <span class="green">zeroes</span> the styles</li>
+                </ul>
+                <p class="fragment"><br />A reset lets us start from <span class="green">a clean slate</span></p>
+            </section>
+            <section>
+                <h3>CSS Reset</h3>
+                <p class="blue">Example</p>
+				<p data-height="190" data-theme-id="0" data-slug-hash="Mazgox" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/Mazgox/'>CSS Reset - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+            </section>
+            <section>
+                <h3>CSS Reset</h3>
+                <p class="blue">How to use a CSS reset</p>
+                <ol>
+                    <li class="fragment">Find one online (<a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">Example &raquo;</a>) and copy the CSS reset</li>
+                    <li class="fragment">Paste the CSS reset <span class="green">at the top of your CSS file</span></li>
+                    <li class="fragment">Do this <span class="orange">before starting</span> any project from now on <span class="green" style="font-size:150%">&#9786;</span></li>
+                </ol>
+            </section>
+
+            <!-- Let's Develop It! -->
+            <section>
+                <h3>Get Started: Folder Structure</h3>
+                <div>
+                  <div class="left" style="width:50%;">
+                    <p class="left-align">Go ahead and create your folders</p>
+                    <p class="left-align">Ignore the HTML and CSS files for now</p>
+                  </div>
+                  <div class="right">
+                    <img src="img/folderstructure-intermediate.png" alt="The project folder structure" />
+                  </div>
+                </div>
+            </section>
+            <section>
+                <h3>Get Started: Images</h3>
+                <img src="img/folderstructure-intermediate-images.png" alt="The project folder structure" />
+                <ol>
+                  <li>Go to <a href="http://tinyurl.com/gdiimages">http://tinyurl.com/gdiimages</a> to download images.zip<!--http://anything.codes/gdi-intro-html-css/images.zip--></li>
+                  <li>Open images.zip<ul><li>If you're using Windows, 'Extract' images.zip</li></ul></li>
+                  <li>Place the unzipped images in the 'intermediate/images' folder you just created</li>
+                </ol>
+            </section>
+            <section>
+        		<h3>Get Started: Files</h3>
+        		<ol>
+        			<li>Open your text editor and create a new file.</li>
+        			<li>Save it as index.html in the 'intermediate' folder you created earlier.</li>
+        			<li>Add the fundamental structure (a doctype, head, title and body).</li>
+                    <li>Create a new file in your text editor. Save it as styles.css in the 'intermediate/css' folder you created earlier.
+                        <ul>
+                            <li>Now let's add a CSS reset to styles.css!</li>
+                        </ul>
+                    </li>
+        		</ol>
+        		<img src="img/folderstructure-intermediate.png" alt="Folder Structure" />
+            </section>
+
+            <!-- HTML5 -->
+            <section>
+                <h3>HTML5</h3>
+                <p class="fragment">HTML5 is the latest version (version 5) of HTML</p>
+                <p class="fragment">All modern browsers support HTML5</p>
+            </section>
+            <section>
+                <h3>HTML5 Benefits</h3>
+                <p class="fragment">HTML5 elements are <span class="green">more semantic</span> since they describe an element's content (compared to &lt;div>)</p>
+                <p class="fragment">
+                  <img src="img/divided-page.jpg" alt="A page divided up into sections">
+                </p>
+                <ul style="font-size:70%">
+                    <li class="fragment"><em class="blue">&lt;header></em> for a header</li>
+                    <li class="fragment"><em class="blue">&lt;footer></em> for a footer</li>
+                    <li class="fragment"><em class="blue">&lt;main></em> for the main content area</li>
+                    <li class="fragment"><em class="blue">&lt;section></em> for a section</li>
+                    <li class="fragment"><em class="blue">&lt;aside></em> for supplemental content, such as a sidebar</li>
+                    <li class="fragment">... and more!</li>
+                </ul>
+            </section>
+            <section>
+                <h3>HTML5 Benefits</h3>
+                <p class="blue">Semantic Elements</p>
+                <p class="fragment">Using semantic HTML5 elements makes it much <span class="orange">easier to read, write, and understand your code</span></p>
+                <p class="fragment">It's also great for <span class="orange">Search Engine Optimization</span> (a.k.a. <span class="orange">SEO</span>) and <span class="orange">accessibility reasons</span> (e.g. visually-impaired people using screen readers)</p>
+            </section>
+            <section>
+                <h3>HTML5 Benefits</h3>
+                <p class="fragment">HTML5 has a lot of new interactive elements, including <span class="green">&lt;canvas></span>, <span class="green">&lt;svg></span>, and <span class="green">&lt;video></span> (<a href="https://www.paypal.com/home" target="_blank">&lt;video> Example &raquo;</a>)</p>
+                <p class="fragment">These new features replace the need for Flash videos, which Apple devices don't support</p>
+				<p class="fragment"><img src="img/flash-apple.jpg" alt="Playing Flash on an Apple device" /></p>
+            </section>
+
+            <!-- Let's Develop It! -->
+            <section>
+                <h2>Let's Develop It!</h2>
+                <p>Let's use block-level HTML5 elements to layout our header and banner (a.k.a. <span class="orange">hero</span>)<br /><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
+            </section>
+			
+			<!-- Image Replacement -->
+			<section>
+				<h3>CSS Image Replacement</h3>
+				<p class="fragment"><span class="green">CSS image replacement</span> is a technique of replacing a <span class="orange">text element</span> (usually a heading) with an <span class="orange">image</span></p>
+				<p class="fragment">For example, you may want to use a &lt;h1> for <span class="green">accessibility</span> and <span class="green">SEO</span> benefits, but want to show a logo instead of text</p>				
+				<pre class="css fragment"><code>
+selector {
+    background-image: url('images/yourimage.png');
+    width: 300px; /* the width of your image */
+    height: 300px; /* the height of your image */
+    white-space: nowrap;
+    text-indent: 100%;
+    overflow: hidden;
+}
+				</code></pre>				
+			</section>
+			<section>
+				<h3>CSS Image Replacement</h3>
+				<p data-height="84" data-theme-id="0" data-slug-hash="LpXYrm" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/LpXYrm/'>CSS Image Replacement - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+			</section>
+
+			<!-- Let's Develop It! -->
+            <section>
+                <h2>Let's Develop It!</h2>
+                <p>Let's use CSS image replacement on our &lt;h1> to show our logo instead of text<br /><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
+            </section>
+			
+			<!-- Positioning Recap -->
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Positioning Recap</h1>
+            </section>
+            <section>
+                <h3><em>position: relative;</em></h3>
+                <div class="fragment">
+                    <p data-height="185" data-theme-id="0" data-slug-hash="QjQPVj" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/QjQPVj/'>Relative Positioning</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                    <p>
+                        <a href="http://codepen.io/anythingcodes/pen/yYjMvL" target="_blank">View result of above CodePen &raquo;</a>
+                    </p>
+				</div>
+            </section>
+            <section>
+                <h3><em>position: absolute;</em></h3>
+                <div class="fragment">
+                    <p data-height="284" data-theme-id="0" data-slug-hash="epVoXR" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/epVoXR/'>Absolute Positioning</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				    <p>
+                        <a href="http://codepen.io/anythingcodes/pen/xwjqYq" target="_blank">View result of above CodePen &raquo;</a>
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h3>Corraling an absolute element inside any non-static (e.g. <span class="blue">relative</span>) element</h3>
+                <p class="fragment"><img src="img/positioning-banner-concept.png" alt="Limiting the scope" /></p>
+                <div class="fragment">
+                    <p data-height="351" data-theme-id="0" data-slug-hash="KdowRV" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/KdowRV/'>Limiting an Absolute Element's Scope</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                </div>
+				<p class="fragment"><a href="http://codepen.io/anythingcodes/pen/meLWXK" target="_blank">View result of above CodePen &raquo;</a></p>
+            </section>
+			<section>
+				<h3>Property: <em>float</em></h3>
+				<p class="fragment">When an element is floated, <span class="orange">subsequent elements wrap around it</span><br /><img src="img/floating.png" style="max-height:250px;" alt="A floating example"></p>
+				<div class="fragment">
+					<p data-height="192" data-theme-id="0" data-slug-hash="vNROXq" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/vNROXq/'>Float - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>				
+				</div>
+			</section>
+
+            <!-- Aw snap, more! -->
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">But wait, there's more!</h1>
+            </section>
+
+            <!-- Fixed positioning -->
+            <section>
+                <h3>Fixed Positioning</h3>				
+                <pre class="fragment"><code class="css">
+selector {
+    position: fixed;
+}
+                </code></pre>
+				<p class="fragment">To make an element scroll with the browser window (a.k.a. the <span class="orange">viewport</span>), use <span class="green">fixed positioning</span></p>
+				<p class="fragment">Unlike static elements, a fixed element can <span class="green">overlap other elements</span></p>
+			</section>
+			<section>
+				<h3>Fixed Positioning</h3>
+				<p class="fragment">Fixed positioning is often applied to a page's header</p>
+				<p class="blue fragment"><br />Examples:</p>
+				<ul class="fragment">
+					<li><a href="http://eehealth.org" target="_blank">Edward-Elmhurst Health</a></li>
+					<li><a href="http://www.hornallanderson.com/" target="_blank">Hornall Anderson</a></li>
+					<li><a href="http://www.kitchensinkstudios.com/" target="_blank">Kitchen Sink Studios</a></li>
+					<li><a href="https://getbootstrap.com/examples/navbar-fixed-top/" target="_blank">Bootstrap</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Fixed Positioning</h3>
+				<p class="blue">Setting the Location</p>
+                <p class="fragment">Use the <span class="orange">top</span>, <span class="orange">bottom</span>, <span class="orange">right</span>, and <span class="orange">left</span> properties to set the location</p>
+				<p class="fragment">These values position the element <span class="green">relative to the viewport</span> so that it scrolls with the page</p>
+            </section>
+			<section>
+				<h3>Fixed Positioning</h3>
+				<p data-height="268" data-theme-id="0" data-slug-hash="OyaJya" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/OyaJya/'>Fixed Positioning - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+			</section>
+
+			<!-- Let's Develop It! -->
+            <section>
+                <h2>Let's Develop It!</h2>
+                <p>Let's use fixed positioning to style our header, and style our navigation menu while we're at it<br /><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
+            </section>
+			
+			<!-- Another banner tactic -->
+			<section>
+				<h3>The Banner (a.k.a. Hero) Section</h3>
+				<p class="fragment">A large banner image, prominently placed on a page, generally in front and center</p>
+				<p class="fragment">Use three CSS properties &mdash; <span class="green">background-image</span>, <span class="green">background-size</span>, and <span class="green">height</span> &mdash; together to make a scalable responsive banner</p>
+				<p class="fragment">Use <span class="orange">background-size: cover;</span> to scale the image to the largest size such that both its width and its height can fit inside the content area</p>
+			</section>
+			
+			<!-- Let's Develop It! -->
+            <section>
+                <h2>Let's Develop It!</h2>
+                <p>Let's start styling our banner section<br /><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
+            </section>
+			
+			<!-- Border Radius -->
+			<section>			
+				<h3>Property: <em>border-radius</em></h3>
+				<p><span class="green">border-radius</span> rounds the corners of an element</p>
+				<p class="fragment">No image editing required! The <em>border-radius</em> property is part of <span class="blue">CSS3</span> (the latest version of CSS)</p>
+			</section>
+			<section>
+				<h3><em>border-radius</em> with Four Values</h3>
+				<p>Clockwise from the top left</p>
+				<pre class="css"><code>
+selector {
+    border-radius: topLeft topRight bottomRight bottomLeft;
+}
+				</code></pre><p></p>
+				<div class="fragment">				
+					<pre class="css"><code>
+img {
+    border-radius: 10px 30px 60px 150px;
+}
+					</code></pre>
+				
+					<p class="fragment"><img style="box-shadow:none;" src="img/border-radius-kitten.png" /><small><br />becomes</small><img style="box-shadow:none;border-radius:10px 30px 60px 150px" src="img/border-radius-kitten.png" class="fragment" /></p>
+					
+				</div>
+			</section>
+			<section>
+				<h3><em>border-radius</em> with Two Values</h3>
+				<pre class="css"><code>
+selector {
+    border-radius: topLeftAndBottomRight topRightAndBottomLeft;
+}
+				</code></pre>
+				<p></p>
+				<pre class="css fragment"><code>
+img {
+    border-radius: 10px 150px;
+}
+				</code></pre>
+				<p class="fragment"><img style="box-shadow:none;border-radius:10px 150px" src="img/border-radius-kitten.png" /></p>
+					
+			</section>
+			<section>
+				<h3><em>border-radius</em> with One Value</h3>
+				<pre class="css"><code>
+selector {
+    border-radius: all;
+}
+				</code></pre>
+				<p></p>
+				<pre class="fragment css"><code>
+img {
+    border-radius: 40px;
+}
+				</code></pre>
+				<p class="fragment"><img style="box-shadow:none;border-radius:40px" src="img/border-radius-kitten.png" /></p>
+					
+			</section>
+			<section>
+				<h3>Using <em>border-radius</em> to Make an Element into a Circle</h3>
+				<pre class="css"><code>
+selector {
+    border-radius: 50%;
+}
+				</code></pre>
+				<p></p>
+				<pre class="css fragment"><code>
+img {
+    border-radius: 50%;
+}
+				</code></pre>
+				<p class="fragment"><img style="box-shadow:none;border-radius:50%" src="img/border-radius-kitten.png" /></p>
+			</section>
+			
+			<!-- Let's Develop It! -->
+            <section>
+                <h2>Let's Develop It!</h2>
+                <p>Let's make our profile image into a circle<br /><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
+            </section>
+			
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Custom Fonts</h1>
+                <h3 style="color: #fafafa;">Beyond Times News Roman</h3>
+            </section>
+            <section>
+                <h3>Meet Google Web Fonts</h3>
+                <p class="fragment">Google has hundreds of free, open-source fonts that have been optimized for the web, and ready for us to use!</p>
+                <p class="fragment">The service runs on Google's servers which are fast, reliable and tested. Google provides this service free of charge.</p>
+				<p class="fragment">Check it out at <a href="http://google.com/fonts" target="_blank">http://google.com/fonts &raquo;</a></p>
+				<p class="fragment"><small>There are also other great font services, such as <a href="http://www.fontsquirrel.com/" target="_blank">Font Squirrel</a></small></p>
+            </section>
+            
+            <!-- Fonts-->
+            <section>
+                <h3>Custom Fonts</h3>
+                <p class="fragment">In our design, we've used Lato for the body and Bree Serif for the headlines</p>
+                <p class="fragment">You can use any font you'd like!</p>
+                <div class="fragment">
+					<img src="images/lato.png" alt="lato" style="width: 40%; float: left;"  />
+					<img src="images/bree.png" alt="bree" style="width: 40%; float: right;" />
+				</div>
+            </section>
+            <section>
+                <h3>How To Use Google Fonts</h3>
+                <ol>
+                    <li class="fragment"><a href="http://google.com/fonts" target="_blank">Search the hundreds of font families</a>, then add some to your collection</li>
+                    <li class="fragment">Compare and refine the collection &mdash; think about what styles you <strong>need</strong></li>
+                    <li class="fragment">Grab the CSS that Google prepares for you and add it to the top of your CSS file!<br /><pre class="css"><code>@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Bree+Serif);</code></pre></li>
+				</ol>
+			</section>
+			<section>
+				<h3>How to Use Google Fonts</h3>
+				<ol start="4">
+					<li>Use <span class="orange">font-family</span> to reference the Google fonts (Google will give you code for this, as well)</li>
+                </ol>
+                <pre><code class = "html">
+body{
+  font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bree Serif', serif;
+}
+</code></pre>
+            </section>
+			
+			<!-- Let's Develop It! -->
+            <section>
+                <h2>Let's Develop It!</h2>
+				<p>Pick some fonts for your site using Google Fonts.</p>
+                <p>Adjust the <code>font-size</code> and <code>line-height</code> to refine your fonts<br /><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
+            </section>
+
+			<!-- Next Week -->
+			<section class="hide-pdf">
+				<h2>Next Week</h2>
+				<p class="blue">Beyond Layouts &mdash; CSS Animations, SVGs, &amp; More Advanced CSS Goodness</p>
+				<p>&nbsp;</p>
+				<p>If you haven't already, try to use each of the CSS properties discussed today. Next week we'll learn some more cool CSS tricks, and start talking about responsive development!</p>
+			</section>
+			<section class="hide-pdf">
+                <h3>Questions?</h3>
+                <div style="font-size:1200%; height:100%; margin-top:20%" class="blue">?
+                    <div class="clear"></div>
+                </div>
+				<aside class="notes">Can always email me!</aside>
+            </section>
+
+        </div>
+        <footer>
+            <div class="copyright">
+                Intermediate HTML &amp; CSS&nbsp; | &nbsp;Boston Chapter &nbsp;| &nbsp;
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+                </a>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                condition: function() {
+                    return !!document.querySelector('pre code');
+                },
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/accessibility-helper/js/accessibility-helper.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+
+</body>
+
+</html>
