@@ -78,7 +78,7 @@
                 <ul>
                     <li>Who are you?</li>
                     <li>What do you hope to get out of the class?</li>
-                    <li>Who is your hero, and why?</li>
+                    <li>What's your spirit animal, and why?</li>
                 </ul>
             </section>
 			<section>
@@ -112,18 +112,18 @@
             </section>
             <section>
                 <h3>CSS Reset</h3>
-                <p class="blue">Example</p>
-				<p data-height="190" data-theme-id="0" data-slug-hash="Mazgox" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/Mazgox/'>CSS Reset - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-            </section>
-            <section>
-                <h3>CSS Reset</h3>
                 <p class="blue">How to use a CSS reset</p>
                 <ol>
                     <li class="fragment">Find one online (<a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">Example &raquo;</a>) and copy the CSS reset</li>
                     <li class="fragment">Paste the CSS reset <span class="green">at the top of your CSS file</span></li>
                     <li class="fragment">Do this <span class="orange">before starting</span> any project from now on <span class="green" style="font-size:150%">&#9786;</span></li>
                 </ol>
+            </section>
+            <section>
+                <h3>CSS Reset</h3>
+                <p class="blue">Example</p>
+				<p data-height="190" data-theme-id="0" data-slug-hash="Mazgox" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/Mazgox/'>CSS Reset - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
 
             <!-- Let's Develop It! -->
@@ -202,12 +202,12 @@
                 <h2>Let's Develop It!</h2>
                 <p>Let's use block-level HTML5 elements to layout our header and banner (a.k.a. <span class="orange">hero</span>)<br /><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
             </section>
-			
+
 			<!-- Image Replacement -->
 			<section>
 				<h3>CSS Image Replacement</h3>
 				<p class="fragment"><span class="green">CSS image replacement</span> is a technique of replacing a <span class="orange">text element</span> (usually a heading) with an <span class="orange">image</span></p>
-				<p class="fragment">For example, you may want to use a &lt;h1> for <span class="green">accessibility</span> and <span class="green">SEO</span> benefits, but want to show a logo instead of text</p>				
+				<p class="fragment">For example, you may want to use a &lt;h1> for <span class="green">accessibility</span> and <span class="green">SEO</span> benefits, but want to show a logo instead of text</p>
 				<pre class="css fragment"><code>
 selector {
     background-image: url('images/yourimage.png');
@@ -217,7 +217,7 @@ selector {
     text-indent: 100%;
     overflow: hidden;
 }
-				</code></pre>				
+				</code></pre>
 			</section>
 			<section>
 				<h3>CSS Image Replacement</h3>
@@ -229,7 +229,7 @@ selector {
                 <h2>Let's Develop It!</h2>
                 <p>Let's use CSS image replacement on our &lt;h1> to show our logo instead of text<br /><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
             </section>
-			
+
 			<!-- Positioning Recap -->
             <section data-background="#f05b62">
                 <h1 style="color: #fafafa;">Positioning Recap</h1>
@@ -264,7 +264,7 @@ selector {
 				<h3>Property: <em>float</em></h3>
 				<p class="fragment">When an element is floated, <span class="orange">subsequent elements wrap around it</span><br /><img src="img/floating.png" style="max-height:250px;" alt="A floating example"></p>
 				<div class="fragment">
-					<p data-height="192" data-theme-id="0" data-slug-hash="vNROXq" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/vNROXq/'>Float - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>				
+					<p data-height="192" data-theme-id="0" data-slug-hash="vNROXq" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/vNROXq/'>Float - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 				</div>
 			</section>
 
@@ -275,7 +275,7 @@ selector {
 
             <!-- Fixed positioning -->
             <section>
-                <h3>Fixed Positioning</h3>				
+                <h3>Fixed Positioning</h3>
                 <pre class="fragment"><code class="css">
 selector {
     position: fixed;
@@ -311,7 +311,7 @@ selector {
                 <h2>Let's Develop It!</h2>
                 <p>Let's use fixed positioning to style our header, and style our navigation menu while we're at it<br /><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
             </section>
-			
+
 			<!-- Another banner tactic -->
 			<section>
 				<h3>The Banner (a.k.a. Hero) Section</h3>
@@ -319,15 +319,15 @@ selector {
 				<p class="fragment">Use three CSS properties &mdash; <span class="green">background-image</span>, <span class="green">background-size</span>, and <span class="green">height</span> &mdash; together to make a scalable responsive banner</p>
 				<p class="fragment">Use <span class="orange">background-size: cover;</span> to scale the image to the largest size such that both its width and its height can fit inside the content area</p>
 			</section>
-			
+
 			<!-- Let's Develop It! -->
             <section>
                 <h2>Let's Develop It!</h2>
                 <p>Let's start styling our banner section<br /><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
             </section>
-			
+
 			<!-- Border Radius -->
-			<section>			
+			<section>
 				<h3>Property: <em>border-radius</em></h3>
 				<p><span class="green">border-radius</span> rounds the corners of an element</p>
 				<p class="fragment">No image editing required! The <em>border-radius</em> property is part of <span class="blue">CSS3</span> (the latest version of CSS)</p>
@@ -340,15 +340,15 @@ selector {
     border-radius: topLeft topRight bottomRight bottomLeft;
 }
 				</code></pre><p></p>
-				<div class="fragment">				
+				<div class="fragment">
 					<pre class="css"><code>
 img {
     border-radius: 10px 30px 60px 150px;
 }
 					</code></pre>
-				
+
 					<p class="fragment"><img style="box-shadow:none;" src="img/border-radius-kitten.png" /><small><br />becomes</small><img style="box-shadow:none;border-radius:10px 30px 60px 150px" src="img/border-radius-kitten.png" class="fragment" /></p>
-					
+
 				</div>
 			</section>
 			<section>
@@ -365,7 +365,7 @@ img {
 }
 				</code></pre>
 				<p class="fragment"><img style="box-shadow:none;border-radius:10px 150px" src="img/border-radius-kitten.png" /></p>
-					
+
 			</section>
 			<section>
 				<h3><em>border-radius</em> with One Value</h3>
@@ -381,7 +381,7 @@ img {
 }
 				</code></pre>
 				<p class="fragment"><img style="box-shadow:none;border-radius:40px" src="img/border-radius-kitten.png" /></p>
-					
+
 			</section>
 			<section>
 				<h3>Using <em>border-radius</em> to Make an Element into a Circle</h3>
@@ -398,13 +398,13 @@ img {
 				</code></pre>
 				<p class="fragment"><img style="box-shadow:none;border-radius:50%" src="img/border-radius-kitten.png" /></p>
 			</section>
-			
+
 			<!-- Let's Develop It! -->
             <section>
                 <h2>Let's Develop It!</h2>
                 <p>Let's make our profile image into a circle<br /><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
             </section>
-			
+
 			<section data-background="#f05b62">
                 <h1 style="color: #fafafa;">Custom Fonts</h1>
                 <h3 style="color: #fafafa;">Beyond Times News Roman</h3>
@@ -416,7 +416,7 @@ img {
 				<p class="fragment">Check it out at <a href="http://google.com/fonts" target="_blank">http://google.com/fonts &raquo;</a></p>
 				<p class="fragment"><small>There are also other great font services, such as <a href="http://www.fontsquirrel.com/" target="_blank">Font Squirrel</a></small></p>
             </section>
-            
+
             <!-- Fonts-->
             <section>
                 <h3>Custom Fonts</h3>
@@ -449,7 +449,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 </code></pre>
             </section>
-			
+
 			<!-- Let's Develop It! -->
             <section>
                 <h2>Let's Develop It!</h2>
