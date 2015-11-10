@@ -425,23 +425,10 @@ img {
                 <ol>
                     <li class="fragment"><a href="http://google.com/fonts" target="_blank">Search the hundreds of font families</a>, then add some to your collection</li>
                     <li class="fragment">Compare and refine the collection &mdash; think about what styles you <strong>need</strong></li>
-                    <li class="fragment">Grab the CSS that Google prepares for you and add it to the top of your CSS file!<br /><pre class="css"><code>@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Bree+Serif);</code></pre></li>
+                    <li class="fragment">Grab the CSS that Google prepares for you and add it to the top of your CSS file (before the CSS reset)<br /><pre class="css"><code>@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Bree+Serif);</code></pre></li>
+                    <li>Use <span class="orange">font-family</span> to reference the Google fonts (Google will give you code for this, as well)</li>
 				</ol>
 			</section>
-			<section>
-				<h3>How to Use Google Fonts</h3>
-				<ol start="4">
-					<li>Use <span class="orange">font-family</span> to reference the Google fonts (Google will give you code for this, as well)</li>
-                </ol>
-                <pre><code class = "html">
-body{
-  font-family: 'Lato', sans-serif;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bree Serif', serif;
-}
-</code></pre>
-            </section>
 
 			<!-- Let's Develop It! -->
             <section>
