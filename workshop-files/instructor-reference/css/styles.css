@@ -1,0 +1,81 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Custom CSS */
+body {
+	font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Bree Serif', serif;
+}
+a {
+	color: black; /* NEW TO CLASS2 */
+	text-decoration: none; /* NEW TO CLASS2 */
+}
+h1 {
+    background-image: url('../images/z.png');
+    background-size: contain;
+    width: 44px;
+    height: 44px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+	margin-top:12px; /* CLEANUP CLASS2 */
+	margin-left: 12px; /* CLEANUP CLASS2 */
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height: 68px;
+    background-color: rgba(255, 255, 255, 0.54);
+	border-bottom: 1px solid #8e9092; /* CLEANUP CLASS2 */
+}
+nav {
+    float: right;
+}
+nav li {
+    display: inline;
+}
+nav li a {
+	display:inline-block; /* NEW TO CLASS2 */
+	padding: 26px 10px; /* NEW TO CLASS2 */
+	margin-right: 10px; /* NEW TO CLASS2 */
+}
+nav li a:hover {
+	background: rgb(217, 213, 239); /* NEW TO CLASS2 */
+}
+#banner {
+    background-image: url('../images/zebra-hero.jpg');
+    height: 483px;  /* CLEANUP CLASS2 */
+    background-size: cover;
+    padding-top: 91px;  /* CLEANUP CLASS2 */
+    text-align: center;
+	color: #fff; /* CLEANUP CLASS2 */
+}
+#banner img {
+    width:154px; /* CLEANUP CLASS2 */
+	border-radius: 50%; /* NEW TO CLASS2 */
+}
+#banner h2 {
+	font-size: 3.1em; /* NEW TO CLASS2 */
+}
+#banner span {
+	display:inline-block; /* NEW TO CLASS2 */
+	margin:1em 0; /* NEW TO CLASS2 */
+	padding:.5em 1em; /* NEW TO CLASS2 */
+	border:2px solid #fff /* NEW TO CLASS2 */
+}
+
+/* Footer NEW TO CLASS2 - ALL */
+footer {
+	background: #8a80c3;
+	padding: 33px;
+	text-align: center;
+	color:#fff;
+}
+footer li {
+	display: inline-block;
+	margin:1em;
+}

@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Girl Develop It - Intermediate HTML + CSS, Class 2</title>
+
+    <meta name="description" content="Girl Develop It's Intermediate HTML and CSS course, customized by Liz Shaw">
+    <meta name="author" content="Liz Shaw">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+    <!-- dark editor-->
+    <link rel="stylesheet" href="lib/css/dark.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!-- If use the PDF print sheet so students can print slides-->
+
+    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Code Your Own Website -->
+            <section>
+                <h2>Code Your Own Website</h2>
+                <img src="img/circle-gdi-logo.png" alt="GDI Logo" style="box-shadow:none" />
+                <h3>Intermediate HTML + CSS</h3>
+                <p>
+                    <small>Class 2</small>
+                </p>
+            </section>
+
+			<!-- Welcome-->
+			<section class="hide-pdf">
+			  <h3>Welcome!</h3>
+			  <div class = "left-align">
+				  <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+				  <p class ="green"><br />Some "rules":</p>
+				  <ul>
+					<li>We are here for you!</li>
+					<li>Every question is important</li>
+					<li>Help each other</li>
+					<li>Have fun</li>
+				  </ul>
+					<p>&nbsp;</p>
+			<p><strong>Thank you to our wonderful TAs!</strong></p>
+					<p>Course website: <a href="http://anything.codes" target="_blank">http://anything.codes</a></p>
+					<p>Instructor contact info: <a href="mailto:lizs@girldevelopit.com">lizs@girldevelopit.com</a></p>
+				</div>
+			</section>
+
+			<!-- Housekeeping -->
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">First, some housekeeping</h1>
+            </section>
+			<section>
+				<h2>Let's Develop It!</h2>
+				<ol>
+					<li>Open your <code>index.html</code> file from last week and change <span class="blue">My Home</span> to <span class="blue">Africa</span></li>
+					<li>Link <span class="blue">Africa</span> to <code>africa.html</code>, <span class="blue">My Diet</span> to <code>diet.html</code>, and <span class="blue">Stripes</span> to <code>stripes.html</code></li>
+				</ol>
+				<img src="images/gdi-profile-layout.png" alt="Homepage of the project" />
+            </section>
+			<section>
+				<h3>Our Class Project</h3>
+				<p>We're going to code several different page templates</p>
+				<ol style="font-size:80%">
+					<li class="fragment"><strong>Homepage</strong>
+						<ul>
+							<li><a href="workshop-files/designs/home.png" target="_blank">Design image &raquo;</a></li>
+							<li><a href="workshop-files/designs/home.psd" target="_blank">Download PSD (optional; requires Photoshop) &raquo;</a></li>
+						</ul>
+					</li>
+					<li class="fragment"><strong>Africa</strong> (a <span class="blue">two-column</span> template with a <span class="blue">left sidebar</span>)
+						<ul>
+							<li><a href="workshop-files/designs/africa.png" target="_blank">Design image &raquo;</a></li>
+							<li><a href="workshop-files/designs/africa.psd" target="_blank">Download PSD (optional; requires Photoshop) &raquo;</a></li>
+						</ul>
+					</li>
+					<li class="fragment"><strong>My Diet</strong> (a <span class="blue">two-column</span> template with a <span class="blue">right sidebar</span>)
+						<ul>
+							<li><a href="workshop-files/designs/diet.png" target="_blank">Design image &raquo;</a></li>
+							<li><a href="workshop-files/designs/diet.psd" target="_blank">Download PSD (optional; requires Photoshop) &raquo;</a></li>
+						</ul>
+					</li>
+					<li class="fragment"><strong>Stripes</strong> (a <span class="blue">one-column</span> template)
+						<ul>
+							<li><a href="workshop-files/designs/stripes.png" target="_blank">Design image &raquo;</a></li>
+							<li><a href="workshop-files/designs/stripes.psd" target="_blank">Download PSD (optional; requires Photoshop) &raquo;</a></li>
+						</ul>
+					</li>
+				</ol>
+			</section>
+
+			<!-- Let's Get Coding! -->
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">Let's Get Coding!</h1>
+            </section>
+
+			<!-- Border Radius -->
+			<section>
+				<h3>Property: <em>border-radius</em></h3>
+				<p><span class="green">border-radius</span> rounds the corners of an element</p>
+				<p class="fragment">No image editing required! The <em>border-radius</em> property is part of <span class="blue">CSS3</span> (the latest version of CSS)</p>
+			</section>
+			<section>
+				<h3><em>border-radius</em> with Four Values</h3>
+				<p>Clockwise from the top left</p>
+				<pre class="css"><code>selector {
+    border-radius: topLeft topRight bottomRight bottomLeft;
+}</code></pre><p></p>
+				<div class="fragment">
+					<pre class="css"><code>img {
+    border-radius: 10px 30px 60px 150px;
+}</code></pre>
+					<p class="fragment"><img style="border-radius:0;box-shadow:none;" src="img/border-radius-kitten.png" /><small><br />becomes</small><img style="box-shadow:none;border-radius:10px 30px 60px 150px" src="img/border-radius-kitten.png" class="fragment" /></p>
+				</div>
+			</section>
+			<section>
+				<h3><em>border-radius</em> with Two Values</h3>
+				<pre class="css"><code>selector {
+    border-radius: topLeftAndBottomRight topRightAndBottomLeft;
+}</code></pre>
+				<p></p>
+				<pre class="css fragment"><code>img {
+    border-radius: 10px 150px;
+}</code></pre>
+				<p class="fragment"><img style="box-shadow:none;border-radius:10px 150px" src="img/border-radius-kitten.png" /></p>
+
+			</section>
+			<section>
+				<h3><em>border-radius</em> with One Value</h3>
+				<pre class="css"><code>selector {
+    border-radius: all;
+}</code></pre>
+				<p></p>
+				<pre class="fragment css"><code>img {
+    border-radius: 40px;
+}</code></pre>
+				<p class="fragment"><img style="box-shadow:none;border-radius:40px" src="img/border-radius-kitten.png" /></p>
+
+			</section>
+			<section>
+				<h3>Using <em>border-radius</em> to Make an Element into a Circle</h3>
+				<pre class="css"><code>selector {
+    border-radius: 50%;
+}</code></pre>
+				<p></p>
+				<pre class="css fragment"><code>img {
+    border-radius: 50%;
+}</code></pre>
+				<p class="fragment"><img style="box-shadow:none;border-radius:50%;margin-bottom:0;" src="img/border-radius-kitten.png" /></p>
+				<p class="fragment"><small><span class="orange">Note:</span> The element must be square to make a perfect circle.<br />Otherwise <code>border-radius: 50%;</code> will make an oval.</small></p>
+			</section>
+
+			<!-- Let's Develop It! -->
+            <section>
+                <h2>Let's Develop It!</h2>
+                <p>Let's make our profile image into a circle<br /><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
+            </section>
+
+			<!-- CSS Coding Tip -->
+			<section>
+				<h3>CSS Coding Tip #1</h3>
+				<p>Organize your CSS by section and use comments for each section</p>
+				<pre class="css">
+					<code>/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.54);
+}
+nav {
+    float: right;
+}
+
+/* Banner */
+#banner {
+    height: 483px;
+}
+#banner img {
+    width:154px;
+    border-radius: 50%;
+}</code>
+				</pre>
+				<p><small>This will make your life much easier down the road, as you add more CSS</small></p>
+			</section>
+
+			<!-- Fonts -->
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Custom Fonts</h1>
+                <h3 style="color: #fafafa;">Add some pizzazz to your page</h3>
+            </section>
+            <section>
+                <h3>Meet Google Web Fonts</h3>
+				<p class="fragment">Tired of using the same old, boring "web-safe" fonts?<br /><small>(No offense, <a href="http://cssfontstack.com" target="_blank">CSSFontStack.com</a>)</small></p>
+                <p class="fragment">Use <a href="http://google.com/fonts" target="_blank">Google Web Fonts</a>! Google has hundreds of free fonts that have been optimized for the web, and are ready for us to use!</p>
+                <p class="fragment">Google Web Fonts don’t rely on fonts installed on users’ computers</p>
+				<p class="fragment">Instead, these fonts are stored on Google’s servers and served to your website (like <a href="http://lorempixel.com/500/400/abstract">an image from another server</a> is served to your website)</p>
+            </section>
+            <section>
+                <h3>Custom Fonts in Our Design</h3>
+                <p class="fragment">In our design, we've used <span class="blue">Lato</span> for the body and <span class="blue">Bree Serif</span> for the headlines</p>
+                <p class="fragment">You can use any fonts you'd like!</p>
+                <div class="fragment">
+					<img src="images/lato.png" alt="lato" style="width: 40%; float: left;"  />
+					<img src="images/bree.png" alt="bree" style="width: 40%; float: right;" />
+				</div>
+            </section>
+            <section>
+                <h3>How To Use Google Fonts</h3>
+                <ol>
+                    <li class="fragment">Search <a href="http://google.com/fonts" target="_blank">http://google.com/fonts</a> and add fonts to your collection (we recommend <span class="green">1-2 fonts per site</span>)</li>
+                    <li class="fragment" style="margin-top:.5em;"><span class="blue">Within your HTML file</span>:
+						<ul>
+							<li>Paste the <span class="orange">Standard</span> HTML that Google prepares for you above the <code>&lt;link></code> to your CSS file<br /><pre class="html"><code>&lt;link href='https://fonts.googleapis.com/css?family=Lato|Bree+Serif' rel='stylesheet' type='text/css' /></code></pre></li>
+						</ul>
+					</li>
+                    <li class="fragment" style="margin-top:.5em;"><span class="blue">Within your CSS file</span>:
+						<ul>
+							<li>Use the <code>font-family</code> properties Google provides<br /><pre class="css">
+<code>body {
+    font-family: 'Lato', sans-serif;
+}</code>
+							</pre></li>
+						</ul>
+					</li>
+				</ol>
+			</section>
+
+			<!-- Let's Develop It! -->
+            <section>
+                <h2>Let's Develop It!</h2>
+				<p>Add some Google Web Fonts to your site</p>
+                <p><img src="images/gdi-profile-layout.png" alt="today's project" /></p>
+            </section>
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>While we're at it, let's also clean up our header and banner/hero to match the design</p>
+				<p><small>Developers typically get these measurements from Photoshop</small></p>
+                <p><img src="workshop-files/designs/header-measurements.png" alt="today's project" /></p>
+			</section>
+
+			<!-- Coding Process Tip -->
+			<section>
+				<h3>Coding Process Tip #1</h3>
+				<p>Make your <span class="blue">global, site-wide</span> elements first</p>
+				<p>For example, our project's header, banner/hero, and footer are global, site-wide elements</p>
+				<p><img src="workshop-files/designs/home.png" alt="today's project" style="border:0;border-radius:0;max-height:300px;" /> <img src="workshop-files/designs/africa.png" alt="today's project" style="border:0;border-radius:0;max-height:300px;" /> <img src="workshop-files/designs/diet.png" alt="today's project" style="border:0;border-radius:0;max-height:300px;" /></p>
+			</section>
+
+			<!-- Display -->
+			<section>
+				<h3>Styling the Navigation</h3>
+				<p class="blue">Recap of <code>display:inline;</code> versus <code>display:block;</code></h3>
+				<div class="fragment">
+					<p data-height="268" data-theme-id="0" data-slug-hash="RWjLrR" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/RWjLrR/'>Inline vs. Block</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					<p class="fragment"><span class="green">Block elements</span> push sibling elements to another line. <span class="green">Inline elements</span> allow sibling elements to sit to their right and left.</p>
+				</div>
+			</section>
+			<section>
+				<h3>Houston, we have a problem</h3>
+				<p><img src="workshop-files/designs/nav-measurements.png" alt="today's project" /></p>
+				<p class="blue">Our navigation links need:</p>
+				<ol>
+					<li class="fragment"><span class="green">To allow other links to their left and right</span><br />... meaning we need a <code>display</code> value that <strong>doesn't</strong> force sibling elements to a new line<br /><small class="fragment" style="text-indent:50px;">(like <code>display:inline;</code>)</small></li>
+					<li class="fragment"><span class="green">26px of top and bottom padding</span><br />... meaning we need a <code>display</code> value that respects top and bottom padding<br /><small class="fragment" style="text-indent:50px;">(like <code>display:block;</code>)</small></li>
+				</ol>
+				<p class="fragment orange">But these needs are at odds with one another! &#128078;</p>
+			</section>
+
+			<!-- inline-block -->
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Enter</h1>
+                <h3 style="color: #fafafa;"><code>display:inline-block;</code></h3>
+            </section>
+
+			<!-- Property Comparison -->
+			<section>
+				<h3>Property: <code>display</code></h3>
+				<table class="data" style="font-size:60%">
+				  <tr>
+					<th></th>
+					<th>Inline</th>
+					<th>Block</th>
+					<th>Inline-Block</th>
+				  </tr>
+				  <tr>
+					<td>Can have a set width &amp; height</td>
+					<td><span style="color:red">&#x2717;</span></td>
+					<td><span class="green">&#10004;</span></td>
+					<td><span class="green">&#10004;</span></td>
+				  </tr>
+				  <tr>
+					<td>Allow other elements to their left &amp; right<br />(i.e. don't force sibling elements to new line)</td>
+					<td><span class="green">&#10004;</span></td>
+					<td><span style="color:red">&#x2717;</span></td>
+					<td class="fragment" style="background-color:rgba(228, 255, 0, 0.47);"><span class="green">&#10004;</span></td>
+				  </tr>
+				  <tr>
+					<td>Respect left &amp; right margins</td>
+					<td><span class="green">&#10004;</span></td>
+					<td><span class="green">&#10004;</span></td>
+					<td><span class="green">&#10004;</span></td>
+				  </tr>
+				  <tr>
+					<td>Respect top &amp; bottom margins &amp; padding</td>
+					<td><span style="color:red">&#x2717;</span></td>
+					<td><span class="green">&#10004;</span></td>
+					<td class="fragment" style="background-color:rgba(228, 255, 0, 0.47);"><span class="green">&#10004;</span></td>
+				  </tr>
+				  <tr class="fragment" style="background:rgba(255, 192, 203, 0.27);">
+					<td><strong>NEW:</strong> By default is as wide as its content</td>
+					<td><span class="green">&#10004;</span></td>
+					<td><span style="color:red">&#x2717;</span></td>
+					<td><span class="green">&#10004;</span></td>
+				  </tr>
+				</table>
+			  </section>
+
+			<!-- Let's Develop It! -->
+			<section>
+				<h2>Let's Develop It!</h2>
+				<ol>
+					<li>Let's use <code>display:inline-block;</code> on our navigation's anchor links and add a hover state</li>
+					<li>We'll also use <code>display:inline-block;</code> on the banner's <code>span</code> so we no longer need to set a width</li>
+				</ol>
+                <p><img src="workshop-files/designs/nav-measurements.png" alt="today's project" /></p>
+				<p><span class="blue"><strong>Bonus Question</strong></span>: Where is the 16px coming from?</p>
+				<!-- Liz Note: Show how to activate hover state in Inspector -->
+			</section>
+
+			<!-- SVG -->
+			<section>
+				<h3>SVG</h3>
+				<p><span class="orange">SVG</span>: <span class="orange">S</span>calable <span class="orange">V</span>ector <span class="orange">G</span>raphic</p>
+				<p class="fragment">SVG graphics do not lose any quality if they are zoomed, which is perfect for modern <span class="green">retina displays</span></p>
+                <p class="fragment">By comparison, <span class="green">raster graphics</span> (PNGs, JPEGs, GIFs, etc.) lose quality when zoomed</p>
+				<p class="fragment">
+					<img src="img/svg-vs-png.png" alt="SVG versus PNG" />
+				</p>
+			</section>
+			<section>
+				<h3>SVG Uses</h3>
+				<p class="fragment">SVGs are typically used for <span class="blue">typography</span>, <span class="blue">icons</span>, and other <span class="blue">graphics with clearly-defined lines</span>, while raster graphics are typically used for photography</p>
+				<p class="fragment">SVGs are often used for animation, since each component of an SVG can be <a href="https://css-tricks.com/animating-svg-css/" target="_blank">animated with CSS</a></p>
+			</section>
+            <!-- LIZ: Insert section about creating an SVG and referencing it in HTML -->
+			<section>
+				<h3>Using SVG within <code>&lt;img></code></h3>
+				<p class="fragment">Reference the .svg file like any other image:</p>
+				<pre class="html fragment">
+					<code>&lt;img src="image.svg" alt="My image" /></code>
+				</pre>
+				<p class="fragment">SVG is so new that <a href="http://caniuse.com/#feat=svg">only modern browsers support it</a></p>
+				<p class="fragment">If you need to support older browsers, save a copy of your SVG as a PNG, then use the PNG as a <span class="green">fallback</span> within the <code>onerror</code> attribute:</p>
+				<pre class="html fragment">
+					<code>&lt;img src="image.svg" alt="My image" onerror="this.onerror=null; this.src='image.png'" /></code>
+				</pre>
+				<p class="fragment"><small class="green"><strong>Tip:</strong> Use <a href="http://caniuse.com">caniuse.com</a> to check browser compatibility of modern HTML5 &amp; CSS3 features</small></p>
+			</section>
+
+			<!-- Let's Develop It -->
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Let's add SVG icons to our footer!<br /> Since we need to add a <span class="orange">top margin</span> to our <code>&lt;li></code>s, <code>display:inline-block;</code> will also come in handy here.</p>
+				<p><img style="border:none;border-radius:0;" src="workshop-files/designs/footer-measurements.png" alt="Footer measurements" /></p>
+			</section>
+
+			<!-- Responsive Setup -->
+			<section>
+				<h3>Responsive Setup</h3>
+				<p class="blue">Browser View</p>
+				<div class="fragment" style="width:60%;float:left">
+					<p>Minimize your browser window. Things should look responsive!</p>
+				</div>
+				<div class="fragment" style="width:40%;float:right">
+					<img src="img/mobile-chrome.png" style="box-shadow:none;" alt="Mobile view for Chrome" />
+				</div>
+			</section>
+			<section>
+				<h3>Responsive Setup</h3>
+				<p class="blue">Device View</p>
+				<div class="fragment" style="width:65%;float:left">
+					<p>On an actual device, however, things look rough:</p>
+				</div>
+				<div class="fragment" style="width:35%;float:right;">
+					<img src="img/mobile-phone.png" style="box-shadow:none;max-width:300px" alt="Viewed on a phone" />
+				</div>
+			</section>
+			<section>
+				<h3>Emulating a Device</h3>
+                <p>Chrome has a built-in <span class="blue">emulator</span> where you can preview how your page might look on a device</p>
+				<ol style="font-size:80%;line-height:1.3">
+					<li class="fragment">In Chrome, right-click your page and click <span class="orange">Inspect Element</span></li>
+					<li class="fragment"><img src="img/chrome-device-mode.gif" style="float:right;" alt="Toggle device mode" />Within the Developer Tools panel, click the <span class="orange">Toggle device mode</span> icon (<img src="img/chrome-toggle-device-icon.gif" alt="Toggle device mode icon in Chrome" style="margin:0;box-shadow:none;border:0;" />)</li>
+					<li class="fragment">Choose from the <span class="orange">Device</span> from the menu and then refresh the page<br /><img src="img/chrome-device-menu.png" alt="Choosing from devices" style="max-height:300px" /></li>
+					<li class="fragment">Click the <span class="orange">Toggle device mode</span> icon (<img src="img/chrome-toggle-device-icon.gif" alt="Toggle device mode icon in Chrome" style="margin:0;box-shadow:none;border:0;" />) to stop emulating</li>
+				</ol>
+			</section>
+            <section>
+                <h3>Emulating a Device</h3>
+                <p class="blue">Other Options</p>
+                <ol>
+                    <li><a href="http://browserstack.com" target="_blank">BrowserStack</a></li>
+                    <li><a href="http://appletoolbox.com/2014/05/use-web-inspector-debug-mobile-safari/" target="_blank">Safari's Inspector</a> - Plug your Apple device into a computer and troubleshoot on an actual device &mdash; not an emulator!</li>
+                </ol>
+            </section>
+			<section>
+				<h3>How do we make our page load responsively in devices?</h3>
+				<div style="width:50%;float:left;"><img src="img/viewport-scaling.jpg" alt="Viewport scaling" /></div>
+				<div class="fragment" style="width:50%;float:right;">
+					<p>Add a <span class="green">viewport</span></p>
+					<p class="fragment">Without a viewport, mobile devices will render the page at a typical desktop screen width, scaled to fit the screen</p>
+				</div>
+				<p class="fragment" style="clear:both;">Add the following to the <code>&lt;head></code>:</p>
+				<pre class="html fragment"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /></code></pre>
+			</section>
+
+			<!-- Let's Develop It! -->
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Let's add a viewport to your page!</p>
+				<p>&nbsp;</p>
+				<pre class="html"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /></code></pre>
+				<p><br />Once we're done, let's check out the page in Chrome's emulator</p>
+			</section>
+
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">Animation time!</h1>
+            </section>
+			
+			<section>
+				<h3>Property: <em>transition</em></h3>
+				<p class="fragment">The <code>transition</code> CSS property lets us create awesome animations without any Javascript</p>
+				<p class="fragment">Each <code>transition</code> property value requires:</p>
+				<ol>
+					<li class="fragment">The <span class="blue">CSS property</span> you want to animate (e.g. <em>width</em>)</li>
+					<li class="fragment">The <span class="blue">duration</span> of the effect in milliseconds or seconds (e.g. <em>2s</em>)</li>
+				</ol>
+				<div class="fragment">
+					<pre class="css">
+<code>
+selector {
+    -webkit-transition: width 2s;
+    transition: width 2s;
+}
+</code>
+					</pre>
+					<p class="green"><small>The <code>-webkit-</code> prefix allows this effect to work on browsers that haven't yet adopted the standard <code>transition</code> CSS property (in this case, Safari).</small></p>
+				</div>
+			</section>
+			<section>
+				<h3>How do you trigger animations?</h3>
+				<p class="fragment">With a <span class="orange">state change</span> (<code>:hover</code>, <code>:checked</code>, <code>:focus</code>, etc.)</p>
+                <p class="fragment">Every animation has a <span class="green">before state</span> and an <span class="green">after state</span></p>
+				<p class="fragment">Always apply <code>transition</code> to the <span class="green">before state</span>, then specify <a href="http://leaverou.github.io/animatable/" target="_blank">what properties</a> change in the <span class="green">after state</span></p>
+                <table class="data" style="margin:0 auto;width:100%;font-size:70%">
+                    <tr class="fragment">
+                        <th style="padding:0;">Before State</th>
+                        <th style="padding:0">After State</th>
+                    </tr>
+                    <tr style="padding:0;" class="fragment">
+                        <td style="padding:0;">
+                            <pre class="css">
+<code>selector {
+    width: 100px;
+    -webkit-transition: width 2s;
+    transition: width 2s;
+}</code>
+                            </pre>
+                        </td>
+                        <td style="padding:0;">
+                            <pre class="css">
+<code>selector:hover {
+    width: 500px;
+}</code>
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr style="padding:0;" class="fragment">
+                        <td style="padding:0;">
+                            <pre class="css">
+<code>selector {
+    background: blue;
+    -webkit-transition: background .15s;
+    transition: background .15s;
+}</code>
+                            </pre>
+                        </td>
+                        <td style="padding:0;">
+                            <pre class="css">
+<code>selector:checked {
+    background: red;
+}</code>
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr style="padding:0;" class="fragment">
+                        <td style="padding:0;">
+                            <pre class="css">
+<code>selector {
+    border: 1px solid grey;
+    -webkit-transition: border .3s;
+    transition: border .3s;
+}</code>
+                            </pre>
+                        </td>
+                        <td style="padding:0;">
+                            <pre class="css">
+<code>selector:focus {
+    border: 2px dashed red;
+}</code>
+                            </pre>
+                        </td>
+                    </tr>
+                </table>                
+            </section>
+			<section>
+				<h3>State Change Example</h3>
+				<p data-height="344" data-theme-id="0" data-slug-hash="OydNqj" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/OydNqj/'>Transition - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+			</section>
+			
+			<!-- Let's Develop It! -->
+			<section>
+				<h3>Let's Develop It!</h3>
+				<p>Let's add a transition to our navigation menu links!</p>
+			</section>
+			
+			<!-- Inspo -->
+            <section>
+                <h3>Animation Inspiration</h3>		
+				<p><br /><a href="https://stuffandnonsense.co.uk/content/demo/madmanimation/" target="_blank">MadManimation &raquo;</a></p>
+				<p><a href="https://pattle.github.io/simpsons-in-css/" target="_blank">The Simpsons in CSS &raquo;</a></p>
+				<p><a href="http://tympanus.net/Tutorials/CreativeCSS3AnimationMenus/" target="_blank">Creative CSS3 Animation Menus &raquo;</a></p>
+				<p><a href="http://tympanus.net/Tutorials/OriginalHoverEffects/" target="_blank">Original <code>:hover</code> Effects</a></p>
+				<p><a href="http://tympanus.net/Tutorials/AnimatedButtons/index5.html" target="_blank">Buttons with <code>:hover</code> &raquo;</a></p>
+				<p><a href="http://tympanus.net/codrops/2012/02/21/accordion-with-css3/" target="_blank">Accordion using <code>:checked</code> &raquo;</a></p>
+				<p><a href="http://codepen.io/shayhowe/pen/zCkBv?editors=110" target="_blank">Mobile menu using <code>:checked</code> &raquo;</a></p>
+			</section>
+			<!--<section>
+				<h3>Animating Multiple Properties</h3>
+				<p>To animate multiple properties, separate each effect with a comma</p>
+				<pre class="css">
+<code>selector {
+    -webkit-transition: border .3s, width 4s;
+    transition: border .3s, width 4s;
+}</code>
+                </pre>
+				<p class="fragment">Use <code>all</code> to seamlessly transition all properties from <span class="green">before</span> to <span class="green">after</span> states at the same duration</p>
+				<pre class="css fragment">
+<code>selector {
+    -webkit-transition: all 4s;
+    transition: all 4s;
+}</code>
+                </pre>
+			</section>-->
+			
+			
+			
+			<!-- BEGIN UNEDITED -->
+			
+	
+
+
+
+			<!-- Next Week -->
+			<section class="hide-pdf">
+				<h2>Next Week</h2>
+				<p class="blue">Advanced CSS Animations, Responsive Grid Systems, &amp; Selectors</p>
+				<p>&nbsp;</p>
+				<p>If you haven't already, try to use each of the CSS properties discussed today!</p>
+                <!-- Mad Men animation: https://stuffandnonsense.co.uk/content/demo/madmanimation/ -->
+			</section>
+			<section class="hide-pdf">
+                <h3>Questions?</h3>
+                <div style="font-size:1200%; height:100%; margin-top:20%" class="blue">?
+                    <div class="clear"></div>
+                </div>
+				<aside class="notes">Can always email me!</aside>
+            </section>
+
+        </div>
+        <footer>
+            <div class="copyright">
+                Intermediate HTML &amp; CSS&nbsp; | &nbsp;Boston Chapter &nbsp;| &nbsp;
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+                </a>
+            </div>
+        </footer>
+    </div>
+
+	<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                condition: function() {
+                    return !!document.querySelector('pre code');
+                },
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/accessibility-helper/js/accessibility-helper.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+
+</body>
+
+</html>
