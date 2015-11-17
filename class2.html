@@ -475,12 +475,10 @@ nav {
 					<pre class="css">
 <code>
 selector {
-    -webkit-transition: width 2s;
     transition: width 2s;
 }
 </code>
 					</pre>
-					<p class="green fragment"><small>The <code>-webkit-</code> prefix allows this effect to work on browsers that haven't yet adopted the standard <code>transition</code> CSS property (in this case, Safari).</small></p>
 				</div>
 			</section>
 			<section>
@@ -504,7 +502,6 @@ selector {
                             <pre class="css">
 <code style="padding:5px">selector {
     width: 100px;
-    -webkit-transition: width 2s;
     transition: width 2s;
 }</code>
                             </pre>
@@ -522,7 +519,6 @@ selector {
                             <pre class="css">
 <code style="padding:5px">selector {
     background: blue;
-    -webkit-transition: background .15s;
     transition: background .15s;
 }</code>
                             </pre>
@@ -564,14 +560,12 @@ selector {
 				<p>To animate multiple properties, separate each effect with a comma</p>
 				<pre class="css">
 <code>selector {
-    -webkit-transition: border .3s, width 4s;
     transition: border .3s, width 4s;
 }</code>
                 </pre>
 				<p class="fragment">Use <code>all</code> to seamlessly transition all properties from <span class="green">before</span> to <span class="green">after</span> states at the same duration</p>
 				<pre class="css fragment">
 <code>selector {
-    -webkit-transition: all 4s;
     transition: all 4s;
 }</code>
                 </pre>
