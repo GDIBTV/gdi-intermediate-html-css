@@ -418,6 +418,16 @@ nav {
 					<img src="img/mobile-phone.png" style="box-shadow:none;max-width:300px" alt="Viewed on a phone" />
 				</div>
 			</section>
+            <section>
+				<h3>How do we make our page load responsively in devices?</h3>
+				<div style="width:50%;float:left;"><img src="img/viewport-scaling.jpg" alt="Viewport scaling" /></div>
+				<div class="fragment" style="width:50%;float:right;">
+					<p>Add a <span class="green">viewport</span></p>
+					<p class="fragment">Without a viewport, mobile devices will render the page at a typical desktop screen width, scaled to fit the screen</p>
+				</div>
+				<p class="fragment" style="clear:both;">Add the following to the <code>&lt;head></code>:</p>
+				<pre class="html fragment"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /></code></pre>
+			</section>
 			<section>
 				<h3>Emulating a Device</h3>
                 <p>Chrome has a built-in <span class="blue">emulator</span> where you can preview how your page might look on a device</p>
@@ -436,16 +446,6 @@ nav {
                     <li><a href="http://appletoolbox.com/2014/05/use-web-inspector-debug-mobile-safari/" target="_blank">Safari's Inspector</a> - Plug your Apple device into a computer and troubleshoot on an actual device &mdash; not an emulator!</li>
                 </ol>
             </section>
-			<section>
-				<h3>How do we make our page load responsively in devices?</h3>
-				<div style="width:50%;float:left;"><img src="img/viewport-scaling.jpg" alt="Viewport scaling" /></div>
-				<div class="fragment" style="width:50%;float:right;">
-					<p>Add a <span class="green">viewport</span></p>
-					<p class="fragment">Without a viewport, mobile devices will render the page at a typical desktop screen width, scaled to fit the screen</p>
-				</div>
-				<p class="fragment" style="clear:both;">Add the following to the <code>&lt;head></code>:</p>
-				<pre class="html fragment"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /></code></pre>
-			</section>
 
 			<!-- Let's Develop It! -->
 			<section>
