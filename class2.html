@@ -226,7 +226,7 @@ nav {
 				<p class="fragment">Tired of using the same old, boring "web-safe" fonts?<br /><small>(No offense, <a href="http://cssfontstack.com" target="_blank">CSSFontStack.com</a>)</small></p>
                 <p class="fragment">Use <a href="http://google.com/fonts" target="_blank">Google Web Fonts</a>! Google has hundreds of free fonts that have been optimized for the web, and are ready for us to use!</p>
                 <p class="fragment">Google Web Fonts don’t rely on fonts installed on users’ computers</p>
-				<p class="fragment">Instead, these fonts are stored on Google’s servers and served to your website (like <a href="http://lorempixel.com/500/400/abstract">an image from another server</a> is served to your website)</p>
+				<p class="fragment">Instead, these fonts are stored on Google’s servers and served to your website (like <a href="http://lorempixel.com/500/400/abstract" target="_blank">an image from another server</a> is served to your website)</p>
             </section>
             <section>
                 <h3>Custom Fonts in Our Design</h3>
@@ -457,7 +457,10 @@ nav {
 			</section>
 
 			<section data-background="#f05b62">
-                <h1 style="color: #fafafa;font-size:3.7em">Animation time!</h1>
+                <h1 style="color: #fafafa;font-size:3.7em;padding-top:2em;">Animation time!</h1>
+				<!-- Completely Unnecessary Bender -->
+				<div id="bender-body"><div id="page"><div id="container"> <div class="foot-left foot"> <div class="f1"></div><div class="f2"></div><div class="first leg1"> <div class="next1 leg1"> <div class="next1 leg1"> <div class="next1 leg1"> <div class="next1 leg1"></div></div></div></div></div></div><div class="foot-right foot"> <div class="f1"></div><div class="f2"></div><div class="first leg2"> <div class="next2 leg2"> <div class="next2 leg2"> <div class="next2 leg2"> <div class="next2 leg2"></div></div></div></div></div></div><div id="b-body"> <div id="b1"></div><div id="b2"></div><div id="b3"></div><div id="head"> <div id="h1"></div><div id="h2"></div><div id="h3"></div><div id="h4"></div><div id="h5"><span></span></div><div id="eyes"> <div id="e"> <div id="e1"> <div class="eye"></div><span></span> </div><div id="e2"> <div class="eye"></div><span></span> </div></div></div><div id="mouth"> <span></span> <span></span> <span></span> <span></span> <span></span> <div id="m1"></div><div id="m2"></div></div></div><div id="b4"></div><div id="b5"> <div class="b51"> <div class="b51"> <div class="b51"> <div class="b51"> <div id="ab"> <div class="a1"></div><div id="a2"></div><div class="a31 a3"></div><div class="a32 a3"></div><div class="a33 a3"></div></div></div></div></div></div></div><div id="b6"></div><div id="b7"> <div class="b71"> <div class="b71"> <div class="b71"> <div class="b71"> <div id="ac"> <div class="a1"></div><div class="a2"></div><div class="a31 a3"></div><div class="a32 a3"></div><div class="a3 a33"></div></div></div></div></div></div></div><div id="b8"> <span></span> </div><div id="b9"></div></div></div></div></div>
+				<p><small><a href="http://codepen.io/anythingcodes/pen/vNbjMM?editors=110">http://codepen.io/anythingcodes/pen/vNbjMM?editors=110</a></small></p>
             </section>
 			
 			<section>
@@ -477,15 +480,16 @@ selector {
 }
 </code>
 					</pre>
-					<p class="green"><small>The <code>-webkit-</code> prefix allows this effect to work on browsers that haven't yet adopted the standard <code>transition</code> CSS property (in this case, Safari).</small></p>
+					<p class="green fragment"><small>The <code>-webkit-</code> prefix allows this effect to work on browsers that haven't yet adopted the standard <code>transition</code> CSS property (in this case, Safari).</small></p>
 				</div>
 			</section>
 			<section>
 				<h3>How do you trigger animations?</h3>
 				<p class="fragment">With a <span class="orange">state change</span> (<code>:hover</code>, <code>:checked</code>, <code>:focus</code>, etc.)</p>
                 <p class="fragment">Every animation has a <span class="green">before state</span> and an <span class="green">after state</span></p>
-				<p class="fragment">Always apply <code>transition</code> to the <span class="green">before state</span>, then specify <a href="http://leaverou.github.io/animatable/" target="_blank">what properties</a> change in the <span class="green">after state</span></p>
-                <table class="data" style="margin:0 auto;width:100%;font-size:70%">
+				<p class="fragment">In the <span class="green">before state</span>, apply <code>transition</code> along with <a href="http://leaverou.github.io/animatable/" target="_blank">what properties</a> change during the transition</p>
+				<p class="fragment">The <span class="green">after state</span> indicates the values after a transition is complete. Never use <code>transition</code> on the after state.</p>
+                <table class="data" style="margin:0 auto;width:100%;font-size:75%">
                     <tr class="fragment">
                         <th style="padding:0;">Before State</th>
                         <th style="padding:0">After State</th>
@@ -493,7 +497,7 @@ selector {
                     <tr style="padding:0;" class="fragment">
                         <td style="padding:0;">
                             <pre class="css">
-<code>selector {
+<code style="padding:5px">selector {
     width: 100px;
     -webkit-transition: width 2s;
     transition: width 2s;
@@ -502,7 +506,7 @@ selector {
                         </td>
                         <td style="padding:0;">
                             <pre class="css">
-<code>selector:hover {
+<code style="padding:5px">selector:hover {
     width: 500px;
 }</code>
                             </pre>
@@ -511,7 +515,7 @@ selector {
                     <tr style="padding:0;" class="fragment">
                         <td style="padding:0;">
                             <pre class="css">
-<code>selector {
+<code style="padding:5px">selector {
     background: blue;
     -webkit-transition: background .15s;
     transition: background .15s;
@@ -520,7 +524,7 @@ selector {
                         </td>
                         <td style="padding:0;">
                             <pre class="css">
-<code>selector:checked {
+<code style="padding:5px">selector:checked {
     background: red;
 }</code>
                             </pre>
@@ -529,7 +533,7 @@ selector {
                     <tr style="padding:0;" class="fragment">
                         <td style="padding:0;">
                             <pre class="css">
-<code>selector {
+<code style="padding:5px">selector {
     border: 1px solid grey;
     -webkit-transition: border .3s;
     transition: border .3s;
@@ -538,7 +542,7 @@ selector {
                         </td>
                         <td style="padding:0;">
                             <pre class="css">
-<code>selector:focus {
+<code style="padding:5px">selector:focus {
     border: 2px dashed red;
 }</code>
                             </pre>
