@@ -486,16 +486,18 @@ selector {
 			<section>
 				<h3>How do you trigger animations?</h3>
 				<p class="fragment">With a <span class="orange">state change</span> (<code>:hover</code>, <code>:checked</code>, <code>:focus</code>, etc.)</p>
-                <p class="fragment">Every animation has a <span class="green">before state</span> and an <span class="green">after state</span><br /><img src="img/transition-hover.gif" alt="A hover state" /></p>
+                <p class="fragment">Every animation has a <span class="green">before selector</span> and an <span class="green">after selector</span><br /><img src="img/transition-hover.gif" alt="A hover state" /></p>
+                <p><span class="blue">Before Selector:</span> The element as it is naturally</p>
+                <p><span class="blue">After Selector:</span> The element when it is interacted with (e.g. when it is hovered over)</p>
             </section>
             <section>
-                <h3>Before and After States</h3>
-				<p class="fragment">In the <span class="green">before state</span>, apply <code>transition</code> along with <a href="http://leaverou.github.io/animatable/" target="_blank">what properties</a> change during the transition</p>
-				<p class="fragment">The <span class="green">after state</span> indicates the values after a transition is complete. Never use <code>transition</code> on the after state.</p>
+                <h3>Before and After Selectors</h3>
+				<p class="fragment">In the <span class="green">before selector</span>, apply <code>transition</code> along with <a href="http://leaverou.github.io/animatable/" target="_blank">what properties</a> change during the transition</p>
+				<p class="fragment">The <span class="green">after selector</span> indicates the values after a transition is complete. Never use <code>transition</code> on the after selector.</p>
                 <table class="data" style="margin:0 auto;width:100%;">
                     <tr class="fragment">
-                        <th style="padding:0;">Before State</th>
-                        <th style="padding:0">After State</th>
+                        <th style="padding:0;">Before Selector</th>
+                        <th style="padding:0">After Selector</th>
                     </tr>
                     <tr style="padding:0;" class="fragment">
                         <td style="padding:0;">
