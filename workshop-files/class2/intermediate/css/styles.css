@@ -1,0 +1,85 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Custom CSS */
+body {
+    font-family: 'Lato', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', serif;
+}
+h1 {
+    background-image: url('../images/z.png');
+    background-size: contain;
+    width: 44px;
+    height: 44px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.54);
+    height: 68px;
+    border-bottom: 1px solid #878d8f;
+}
+nav {
+    float: right;
+}
+nav li {
+    display: inline;
+}
+nav li a {
+    padding: 26px 10px;
+    display: inline-block;
+    transition: background 2s;
+}
+nav li a:hover {
+    background: fuchsia;
+}
+
+/* Banner */
+#banner {
+    background-image: url('../images/zebra-hero.jpg');
+    height: 483px;
+    background-size: cover;
+    padding-top: 91px;
+    text-align: center;
+    color: white;
+}
+#banner img {
+    width:100px;
+    border-radius: 50%;
+}
+#banner h2 {
+    font-size: 3em;
+    margin: 20px;
+}
+#banner span {
+    border: 3px solid white;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Footer */
+footer {
+    background: #8a80c3;
+    padding: 33px;
+    text-align: center;
+    color: white;
+}
+footer li {
+    display: inline-block;
+    padding: 10px;
+}
