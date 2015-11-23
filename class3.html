@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Girl Develop It - Intermediate HTML + CSS, Class 3</title>
+
+    <meta name="description" content="Girl Develop It's Intermediate HTML and CSS course, customized by Liz Shaw">
+    <meta name="author" content="Liz Shaw">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+    <!-- dark editor-->
+    <link rel="stylesheet" href="lib/css/dark.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!-- If use the PDF print sheet so students can print slides-->
+
+    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Code Your Own Website -->
+            <section>
+                <h2>Code Your Own Website</h2>
+                <img src="img/circle-gdi-logo.png" alt="GDI Logo" style="box-shadow:none" />
+                <h3>Intermediate HTML + CSS</h3>
+                <p>
+                    <small>Class 3</small>
+                </p>
+            </section>
+
+			<!-- Pizza!-->
+			<section>
+			  <h3>Pizza, anyone?</h3>
+			  <p>
+				<img src="img/pizza.gif" alt="Darth and Han exchange pizza" />
+			  </p>
+			  <div class="left-align">
+			       <p>Welcome! Please fill out the pizza poll at <a href="http://tinyurl.com/gdipizzaparty" target="_blank">http://tinyurl.com/gdipizzaparty</a></p>
+			  </div>
+			</section>
+				
+			<!-- Download Chrome Extension -->
+			<section>
+				<h2>Let's Download It!</h2>
+				<p><small>The <a href="https://chrome.google.com/webstore/detail/viewport-dimensions/kchdfagjljmhgapoonapmfngpadcjkhk?hl=en-US" target="_blank">Viewport Dimensions</a> extension displays the viewport dimensions in the lower right corner of the browser window when it's resized. This is helpful for responsive coding.</small></p>
+				<ol>
+					<li><img src="img/extension-settings.png" alt="The Chrome Settings menu" style="float:right;max-width: 19vw;" />Add <a href="https://chrome.google.com/webstore/detail/viewport-dimensions/kchdfagjljmhgapoonapmfngpadcjkhk?hl=en-US" target="_blank">Viewport Dimensions</a> to Chrome</li>
+					<li>Click the menu at the top right-hand side and click Settings</li>
+					<li>Click <em>Extensions</em> on the left</li>
+					<li>Check <span class="blue">Allow access to file URLs</span> under <em>Viewport Dimensions</em><br /><img src="img/extension-viewport.png" alt="Allowing access to file URLs" style="max-width: 52vw;" /></li>
+				</ol>
+				<p class="fragment green">Awesome! &#128077;</p>
+            </section>
+			<section>
+				<h2>Let's Develop It!</h2>
+				<ol>
+					<li>Copy <span class="green">index.html</span> and name the copy <span class="green">africa.html</span></li>
+					<li>Copy <span class="green">index.html</span> and name the copy <span class="green">diet.html</span></li>
+					<li>Copy <span class="green">index.html</span> and name the copy <span class="green">stripes.html</span></li>
+				</ol>
+				<p><br />You should now have four identical files with different names: <span class="orange">index.html</span>, <span class="orange">africa.html</span>, <span class="orange">diet.html</span>, and <span class="orange">stripes.html</span></p>
+			</section>
+			
+			<!-- Responsive Grid Systems -->
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">Responsive Grid Systems</h1>
+            </section>
+			<section>
+				<h3>What is a grid system?</h3>
+				<p class="fragment">CSS for columns with margins, which is used to align content (<a href="http://www.responsivegridsystem.com/layouts/" target="_blank">Example &raquo;</a>)</p>
+				<p class="fragment"><img src="img/design-grid.gif" alt="Our design with a grid" class="right" style="margin-left:1em" />Grid systems use <span class="orange">relative units</span> (e.g. <span class="blue">%</span> and <span class="blue">vw</span>) instead of fixed units (e.g. <span class="blue">px</span>) so that the layout adjusts according to the viewport width</p>	
+				<p class="fragment">At narrower <span class="orange">breakpoints</span> (e.g. tablet or mobile), each column expands to fill the viewport in a <span class="orange">single column</span></p>
+			</section>			
+			<section>
+				<h3>Why do we &#9829; grid systems?</h3>
+				<ul>
+					<li class="fragment"><span class="blue">Easier to Maintain</span>: It's easier to design and code new layouts when the structural guidelines have already been decided</li>
+					<li class="fragment"><span class="blue">Usability</span>: Uniformity and consistency are key to creating a website that your users will find easy to navigate, read and understand</li>
+					<li class="fragment"><span class="blue">Faster to Code</span>: At different breakpoints, we can easily collapse everything into a single column</li>
+					<li class="fragment"><span class="blue">Less 'what if's</span>: Aligning content with a grid means there are less layout exceptions</li>
+					<li class="fragment"><span class="blue">Fluid</span>: Fluid layouts are the way of the future <span class="green">&#9786;</span></li>
+				</ul>				
+			</section>
+			<section>
+				<h3>Popular Frameworks<br />Based On Grids</h3>
+				<p class="fragment">Most frameworks are on 12 columns or 16 columns, and include styling for common elements such as headings, buttons, and tables</p>
+				<div class="fragment">
+					<p><br /><a href="http://getskeleton.com/" target="_blank">Skeleton</a></p>
+					<p><a href="http://getbootstrap.com" target="_blank">Bootstrap</a></p>
+					<p><a href="http://foundation.zurb.com/" target="_blank">Foundation</a></p>
+				</div>
+			</section>
+			<section data-background="#f05b62">
+                <h2 style="color: #fafafa">But wouldn't you rather say you made your <em>own</em> grid system?</h2>
+            </section>
+			<section>
+				<h3>Coding Your Own Grid System</h3>
+				<ol>
+					<li class="fragment"><img src="workshop-files/designs/home-grid-measurements.png" alt="Our design on a grid" style="max-width:40vw;" class="right" />Determine the maximum width from the design. In our case, that's <span class="blue">1170px</span>. This will be used as a <code>max-width</code> on each row.</li>
+					<li class="fragment">Calculate the <span class="green">gutter</span> (the margin between columns) width as a percentage of the maximum width. In our case, that's <span class="blue">2.56%</span> (or 30px/1170px).</li>
+					<li class="fragment">Use a <a href="http://www.responsivegridsystem.com/calculator/" target="_blank">grid generator</a> to generate the CSS. (<span class="green">But don't worry &mdash; we've done this for you!</span>)<!--</li>
+						<ul style="font-size:.7em;line-height:1.2" class="fragment">	
+							<li>Calculate the width of a single column as a percentage. In our case, that's <span class="blue">5.986%</span>.</li>
+							<li>Reference the design to see how many columns and gutters should be used in your CSS calculations</li>
+							<li>For example, a column that spanned 6 of 12 columns would have a width of 48.72%, or (6 x 5.986%) + (5 x 2.56%)</li>
+						</ul>-->						
+					</li>
+				</ol>				
+			</section>
+			<section>
+				<h3>Grid System CSS</h3>
+				<p>Our grid system was generated with a <a href="http://www.responsivegridsystem.com/calculator/" target="_blank">grid generator</a>, but the unneccessary CSS has been removed</p>
+				<p data-height="178" data-theme-id="0" data-slug-hash="WQWWEP" data-default-tab="css" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/WQWWEP/'>Responsive Grid System</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+			</section>
+			<section>
+				<h3>Grid System HTML</h3>
+				<p class="fragment">Use the <span class="blue">row</span> class on each row of content:</p>
+				<pre class="html fragment">
+<code>&lt;section class="row">
+
+&lt;/section></code>
+				</pre>
+				<p class="fragment">Within the row, use the <span class="blue">column</span> class and the width class (e.g. <span class="blue">span_4_of_12</span>) on each column of content:</p>
+				<pre class="xml fragment">
+<code>&lt;section class="row">
+    &lt;div class="column span_4_of_12">
+        I'm the first of three columns!
+    &lt;/div>
+    &lt;div class="column span_4_of_12">
+        I'm the second of three columns!
+    &lt;/div>
+    &lt;div class="column span_4_of_12">
+        I'm the third of three columns!
+    &lt;/div>
+&lt;/section></code>
+				</pre>
+				<p class="fragment green"><small><strong>Tip:</strong> To use multiple classes on a single element, separate each class with a space in your HTML as shown above.</small></p>
+			</section>
+			
+			<!-- Let's Develop It! -->
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Let's grab the grid CSS from <a href="http://tinyurl.com/gdibostongrid" target="_blank">tinyurl.com/gdibostongrid</a>! Then let's start to set up <span class="green">About</span> and <span class="green">Mission</span>.</p> 
+				<p><img src="workshop-files/designs/home-grid-measurements.png" alt="Our design on a grid" style="max-height:50vh"/></p>
+			</section>
+			
+			<!-- Responsive Images -->
+			<section>
+				<h3>Responsive Images</h3>
+				<p class="fragment">To make images fit to their containers, some extra properties are required:</p>
+				<pre class="css fragment">
+<code>img {
+    max-width: 100%;
+    box-sizing: border-box;
+}</code>
+				</pre>
+				<p class="fragment">Together these two properties force images to stay within their containers</p>
+				<div class="fragment">
+					<p data-height="294" data-theme-id="0" data-slug-hash="avxxQp" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/avxxQp/'>Responsive Images - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>	
+
+			<!-- Let's Develop It!-->
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Let's make our images <em>truly</em> responsive!</p>
+			</section>
+			
+			<section>
+				<h3>Gradients</h3>
+				<p class="fragment">You can now make gradients with CSS3 &mdash; no image-editing required!</p>
+				<p class="fragment">Use <code>background-image</code> with <code>linear-gradient</code>:</p>
+				<pre class="css fragment">
+<code>selector {
+    background-image: linear-gradient(red, white);
+}</code>
+				</pre>
+				<p class="fragment">The first is the top color, while the second is the bottom color</p>
+				<div class="fragment">
+					<p data-height="118" data-theme-id="0" data-slug-hash="WQWBQN" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/WQWBQN/'>Linear Gradients - Two Values</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+			<section>
+				<h3>Gradients</h3>
+				<p class="fragment">You can use as many values as you want, and specify where the gradient should begin:</p>
+				<div class="fragment">
+					<p data-height="150" data-theme-id="0" data-slug-hash="xweNbX" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/xweNbX/'>Linear Gradients</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+				<p class="fragment">You can even make <span class="green">radial gradients</span></p>
+				<p class="fragment">To save yourself some time, bookmark the <a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Ultimate CSS Gradient Generator</a></p>
+			</section>
+			
+			<!-- Let's Develop It! -->
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Let's add a linear gradient to our <span class="blue">Mission</span> link!</p>
+				<p><img src="img/gradient-mission.png" alt="The gradient in our design" /></p>
+				<p>Feel free to use the <a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Ultimate CSS Gradient Generator</a></p>
+			</section>
+			
+			<!-- Animations -->
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">Additional Animation Effects</h1>
+            </section>
+			<section>
+				<h3>Animation Recap</h3>
+				<ul>
+					<li class="fragment">Add <code>transition</code> to the <span class="blue">before state</span></li>
+					<li class="fragment"><span class="green">Remember:</span> <code>transition</code> accepts two values,<br /><u class="fragment"> the CSS property </u> and <u class="fragment"> the duration </u> of the animation</li>
+				</ul>
+				<table class="data fragment" style="margin:1em auto;width:100%;">
+                    <tr>
+                        <th style="padding:0;">Before Selector</th>
+                        <th style="padding:0">After Selector</th>
+                    </tr>
+                    <tr style="padding:0;">
+                        <td class="fragment" style="padding:0;">
+                            <pre class="css">
+<code style="padding:5px">selector {
+    width: 100px;
+    transition: width 2s;
+}</code>
+                            </pre>
+                        </td>
+                        <td class="fragment" style="padding:0;">
+                            <pre class="css">
+<code style="padding:5px">selector:hover {
+    width: 500px;
+}</code>
+                            </pre>
+                        </td>
+                    </tr>
+                </table>
+				<div class="fragment">
+					<p data-height="268" data-theme-id="0" data-slug-hash="RWjLrR" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/xwBZjP'>Transition: After</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+			
+			<!-- Multiple Properties -->
+			<section>
+				<h3>Animating Multiple Properties</h3>
+				<p class="blue">Method 1: Individual Properties</p>
+				<p class="fragment">To animate multiple properties (typically at <span class="green">different durations</span>), separate each effect with a comma</p>
+				<pre class="css fragment">
+<code>selector {
+    transition: width 2s, background 5s;
+}</code>
+                </pre>
+				<div class="fragment">
+					<p data-height="128" data-theme-id="0" data-slug-hash="GpLwGr" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/GpLwGr/'>Animating Multiple Properties - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+			<section>
+				<h3>Animating Multiple Properties</h3>
+				<p class="blue">Method 2: All Properties</p>
+				<p class="fragment">Use <code>all</code> to seamlessly transition all properties from before to after states at the <span class="green">same duration</span></p>
+				<pre class="css fragment">
+<code>selector {
+    transition: all 3s;
+}</code>
+					</pre>
+				<div class="fragment">
+					<p data-height="131" data-theme-id="0" data-slug-hash="gayQdW" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/gayQdW/'>Transitions Using 'all' - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+				<div class="fragment">
+					<p style="color:firebrick"><small><br />Sounds great, right? However, <code>all</code> has performance drawbacks, so use it sparingly!</small></p>
+					<p data-height="72" data-theme-id="0" data-slug-hash="NGmEoY" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/NGmEoY/'>Extreme Example: Performance concerns with the 'all' transition</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+			
+			<!-- Delaying Animations -->			
+			<section>
+				<h3>Property: <em>transition-delay</em></h3>
+				<p>Use <code>transition-delay</code> to delay when an animation begins</p>
+				<pre class="css fragment">
+<code>selector {
+    transition: width 1s;
+    transition-delay: 3s;
+}</code>
+				</pre>
+				<div class="fragment">
+					<p data-height="338" data-theme-id="0" data-slug-hash="PPgxEp" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/PPgxEp/'>Transition Delays</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+			
+			<!-- Transition Timing -->
+			<section>
+				<h3>Property:<br/><em>transition-timing-function</em></h3>
+				<p class="fragment">The <span class="blue">timing function</span> changes how fast or slow the animation is at parts of the animation</p>						
+				<pre class="css fragment" style="font-size:15px">
+<code>selector {
+    transition: width 3.5s;
+    transition-timing-function: ease;
+    transition-timing-function: linear;
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(n,n,n,n);
+}</code>
+				</pre>
+				<div class="fragment">
+					<p data-height="290" data-theme-id="0" data-slug-hash="JYVwgr" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/JYVwgr/'>Transition Timing Functions</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+				<p class="fragment"><small><strong>Fun fact</strong>: The <span class="blue">timing function</span> is sometimes called the <span class="blue">speed curve</span></small></p>	
+			</section>
+			<section>
+				<h3>Property:<br /><em>transition-timing-function</em></h3>
+				<p class="blue">Additional Notes</p>
+				<p class="fragment">If you don't specify a timing function, <span class="orange">ease</span> is used</p>
+				<p class="fragment">With <span class="orange">cubic-bezier</span>, you can create your own timing function</p>
+				<p class="fragment">Use <a href="http://cubic-bezier.com/" target="_blank">cubic-bezier.com</a> to make your own timing function, and compare it to the built-in timing functions (such as <span class="green">ease</span> and <span class="green">linear</span>)</p>
+			</section>
+			
+			<!-- Transformations -->
+			<section>
+				<h3>Property: <em>transform</em></h3>
+				<p class="fragment">Use <code>transform</code> to rotate, scale, skew, change the perspective, and <a href="http://www.w3schools.com/cssref/css3_pr_transform.asp" target="_blank">much more</a></p>
+				<pre class="css fragment">
+<code>selector {
+    transform: rotate(360deg);
+    transform: translate3d(0, -3px, 0);
+    /* and more! */
+}</code>
+				</pre>				
+				<p class="fragment"><code>transform</code> has too many values to list &mdash; use <a href="http://www.css3maker.com/css3-transform.html" target="_blank">CSS3Maker</a> or <a href="http://css3please.com/" target="_blank">CSS3, please!</a> to generate them</p>
+				<p class="fragment">A transformation is often animated with <code>transition</code></p>
+				<div class="fragment">
+					<p data-height="179" data-theme-id="0" data-slug-hash="YyMBVR" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/YyMBVR/'>Transition + Transform - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+			
+
+			<!-- BEGIN UNEDITED -->
+
+			<!-- Questions -->
+			<section class="hide-pdf">
+                <h3>Questions?</h3>
+                <div style="font-size:1200%; height:100%; margin-top:20%" class="blue">?
+                    <div class="clear"></div>
+                </div>
+            </section>
+
+        </div>
+        <footer>
+            <div class="copyright">
+                Intermediate HTML &amp; CSS&nbsp; | &nbsp;Boston Chapter &nbsp;| &nbsp;
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+                </a>
+            </div>
+        </footer>
+    </div>
+
+	<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                condition: function() {
+                    return !!document.querySelector('pre code');
+                },
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/accessibility-helper/js/accessibility-helper.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+
+</body>
+
+</html>
