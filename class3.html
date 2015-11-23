@@ -278,6 +278,49 @@
 				<h2>Let's Develop It!</h2>
 				<p>Let's add a mobile breakpoint to make the columns take up the entire viewport!</p>
 			</section>
+			<section>
+				<h3>Other Media Queries</h3>
+				<ol>
+					<li class="fragment">Targeting minimum viewport widths:
+						<pre class="css">
+<code>@media screen and (min-width: 1200px) {
+    selector {
+    }
+}</code>
+						</pre>
+					</li>					
+					<li class="fragment">Targeting device orientation and/or viewport size:
+						<pre class="css">
+<code>@media screen and (orientation: landscape) and (max-device-width: 1024px) {
+    selector {
+    }
+}</code>
+						</pre>
+						<p><small>The alternative to <em>landscape</em> is <em>portrait</em></small></p>
+					</li>
+				</ol>
+			</section>
+			<section>
+				<h3>Other Media Queries</h3>
+				<ol start="3">
+					<li class="fragment">Targeting devices between viewport sizes:
+						<pre class="css">
+<code>@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    selector {
+    }
+}</code>
+						</pre>
+					</li>
+					<li class="fragment">Styling on-paper printed pages:
+						<pre class="css">
+<code>@media print {
+    selector {
+    }
+}</code>
+						</pre>
+					</li>
+				</ol>
+			</section>
 			
 			<!-- Animation Recap -->
 			<section>
@@ -360,15 +403,22 @@
 			</section>
 			<section>
 				<h3>Property: <em>opacity</em></h3>
-				<!-- LIZ TODO -->
+				<p><code>opacity</code> changes the opacity of the <span class="green">whole element</span></p>
+				<pre class="css">
+<code>selector {
+    opacity: 0.5;
+}</code>
+				</pre>
+				<p class="fragment">The value can be a number between <span class="blue">0 (translucent)</span> and <span class="blue">1.0 (opaque)</span></p>
+				<div class="fragment">
+					<p data-height="268" data-theme-id="0" data-slug-hash="WQBGBq" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/WQBGBq/'>Opacity vs. RBGA</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
 			</section>
 			<section>
 				<h2>Let's Develop It!</h2>
 				<p>You may have noticed that one of these things is not like the other. That's because one is a hover state!</p>
 				<p>Let's animate multiple properties (for example, <code>box-shadow</code> and <code>opacity</code>) for the hover states in the <span class="blue">About</span> section.</p>
-				<p>
-					<img src="img/home-hover.jpg" alt="Hover state for home image" />
-				</p>
+				<p><img src="img/home-hover.jpg" alt="Hover state for home image" /></p>
 			</section>
 
 			<!-- Additional Animation Effects -->
