@@ -126,7 +126,7 @@
 			<section>
 				<h3>Coding Your Own Grid System</h3>
 				<ol>
-					<li class="fragment"><img src="workshop-files/designs/home-grid-measurements.png" alt="Our design on a grid" style="max-width:40vw;" class="right" />Determine the maximum width from the design. In our case, that's <span class="blue">1170px</span>. This will be used as a <code>max-width</code> on each row.</li>
+					<li class="fragment"><img src="workshop-files/designs/home-grid-measurements.png" alt="Our design on a grid" style="max-height:45vh;" class="right" />Determine the maximum width from the design. In our case, that's <span class="blue">1170px</span>. This will be used as a <code>max-width</code> on each row.</li>
 					<li class="fragment">Calculate the <span class="green">gutter</span> (the margin between columns) width as a percentage of the maximum width. In our case, that's <span class="blue">2.56%</span> (or 30px/1170px).</li>
 					<li class="fragment">Use a <a href="http://www.responsivegridsystem.com/calculator/" target="_blank">grid generator</a> to generate the CSS. (<span class="green">But don't worry &mdash; we've done this for you!</span>)<!--</li>
 						<ul style="font-size:.7em;line-height:1.2" class="fragment">
@@ -229,11 +229,8 @@
 				<p><img src="img/gradient-mission.png" alt="The gradient in our design" /></p>
 				<p>Feel free to use the <a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Ultimate CSS Gradient Generator</a></p>
 			</section>
-
-			<!-- Animations -->
-			<section data-background="#f05b62">
-                <h1 style="color: #fafafa;font-size:3.7em">Additional Animation Effects</h1>
-            </section>
+			
+			<!-- Animation Recap -->
 			<section>
 				<h3>Animation Recap</h3>
 				<ul>
@@ -271,8 +268,8 @@
 			<!-- Multiple Properties -->
 			<section>
 				<h3>Animating Multiple Properties</h3>
-				<p class="blue">Method 1: Individual Properties</p>
-				<p class="fragment">To animate multiple properties (typically at <span class="green">different durations</span>), separate each effect with a comma</p>
+				<!--<p class="blue">Method 1: Individual Properties</p>-->
+				<p class="fragment">To animate multiple properties<!-- (typically at <span class="green">different durations</span>)-->, separate each effect with a comma</p>
 				<pre class="css fragment">
 <code>selector {
     transition: width 2s, background 5s;
@@ -282,7 +279,7 @@
 					<p data-height="128" data-theme-id="0" data-slug-hash="GpLwGr" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/GpLwGr/'>Animating Multiple Properties - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 				</div>
 			</section>
-			<section>
+			<!--<section>
 				<h3>Animating Multiple Properties</h3>
 				<p class="blue">Method 2: All Properties</p>
 				<p class="fragment">Use <code>all</code> to seamlessly transition all properties from before to after states at the <span class="green">same duration</span></p>
@@ -297,9 +294,38 @@
 				<div class="fragment">
 					<p style="color:firebrick"><small><br />Sounds great, right? However, <code>all</code> has performance drawbacks, so use it sparingly! (<a href="http://codepen.io/anythingcodes/pen/NGmEoY/?editors=110" target="_blank">Example &raquo;</a>)</small></p>
 				</div>
+			</section>-->
+			<section>
+				<h3>Property: <em>box-shadow</em></h3>
+				<p>The <code>box-shadow</code> CSS3 property is often used to give a 3D effect when an element is hovered over</p>
+				<pre class="css fragment">
+<code>selector {
+    box-shadow: horizontalShadow verticalShadow blurDistance color;
+    box-shadow: 10px 10px 5px grey;
+}</code>
+				</pre>
+				<div class="fragment">
+					<p data-height="200" data-theme-id="0" data-slug-hash="zvQBKm" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/zvQBKm/'>CSS3 Generator: box-shadow </a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+				<p class="fragment">Don't worry about memorizing this &mdash; use a <a href="http://css3gen.com/box-shadow/" target="_blank">generator</a> instead!</p>
+			</section>
+			<section>
+				<h3>Property: <em>opacity</em></h3>
+				<!-- LIZ TODO -->
+			</section>
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>You may have noticed that one of these things is not like the other. That's because one is a hover state!</p>
+				<p>Let's animate multiple properties (for example, <code>box-shadow</code> and <code>opacity</code>) for the hover states in the <span class="blue">About</span> section.</p>
+				<p>
+					<img src="img/home-hover.jpg" alt="Hover state for home image" />
+				</p>
 			</section>
 
-			<!-- Delaying Animations -->
+			<!-- Additional Animation Effects -->
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">Additional Animation Effects</h1>
+            </section>
 			<section>
 				<h3>Property: <em>transition-delay</em></h3>
 				<p>Use <code>transition-delay</code> to delay when an animation begins</p>
@@ -348,8 +374,8 @@
 				<p class="fragment">Use <code>transform</code> to rotate, scale, skew, change the perspective, and <a href="http://www.w3schools.com/cssref/css3_pr_transform.asp" target="_blank">much more</a></p>
 				<pre class="css fragment">
 <code>selector {
-    transform: rotate(360deg);
     transform: translate3d(0, -3px, 0);
+    transform: rotate(360deg);
     /* and more! */
 }</code>
 				</pre>
@@ -359,22 +385,11 @@
 					<p data-height="179" data-theme-id="0" data-slug-hash="YyMBVR" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/YyMBVR/'>Transition + Transform - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 				</div>
 			</section>
-			<section>
-				<h3>Property: <em>box-shadow</em></h3>
-				<p>The <code>box-shadow</code> CSS3 property is often used for 3D effects, especially when an element is hovered over</p>
-				<pre class="css fragment">
-<code>selector {
-    box-shadow: horizontalShadow verticalShadow blurDistance color;
-    box-shadow: 10px 10px 5px grey;
-}</code>
-				</pre>
-				<p class="fragment">Don't worry about memorizing this &mdash; use a <a href="http://css3gen.com/box-shadow/" target="_blank">CSS3 Box Shadow Generator</a> instead!</p>
-			</section>
-			<section>
+			
+			<!--<section>
 				<h3>Creating a 3D Hover Effect</h3>
-				<!-- LIZ TODO: transform and box-shadow -->
-			</section>
-
+				LIZ TODO: transform and box-shadow
+			</section>-->
 
 			<!-- BEGIN UNEDITED -->
 
