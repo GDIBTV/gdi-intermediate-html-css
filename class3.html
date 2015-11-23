@@ -230,6 +230,55 @@
 				<p>Feel free to use the <a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Ultimate CSS Gradient Generator</a></p>
 			</section>
 			
+			<!-- Media Queries -->
+			<section>
+				<h3>Media Queries</h3>
+				<p class="fragment">Visit your page and narrow the browser window</p>
+				<p class="fragment">The columns you set up are <span class="green">fluid</span> and <span class="green">responsive</span>, since they respond to the viewport width, but don't collapse into a single column</p>
+				<p class="fragment">How do we make that happen? With <span class="blue">media queries</span></p>
+			</section>
+			<section>
+				<h3>Media Queries</h3>
+				<p class="fragment">Within each <span class="orange">media query rule</span>, put CSS rules you would like to override for that <span class="orange">breakpoint</span></p>				
+				<pre class="css fragment">
+<code>
+@media screen and (max-width: 600px) {
+    .column {
+        margin: 1% 0;
+        width: 100%;
+    }
+}
+</code>
+				</pre>				
+				<p class="fragment">Always <span class="blue">use media queries at the end of your CSS file</span></p>
+			</section>
+			<section>
+				<h3>Common Media Query Uses</h3>
+				<ol>
+					<li class="fragment">To force columns to take up the viewport width (<span class="green">what we'll be doing</span>):
+						<div class="fragment">
+							<p data-height="138" data-theme-id="0" data-slug-hash="WQBGOY" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/WQBGOY/'>Media Queries - Columns</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+						</div>
+					</li>
+					<li class="fragment">Showing or hiding content at various breakpoints:
+						<div class="fragment">
+							<p data-height="138" data-theme-id="0" data-slug-hash="JYqRbX" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/JYqRbX/'>Media Queries</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+						</div>
+					</li>
+				</ol>				
+			</section>
+			<section>
+				<h3>Recommendations</h3>
+				<p class="fragment">The temptation is to add breakpoints based on whatever device is popular at the time (e.g. 768px)</p>
+				<p class="fragment">This is a <span class="green">bad idea</span></p>
+				<p class="fragment"><img src="img/devices.png" alt="A pile of devices" style="float:left;" /><span class="fragment"><br />After all, responsive design is about <span class="orange">any</span> and <span class="orange">every</span> potential screen size!</span></p>
+				<p class="fragment" style="clear:left">The Golden Rule: Keep it fluid<br /><span class="blue">Add a breakpoint where your design breaks</span></p>
+			</section>
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Let's add a mobile breakpoint to make the columns take up the entire viewport!</p>
+			</section>
+			
 			<!-- Animation Recap -->
 			<section>
 				<h3>Animation Recap</h3>
