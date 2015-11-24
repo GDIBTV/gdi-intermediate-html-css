@@ -294,7 +294,7 @@ nav {
 				<p class="blue">Our navigation links need:</p>
 				<ol>
 					<li class="fragment"><span class="green">To allow other links to their left and right</span><br />... meaning we need a <code>display</code> value that <strong>doesn't</strong> force sibling elements to a new line<br /><small class="fragment" style="text-indent:50px;">(like <code>display:inline;</code>)</small></li>
-					<li class="fragment"><span class="green">26px of top and bottom padding</span><br />... meaning we need a <code>display</code> value that respects top and bottom padding<br /><small class="fragment" style="text-indent:50px;">(like <code>display:block;</code>)</small></li>
+					<li class="fragment"><span class="green">26px of top and bottom padding to push down the content</span> (e.g. "Africa")<br />... meaning we need a <code>display</code> value whose top and bottom padding is relative to the box itself, <em>not</em> relative to the text baseline<br /><small class="fragment" style="text-indent:50px;">(like <code>display:block;</code>)</small></li>
 				</ol>
 				<p class="fragment orange">But these needs are at odds with one another! &#128078;</p>
 			</section>
