@@ -111,6 +111,10 @@
 					<li class="fragment"><span class="blue">Fluid</span>: Fluid layouts are the way of the future <span class="green">&#9786;</span></li>
 				</ul>
 			</section>
+            <section>
+                <h4>Grids Are Everywhere!</h4>
+                <img src="img/grid-boston.jpg" alt="Grids: Boston vs. NYC" style="margin:0" class="fragment" />
+            </section>
 			<section>
 				<h3>Popular Frameworks<br />Based On Grids</h3>
 				<p class="fragment">Most frameworks are on 12 columns or 16 columns, and include styling for common elements such as headings, buttons, and tables</p>
@@ -138,12 +142,8 @@
 				</ol>
 			</section>
 			<section>
-				<h3>Grid System CSS</h3>
-				<p>Our grid system was generated with a <a href="http://www.responsivegridsystem.com/calculator/" target="_blank">grid generator</a>, but the unneccessary CSS has been removed</p>
-				<p data-height="178" data-theme-id="0" data-slug-hash="WQWWEP" data-default-tab="css" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/WQWWEP/'>Responsive Grid System</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-			</section>
-			<section>
 				<h3>Grid System HTML</h3>
+                <p><small>Our grid system was generated with a <a href="http://www.responsivegridsystem.com/calculator/" target="_blank">grid generator</a>, but the unneccessary CSS has been removed. Today we'll be focusing on using the grid system in the HTML.</small></p>
 				<p class="fragment">Use the <span class="blue">row</span> class on each row of content:</p>
 				<pre class="html fragment">
 <code>&lt;section class="row">
@@ -170,8 +170,12 @@
 			<!-- Let's Develop It! -->
 			<section>
 				<h2>Let's Develop It!</h2>
-				<p>Let's grab the grid CSS from <a href="http://tinyurl.com/gdibostongrid" target="_blank">tinyurl.com/gdibostongrid</a>! Then let's start to set up <span class="green">About</span> and <span class="green">Mission</span>.</p>
-				<p><img src="workshop-files/designs/home-grid-measurements.png" alt="Our design on a grid" style="max-height:50vh"/></p>
+                <p>Let's put our grid system to use in the HTML!</p>
+				<ol style="margin-top:1em">
+                    <li><img src="workshop-files/designs/home-grid-measurements.png" alt="Our design on a grid" style="max-width:20vw;float:right"/>Copy the grid CSS from <a href="http://tinyurl.com/gdibostongrid" target="_blank">tinyurl.com/gdibostongrid</a> into your CSS file. Now it's ready to use in the HTML!</li>
+                    <li>Add grid HTML to <span class="orange">index.html</span>, then style the <span class="green">About</span> and <span class="green">Mission</span> sections</li>
+                    <li>Add grid HTML to <span class="orange">africa.html</span>, <span class="orange">diet.html</span>, and <span class="orange">stripes.html</span>. We'll style these pages next week!</li>
+                </ol>
 			</section>
 
 			<!-- Responsive Images -->
@@ -193,8 +197,10 @@
 			<!-- Let's Develop It!-->
 			<section>
 				<h2>Let's Develop It!</h2>
-				<p>Let's make our images <em>truly</em> responsive!</p>
-				<p>Let's also make our <span class="blue">About</span> images circular with a border.</p>
+                <ol>
+				    <li>Let's make our images <em>truly</em> responsive!</li>
+				    <li>Let's also make our <span class="blue">About</span> images circular with a border.</li>
+                </ol>
 			</section>
 
 			<!-- Gradients -->
@@ -214,6 +220,7 @@
 			</section>
 			<section>
 				<h3>Gradients</h3>
+                <p class="blue">Bonus Functionality</p>
 				<p class="fragment">You can use as many values as you want, and specify where the gradient should begin:</p>
 				<div class="fragment">
 					<p data-height="150" data-theme-id="0" data-slug-hash="xweNbX" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/xweNbX/'>Linear Gradients</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
@@ -235,6 +242,7 @@
 				<h3>Media Queries</h3>
 				<p class="fragment">Visit your page and narrow the browser window</p>
 				<p class="fragment">The columns you set up are <span class="green">fluid</span> and <span class="green">responsive</span>, since they respond to the viewport width, but don't collapse into a single column</p>
+                <p class="fragment"><img src="img/responsive-single-column.gif" alt="Animation of columns collapsing into single column" style="box-shadow:none;padding:0;" /></p>
 				<p class="fragment">How do we make that happen? With <span class="blue">media queries</span></p>
 			</section>
 			<section>
@@ -247,15 +255,19 @@
         margin: 1% 0;
         width: 100%;
     }
+    .some-other-class {
+        background-color: yellow;
+    }
 }
 </code>
 				</pre>
-				<p class="fragment">Always <span class="blue">use media queries at the end of your CSS file</span></p>
+				<p class="fragment">Always use media queries <span class="blue">at the end of your CSS file</span></p>
+                <p class="fragment green"><small><strong>Tip:</strong> Remember to watch your closing brackets!</small></p>
 			</section>
 			<section>
 				<h3>Common Media Query Uses</h3>
 				<ol>
-					<li class="fragment">To force columns to take up the viewport width (<span class="green">what we'll be doing</span>):
+					<li class="fragment">To force columns to stack and fill up the whole screen width (<span class="green">what we'll be doing</span>):
 						<div class="fragment">
 							<p data-height="138" data-theme-id="0" data-slug-hash="WQBGOY" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/WQBGOY/'>Media Queries - Columns</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 						</div>
