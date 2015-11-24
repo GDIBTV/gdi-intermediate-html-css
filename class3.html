@@ -106,8 +106,8 @@
 				<ul>
 					<li class="fragment"><span class="blue">Easier to Maintain</span>: It's easier to design and code new layouts when the structural guidelines have already been decided</li>
 					<li class="fragment"><span class="blue">Usability</span>: Uniformity and consistency are key to creating a website that your users will find easy to navigate, read and understand</li>
+                    <li class="fragment"><span class="blue">Abides by the <a href="http://tympanus.net/codrops/2012/05/23/understanding-the-rule-of-thirds-in-web-design" target="_blank">'Rule of Thirds'</a></span>: Helps avoid arbitary design decisions. For developers, this means there are less layout exceptions to account for.</li>
 					<li class="fragment"><span class="blue">Faster to Code</span>: At different breakpoints, we can easily collapse everything into a single column</li>
-					<li class="fragment"><span class="blue">Less 'what if's</span>: Aligning content with a grid means there are less layout exceptions</li>
 					<li class="fragment"><span class="blue">Fluid</span>: Fluid layouts are the way of the future <span class="green">&#9786;</span></li>
 				</ul>
 			</section>
@@ -129,10 +129,10 @@
             </section>
 			<section>
 				<h3>Coding Your Own Grid System</h3>
-				<ol>
-					<li class="fragment"><img src="workshop-files/designs/home-grid-measurements.png" alt="Our design on a grid" style="max-height:45vh;" class="right" />Determine the maximum width from the design. In our case, that's <span class="blue">1170px</span>. This will be used as a <code>max-width</code> on each row.</li>
+				<ol style="font-size:85%;line-height:1.3">
+					<li class="fragment"><img src="workshop-files/designs/home-grid-measurements.png" alt="Our design on a grid" style="max-height:38vh;" class="right" />Determine the maximum width from the design. In our case, that's <span class="blue">1170px</span>. This will be used as a <code>max-width</code> on each row.</li>
 					<li class="fragment">Calculate the <span class="green">gutter</span> (the margin between columns) width as a percentage of the maximum width. In our case, that's <span class="blue">2.56%</span> (or 30px/1170px).</li>
-					<li class="fragment">Use a <a href="http://www.responsivegridsystem.com/calculator/" target="_blank">grid generator</a> to generate the CSS. (<span class="green">But don't worry &mdash; we've done this for you!</span>)<!--</li>
+					<li class="fragment">Use a <a href="http://www.responsivegridsystem.com/calculator/" target="_blank">grid generator</a> to generate the CSS. (<span class="green">But don't worry &mdash; we've done this for you!</span>) Then reference these classes in your HTML.<!--</li>
 						<ul style="font-size:.7em;line-height:1.2" class="fragment">
 							<li>Calculate the width of a single column as a percentage. In our case, that's <span class="blue">5.986%</span>.</li>
 							<li>Reference the design to see how many columns and gutters should be used in your CSS calculations</li>
@@ -143,7 +143,7 @@
 			</section>
 			<section>
 				<h3>Grid System HTML</h3>
-                <p><small>Our grid system CSS was generated with a <a href="http://www.responsivegridsystem.com/calculator/" target="_blank">grid generator</a>, but the unneccessary CSS has been removed. Today we'll be focusing on using the grid system in the HTML.</small></p>
+                <p><small>Our grid CSS was generated with a <a href="http://www.responsivegridsystem.com/calculator/" target="_blank">grid generator</a>, but the unneccessary CSS has been removed. Today we'll be focusing on using the grid system in the HTML.</small></p>
 				<p class="fragment">Use the <span class="blue">row</span> class on each row of content:</p>
 				<pre class="html fragment">
 <code>&lt;section class="row">
@@ -170,10 +170,10 @@
 			<!-- Let's Develop It! -->
 			<section>
 				<h2>Let's Develop It!</h2>
-                <p>Let's put our grid system to use in the HTML!</p>
-				<ol style="margin-top:1em">
-                    <li><img src="workshop-files/designs/home-grid-measurements.png" alt="Our design on a grid" style="max-width:20vw;float:right"/>Copy the grid CSS from <a href="http://tinyurl.com/gdibostongrid" target="_blank">tinyurl.com/gdibostongrid</a> into your CSS file. Now it's ready to use in the HTML!</li>
-                    <li>Add grid HTML to <span class="orange">index.html</span>, then style the <span class="green">About</span> and <span class="green">Mission</span> sections</li>
+                <p><small>Let's put our grid system to use in the HTML!</small></p>
+				<ol>
+                    <li>Copy the grid CSS from <a href="http://tinyurl.com/gdibostongrid" target="_blank">tinyurl.com/gdibostongrid</a> into your CSS file. Now it's ready to use in the HTML!</li>
+                    <li><img src="workshop-files/designs/home-grid-measurements.png" alt="Our design on a grid" style="max-width:30vw;float:right;" />Add grid HTML to <span class="orange">index.html</span>, then style the <span class="green">About</span> and <span class="green">Mission</span> sections</li>
                     <li>Add grid HTML to <span class="orange">africa.html</span>, <span class="orange">diet.html</span>, and <span class="orange">stripes.html</span>. We'll style these pages next week!</li>
                 </ol>
 			</section>
