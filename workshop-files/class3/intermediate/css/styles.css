@@ -1,0 +1,194 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Custom CSS */
+body {
+    font-family: 'Lato', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', serif;
+}
+h1 {
+    background-image: url('../images/z.png');
+    background-size: contain;
+    width: 44px;
+    height: 44px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+h3 {
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+img {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Grid System */
+.row {
+	clear: both;
+	padding: 0;
+	margin: 0 auto;
+	max-width: 1170px;
+}
+.row:after {
+	content: "";
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	display: block;
+}
+.column {
+	float: left;
+	margin: 0 0 0 2.56%;
+	min-height: 1px;
+}
+.column:first-of-type {
+	margin-left: 0;
+}
+.span_12_of_12 {
+	width: 100%;
+}
+.span_11_of_12 {
+  	width: 91.45%;
+}
+.span_10_of_12 {
+  	width: 82.90%;
+}
+.span_9_of_12 {
+  	width: 74.36%;
+}
+.span_8_of_12 {
+  	width: 65.81%;
+}
+.span_7_of_12 {
+  	width: 57.26%;
+}
+.span_6_of_12 {
+  	width: 48.72%;
+}
+.span_5_of_12 {
+  	width: 40.17%;
+}
+.span_4_of_12 {
+  	width: 31.62%;
+}
+.span_3_of_12 {
+  	width: 23.08%;
+}
+.span_2_of_12 {
+  	width: 14.53%;
+}
+.span_1_of_12 {
+  	width: 5.986%;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.54);
+    height: 68px;
+    border-bottom: 1px solid #878d8f;
+}
+nav {
+    float: right;
+}
+nav li {
+    display: inline;
+}
+nav li a {
+    padding: 26px 10px;
+    display: inline-block;
+    transition: background 2s;
+}
+nav li a:hover {
+    background: fuchsia;
+}
+
+/* Button Styles */
+.fancy-button {
+    background-image: linear-gradient(rebeccapurple, violet);
+    display: inline-block;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Banner */
+#banner {
+    background-image: url('../images/zebra-hero.jpg');
+    height: 483px;
+    background-size: cover;
+    padding-top: 91px;
+    text-align: center;
+    color: white;
+}
+#banner img {
+    width:100px;
+    border-radius: 50%;
+}
+#banner h2 {
+    font-size: 3em;
+    margin: 20px;
+}
+#banner span {
+    border: 3px solid white;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Footer */
+footer {
+    background: #8a80c3;
+    padding: 33px;
+    text-align: center;
+    color: white;
+}
+footer li {
+    display: inline-block;
+    padding: 10px;
+}
+
+/* About */
+#about {
+    text-align: center;
+    margin: 2em auto;
+}
+#about img {
+    border: 4px solid rebeccapurple;
+    border-radius: 50%;
+}
+
+/* Mission */
+#mission {
+    text-align: center;
+    background-color: #d2ccfc;
+    padding: 2em 0;
+    margin: 2em auto;
+}
+#mission .column {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+
+/* Mobile Breakpoint */
+@media screen and (max-width: 600px){
+    .column, .column:first-of-type {
+        width: 90%;
+        margin: 1em 5%;
+    }
+}
