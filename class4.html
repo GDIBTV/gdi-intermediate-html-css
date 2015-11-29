@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Girl Develop It - Intermediate HTML + CSS, Class 4</title>
+
+    <meta name="description" content="Girl Develop It's Intermediate HTML and CSS course, customized by Liz Shaw">
+    <meta name="author" content="Liz Shaw">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+    <!-- dark editor-->
+    <link rel="stylesheet" href="lib/css/dark.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!-- If use the PDF print sheet so students can print slides-->
+
+    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Code Your Own Website -->
+            <section>
+                <h2>Code Your Own Website</h2>
+                <img src="img/circle-gdi-logo.png" alt="GDI Logo" style="box-shadow:none" />
+                <h3>Intermediate HTML + CSS</h3>
+                <p>
+                    <small>Class 4</small>
+                </p>
+            </section>
+						
+			<!-- Pizza!-->
+			<section>
+			  <h3>Pizza!</h3>
+				<p>
+				  <img src="img/pizza.gif" alt="Vader and Solo with pizza" />
+				</p>
+			  <p>Help yourself to some pizza in the kitchen!</p>
+			</section>
+			
+			<!-- Housekeeping -->
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">First, some housekeeping</h1>
+            </section>
+			
+			<section>
+				<h2>Let's Develop It!</h2>
+				<ol>
+					<li>Open <span class="orange">styles.css</span> in your text editor and change <code>:first-of-type</code> to <code>:first-child</code></li>
+					<li>Open <span class="orange">index.html</span> in your text editor and change <code>:first-of-type</code> to <code>:first-child</code></li>
+				</ol>
+				<p><br />Now if you view <span class="orange">index.html</span> in your browser, it should look jacked up <span class="blue">&#9786;</span> &mdash; let's fix that!</p> 				
+				<table class="data" style="font-size:70%;line-height:1.2;margin-top:1em">
+					<tr>
+						<th>Selector</th>
+						<th>Definition</th>
+						<th>Example</th>						
+					</tr>
+					<tr>
+						<td style="padding:0;white-space:nowrap"><code>:first-of-type</code></td>
+						<td style="padding:.2em">The <code>:first-of-type</code> selector styles the first sibling of its type (e.g. specific tag and class) that is a child of its parent element</td>
+						<td style="padding:0"><a href="http://codepen.io/anythingcodes/pen/BoXQjP?editors=110" target="_blank">Example &raquo;</a></td>
+					</tr>
+					<tr>
+						<td style="padding:0"><code>:first-child</code></td>						
+						<td style="padding:.2em">The <code>:first-child</code> selector styles the first child of its parent element, regardless of type</td>
+						<td style="padding:0"><a href="http://codepen.io/anythingcodes/pen/KdONML?editors=110" target="_blank">Example &raquo;</a></td>
+					</tr>
+				</table>
+				
+			</section>
+			
+			<section>
+				<h3>Recap: Grid System</h3>
+				<p class="fragment">Use the <span class="blue">row</span> class on each row of content:</p>
+				<pre class="html fragment">
+<code>&lt;section class="row">
+
+&lt;/section></code>
+				</pre>
+				<p class="fragment">Within the row, use the <span class="blue">column</span> class and the width class (e.g. <span class="blue">span_4_of_12</span>) on each column of content:</p>
+				<pre class="xml fragment">
+<code>&lt;section class="row">
+    &lt;div class="column span_4_of_12">
+        I'm the first of three columns!
+    &lt;/div>
+    &lt;div class="column span_4_of_12">
+        I'm the second of three columns!
+    &lt;/div>
+    &lt;div class="column span_4_of_12">
+        I'm the third of three columns!
+    &lt;/div>
+&lt;/section></code>
+				</pre>
+			</section>			
+			
+			<!-- Let's Develop It! -->
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Let's get semantic! Use the grid system with HTML5 elements to make our <span class="blue">Africa</span> page.</p>
+				<ol style="font-size:90%;line-height:1.2;">
+                    <li><img src="img/africa-grid.png" alt="Africa design" class="right" style="max-width:50%;box-shadow:none;" />Open <span class="orange">africa.html</span> and structure the <span class="green">sidebar</span> and the <span class="green">article area</span> using HTML5 elements:
+					<pre class="html" style="margin-top:1em">
+<code>&lt;main>
+
+    &lt;aside>	
+        &lt;nav>
+        &lt;/nav>
+    &lt;/aside>
+	
+    &lt;article>
+    &lt;/article>
+	
+&lt;/main></code>
+					</pre>
+					</li>
+					<li>Add grid classes to the HTML</li>
+					<li>Let's also add a <span class="orange">sidebar</span> class to the sidebar HTML so we can style that later!</li>
+				</ol>					
+			</section>
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Use the grid system with HTML5 elements to make our <span class="blue">Diet</span> page</p>
+				<ol style="font-size:90%;line-height:1.2;">
+                    <li><img src="img/diet-grid.png" alt="Diet design" class="right" style="max-width:50%;box-shadow:none;" />Open <span class="orange">diet.html</span> and structure the <span class="green">sidebar</span> and the <span class="green">article area</span> using HTML5 elements:
+					<pre class="html" style="margin-top:1em">
+<code>&lt;main>
+
+    &lt;article>
+    &lt;/article>
+	
+    &lt;aside>	
+        &lt;nav>
+        &lt;/nav>
+    &lt;/aside>
+	
+&lt;/main></code>
+					</pre>
+					</li>
+					<li>Add grid classes to the HTML</li>
+					<li>Let's add a <span class="orange">sidebar</span> class to the sidebar HTML, then style it with <code>background-color</code> (e.g. <span class="green">#D2CCFC</span> from the design)</li>
+				</ol>					
+			</section>
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Use the grid system with HTML5 elements to make our <span class="blue">Stripes</span> page</p>
+				<ol>
+                    <li><img src="img/stripes-grid.png" alt="Stripes design" class="right" style="max-width:50%;box-shadow:none;" />Open <span class="orange">stripes.html</span> and structure the <span class="green">article area</span> using HTML5 elements:
+					<pre class="html" style="margin-top:1em">
+<code>&lt;main>
+
+    &lt;article>
+    &lt;/article>
+	
+&lt;/main></code>
+					</pre>
+					</li>
+					<li>Add grid classes to the HTML</li>
+				</ol>					
+			</section>			
+			
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">So how does a grid system work?</h1>
+            </section>
+			
+			<!-- Floating -->
+			<section>
+				<h3>Recap: Floating</h3>
+				<p class="fragment">The <span class="blue">float</span> property shifts an element to the <span class="green">left</span> or <span class="green">right</span> on the current line, taking it out of normal flow</p>
+				<p class="fragment">When an element is floated, <span class="orange">subsequent elements wrap around it</span></p>
+				<p class="fragment"><img src="img/floating.png" alt="A floating example" style="max-width:40vw;" /></p>
+				<div class="fragment">
+					<p data-height="100" data-theme-id="0" data-slug-hash="vNROXq" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/vNROXq/'>Float - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+			<section>
+				<h3>Recap: Clearing</h3>
+				<p class="fragment">The <code>clear</code> property tells the element on which side (<span class="orange">left</span>, <span class="orange">right</span>, or <span class="orange">both</span>) floated elements <strong>cannot</strong> appear</p>
+				<div class="fragment"><p data-height="205" data-theme-id="0" data-slug-hash="jbzbbx" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/jbzbbx/'>Float with Text - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p></div>
+			</section>
+			
+			<section>
+				<h3>Grids Under The Hood</h3>
+				<div style="position:relative;">
+					<div style="width:40%;float:left;font-size:75%;line-height:1.15">
+						<p class="fragment"><strong>Each <span class="blue">row</span>:</strong></p>
+						<ul style="display:block;">					
+							<li class="fragment">Contains columns</li>
+						</ul>
+						<p class="fragment"><br /><strong>Each <span class="blue">column</span>:</strong></p>
+						<ul style="display:block;">
+							<li class="fragment">Has a width, which is set by the <span class="green">span_X_of_12</span> class</li>
+							<li class="fragment">Has a left margin (except for the 1st column in the row)</li>
+							<li class="fragment">Is floated left so columns stack side-by-side</li>
+						</ul>
+						<p class="fragment"><br /><span style="color:red"><strong>&#x2717; The Problem?</strong></span><span class="fragment"><br />Floating takes columns out of normal flow, preventing columns from contributing to the height of their container!</span></p>
+					</div>
+					<div style="position:absolute;width:60%;right:0;top:0;height:100%;">
+						<img src="img/rows-columns-1.png" alt="Row" style="box-shadow:none;position:absolute;top:0;left:0;width:100%;z-index:1;max-width:100%;max-height:none;" class="fragment" />
+						<img src="img/rows-columns-2.png" alt="Columns with Set Widths" style="box-shadow:none;position:absolute;top:0;left:0;width:100%;z-index:2;max-width:100%;max-height:none;" class="fragment" />
+						<img src="img/rows-columns-3.png" alt="Columns with Gutters/Margins" style="box-shadow:none;position:absolute;top:0;left:0;width:100%;z-index:3;max-width:100%;max-height:none;" class="fragment" />
+						<img src="img/rows-columns-4.png" alt="Floated Columns" style="box-shadow:none;position:absolute;top:0;left:0;width:100%;z-index:4;max-width:100%;max-height:none;" class="fragment" />
+					</div>
+				</div>
+			</section>
+			<section>
+				<h3>Clearing Floats</h3>
+				<div style="position:relative;">
+					<div style="width:40%;float:left;font-size:90%;line-height:1.15">
+						<p class="fragment"><strong class="green">&#10004; The Solution</strong><br />The row clears floats, which properly:
+						<ol>
+							<li class="fragment">adjusts the <span class="orange">height</span> of the row</li>
+							<li class="fragment"><span class="orange">prevents subsequent elements from wrapping</span> around the columns</li>
+						</ol>
+						<p class="fragment"><br /><strong>How?</strong> With an <code>:after</code> pseudoelement, which injects content at the end of an element</p>
+					</div>
+					<div style="position:absolute;width:60%;right:0;top:0;height:100%;">
+						<img class="fragment" src="img/rows-columns-4.png" alt="Floated Columns" style="box-shadow:none;position:absolute;top:0;left:0;width:100%;z-index:2;max-width:100%;max-height:none;"/>
+						<img class="fragment" src="img/rows-columns-5.png" alt="Floated Columns" style="box-shadow:none;position:absolute;top:0;left:0;width:100%;z-index:3;max-width:100%;max-height:none;"/>
+						<img src="img/rows-columns-6.png" alt="Floated Columns with Clearfix" style="box-shadow:none;position:absolute;top:0;left:0;width:100%;z-index:4;max-width:100%;max-height:none;" class="fragment" />
+					</div>
+				</div>
+			</section>
+			<section>
+				<h3>The Clearfix Method</h3>
+				<div class="fragment">
+					<p>We use <code>:after</code> to inject an empty <span class="green">clear</span>ed, <span class="green">block</span>-level pseudoelement at the end of each row</p>
+					<pre class="css">
+<code>.row:after {
+    content: '';
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+}</code>
+					</pre>
+				</div>
+				<p class="fragment green"><small><strong>Tip:</strong> If you don't have the <code>content</code> property, <code>:after</code> won't work. <code>visibility</code> and <code>height</code> are optional, but address problems in older browsers.</small></p>
+				<p class="fragment">Since <code>:after</code> acts as the last item in our row (after the columns), it clears the float at that point and sets the row height properly</p>
+				<p class="fragment"><span class="blue">Memorize this &#9786;</span> &mdash; it comes up all the time!</p>				
+			</section>
+			<section>
+				<h3>Examples</h3>
+				<p data-height="100" data-theme-id="0" data-slug-hash="vNROXq" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/vNROXq/'>Float - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				<p data-height="100" data-theme-id="0" data-slug-hash="JYQQbB" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/JYQQbB/'>Responsive Grid System</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+			</section>					
+			
+			<!-- Let's Develop It! -->
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p><small>Let's add some space between our <span class="green">About</span> section's images and the &lt;p>!</small></p>
+				<ol style="font-size:90%">
+					<li>Make a CSS rule for your <span class="green">About</span>'s &lt;p> tag</li>
+					<li>Add a top margin</li>
+					<li class="fragment" style="font-size:80%;line-height:1.2"><strong>Not working?</strong> That's because you need to clear the float, either by:
+						<ol>
+							<li>making another clearfix <code>:after</code> rule for the &lt;p></li>
+							<li>Adding the <span class="orange">row</span> class to the &lt;p></li>
+							<li>Wrapping the &lt;p> in an element with a class of <span class="orange">row</span></li>
+						</ol>
+					</li>
+				</ol>
+				<p><img src="img/about-paragraph.png" alt="About margin/padding" style="max-height:50vh;" /></p>
+			</section>
+						
+			<section>
+				<h3>Selector: <em>:nth-child(n)</em></h3>
+				<pre class="css">
+<code>selector:nth-child(n) {
+    background: red;
+}</code>
+				</pre>
+				<p class="fragment">The <span class="blue">:nth-child(<em>n</em>)</span> selector matches every element that is the <em>n</em>th child of its parent.</p>
+				<p class="fragment"><em>n</em> can be a number (e.g. <span class="orange">2</span>), keyword (e.g. <span class="orange">even</span> or <span class="orange">odd</span>), or formula (e.g. <span class="orange">3n + 3</span>)</p>
+				<div class="fragment">
+					<p data-height="100" data-theme-id="0" data-slug-hash="vNoLZK" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/vNoLZK/'>The nth-child Selector</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>				
+				</div>
+			</section>
+			<section>
+				<h2>Let's Develop It!</h2>				
+				<ol>
+					<li><img src="img/stripes-grid.png" alt="Stripes design" style="float:right;max-width:25vw;" />Open <span class="orange">stripes.html</span> and add a &lt;div> for each blog post</li>
+					<li>Add an image to each &lt;div> (use <span class="green">http://placehold.it/455x186</span>), then add a headline, date, and descriptive paragraph</li>
+					<li>Use the <code>:nth-child(even)</code> and <code>:nth-child(odd)</code> selectors to alternate each blog post's background color</li>
+				</ol>
+			</section>
+			
+			<section data-background="#d2ccfc" style="color:#5C4884;">
+				<h1 style="color:#5C4884;">Homework 1:</h1>
+				<ol>
+					<li>Make each blog container resize to fit its content:<br /><img src="img/hw-1.png" alt="HW1" /></li>
+					<li>Use the <code>:nth-child(even)</code> and <code>:nth-child(odd)</code> selectors to alternate the <code>float</code> value for each image (<span class="blue">left</span> or <span class="blue">right</span>)</li>
+					<li>Style the text to your liking</li>
+				</ol>
+				<p><small><br />Homework solutions will be emailed on Sunday</small></p>
+			</section>
+			
+			<section>
+				<h3>Sidebar Heights</h3>
+				<p>We commonly see sidebars that take up the entire height of the main content area:</p>
+				<p><img src="workshop-files/designs/africa.png" style="max-height:40vh" alt="Africa design" /></p>
+				<p>This is possible with <code>float</code>s, but hardly fun!</p>
+			</section>
+			
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">Why Floats?</h1>
+            </section>
+			
+			<section>
+				<h3>Why Floats?</h3>
+				<p class="fragment"><span class="green">Browser support</span> &mdash; effectively all browsers support the float property (IE6+, Firefox 2+, Chrome 1+, etc.)</p>
+				<div class="fragment">
+					<p class="blue"><br />But there are new CSS3 alternatives<br />to make our lives easier!</p>
+					<p><img src="http://reactiongif.org/wp-content/uploads/GIF/2014/08/GIF-excited-Fangirl-Fangirling-yay-GIF.gif" alt="Lucille Bluth" /></p>
+					<p><small>Hurray!</small></p>
+				</div>
+			</section>
+			
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">Introducing Flexbox</h1>
+            </section>
+			
+			<section>
+				<h3>Flexbox</h3>
+				<p class="fragment"><span class="blue">Flexbox</span>: <span class="orange">Flex</span>ible <span class="orange">Box</span> Model, the latest and greatest CSS3 offering</p>
+				<p class="fragment">It was created largely because of common responsive development problems &mdash; <code>float</code> is great, but it requires too much extra attention!</p>
+				<p class="fragment">The central idea is that flexbox keeps your layout <span class="green">fluid</span> by doing a lot of the <span class="green">math</span> for you!</p>
+				<p class="fragment"><strong>Example:</strong> Use flexbox on a parent container. Its children will <span class="green">automatically have the same height</span> &mdash; set child dimensions only if you need to!</p>
+			</section>
+			
+			<section>
+				<h3>Using Flexbox</h3>
+				<p class="fragment">Set <code>display:flex;</code> on a parent container.</p>
+				<pre class="css fragment">
+<code>selector {
+    display: flex;
+}</code>
+				</pre>
+				<p class="fragment">Now all children will have the same height, unless that height was set elsewhere</p>
+				<div class="fragment">
+					<p data-height="200" data-theme-id="0" data-slug-hash="epqgvE" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/epqgvE/'>Using Flexbox</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+			
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Let's solve our sidebar height problem using flexbox!</p>
+				<p><img src="workshop-files/designs/africa.png" style="max-height:40vh" alt="Africa design" /></p>
+			</section>
+			
+			<section>
+				<h3>Flexbox is magical</h3>
+				<p class="fragment">You can do <strong>a lot more</strong> with flexbox, including:</p>
+				<ul>
+					<li class="fragment">Reordering elements at different breakpoints</li>
+					<li class="fragment">Calculating widths dynamically (awesome for Content Management System, or CMS, work <span style="color:red;">&#10084;</span>)</li>
+					<li class="fragment">Easier vertical alignment</li>
+				</ul>				
+				<p class="fragment blue"><br />Articles &amp; Examples:<br /><a href="http://chriswrightdesign.com/experiments/using-flexbox-today/" target="_blank">'Using Flexbox Today' by Chris Wright &raquo;</a><br /><a href="https://philipwalton.github.io/solved-by-flexbox/" target="_blank">'Solved by Flexbox' by Philip Walton &raquo;</a></small></p>
+			</section>
+			
+			<section>
+				<h3>What are the drawbacks?</h3>
+				<p class="fragment">Flexbox is so new that you will need to use <span class="blue">vendor prefixes</span> until the simple non-prefixed <code>display:flex;</code> is supported in a browser:</p>
+				<div class="fragment">
+					<pre class="css">
+<code>selector {
+    display: -webkit-box;  /* iOS 6-, Safari 3.1-6 */
+    display: -ms-flexbox;  /* IE 10 */
+    display: -webkit-flex; /* Safari 6.1+. iOS 7.1+ */
+    display: flex;         /* MODERN VERSIONS: Firefox, Chrome, Opera */
+}</code>
+					</pre>
+					<p><small>Order matters! The non-prefixed version should always go last.</small></p>
+				</div>
+				<p class="fragment">Don't memorize this! Use <a href="http://shouldiprefix.com/#flexbox" target="_blank">shouldiprefix.com</a></p>
+			</section>
+			<section>
+				<h3>Common Vendor Prefixes</h3>
+				<ul class="fragment">
+                    <li><span class="green">Firefox:</span> -moz-</li>
+                    <li><span class="green">Safari:</span> -webkit-</li>
+                    <li><span class="green">Internet Explorer:</span> -ms-</li>
+                    <li><span class="green">Opera:</span> -o-</li>
+                </ul>
+				<p class="fragment"><br />... but really, don't memorize this.<br />Use <a href="http://shouldiprefix.com/#flexbox" target="_blank">shouldiprefix.com</a>.</p>
+			</section>
+			<section>
+				<h3>Polyfills</h3>
+				<p class="fragment">Old browsers (for example, IE 9 &amp; below) were made before flexbox existed; these browsers don't know what flexbox is</p>
+				<p class="fragment">You can use a <span class="blue">polyfill</span>, which is code that replicates the functions of a modern HTML5 or CSS3 feature for browsers that don't support that feature natively</p>
+				<p class="fragment"><a href="http://flexiejs.com/" target="_blank">Flexie</a> is a flexbox polyfill</p>
+				<p class="fragment">A variety of polyfills exist for other modern CSS3 properties and HTML5 elements</p>
+				<p class="fragment">Use <a href="http://caniuse.com/" target="_blank">caniuse.com</a> to check if a certain HTML5 or CSS3 feature is supported. If not, google for a polyfill!</p>
+			</section>
+			
+			<section>
+				<h3>Book Giveaway and<br />Workshops Survey</h3>
+				<p><img src="img/book.jpg" alt="Responsive Design Cover" class="right" style="max-width:20vw" /><br /><a href="http://tinyurl.com/gdispecialtopics" target="_blank">http://tinyurl.com/gdispecialtopics</a></p>
+				<p>Optionally, let us know what special topics workshops might interest you!</p>
+			</section>
+			
+			<section>
+				<section data-background="#f05b62">
+					<h1 style="color: #fafafa;font-size:3.7em">Masonry Layouts</h1>
+					<p style="color:#fafafa;">Press the down arrow or spacebar to view</p>
+				</section>
+				
+				<section>
+					<h3>Properties:<br /><em>column-count</em> and <em>column-gap</em></h3>
+					<p class="fragment"><img src="img/masonry.jpg" class="right" alt="A masonry layout" /><span class="blue">Masonry</span> layouts have become popular lately, largely thanks to sites with <span class="blue">infinite scrolling</span> such as Pinterest</p>
+					<p class="fragment">Now we can make them much more easily with CSS3!</p>
+					<pre class="css fragment">
+<code>.masonry {
+    column-count: 3;
+    column-gap: 3;
+}</code>
+					</pre>
+					<p class="fragment green"><small><code>column-count</code> and <code>column-gap</code> also need vendor prefixes &mdash; check <a href="http://shouldiprefix.com/#multicolumn" target="_blank">shouldiprefix.com</a>!</small></p>
+				</section>
+				<section>
+					<h3>Bricks</h3>
+					<p class="fragment" style="clear:right;">Each item in a masonry layout is usually called a <span class="blue">brick</span> and has some additional styling:</p>
+					<pre class="css fragment">
+<code>.brick {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 1em 0;
+}
+.brick img {
+    width: 100%;
+}</code>
+					</pre>
+				</section>
+				<section>
+					<h3>Masonry Layout Demo</h3>
+					<p data-height="368" data-theme-id="0" data-slug-hash="bVXEvL" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/bVXEvL/'>CSS Masonry Layout</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					<p>Feel free to copy this to your <span class="orange">diet.html</span> page!</p>
+				</section>		
+			</section>
+			
+			<section>
+				<section data-background="#f05b62">
+					<h1 style="color: #fafafa;font-size:3.7em">Mobile Menus</h1>
+					<p style="color:#fafafa;">Press the down arrow or spacebar to view</p>
+				</section>
+				
+				<section>
+					<h3>Mobile Menus</h3>
+					<p>We can use CSS3 to make a nifty mobile menu!</p>
+					<img src="img/mobile-menu.gif" alt="Mobile menu animation" class="right" style="box-shadow:none;max-height:60vh;margin-top:0" />
+					<p class="fragment blue"><br />We know:</p>
+					<ol style="display:inline;margin:0;font-size:90%;line-height:1.2;">
+						<li class="fragment">About absolute positioning</li>
+						<li class="fragment">About animations using <code>transition</code></li>
+						<li class="fragment">About the viewport width (<code>vw</code>) unit</li>
+						<li class="fragment">About <code>max-width</code> and <code>max-height</code></li>
+						<li class="fragment">About hiding elements at different breakpoints</li>
+						<li class="fragment"><span class="green">A <strong>lot!</strong> (good job! &#128077; )</span></li>
+					</ol>
+					<p class="fragment blue"><br />We need to know:</p>	
+					<ol style="display:inline;margin:0;font-size:90%;line-height:1.2;">
+						<li class="fragment">About the checkbox <code>&lt;input></code>s, <code>&lt;label></code>s, and the <code>:checked</code> selector</li>
+						<li class="fragment">About sibling selectors</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h3>The checkbox <code>&lt;input></code></h3>
+					<p class="fragment"><img src="img/inputs.png" class="right" alt="form inputs" />The <code>&lt;input></code> element specifies an input field, usually in a form</p>
+					<p class="fragment">Use the <span class="green">type="checkbox"</span> attribute to make a checkbox:</p>
+					<pre class="html fragment">
+	<code>&lt;input type="checkbox" /></code>
+					</pre>
+					<p class="fragment blue">Why a checkbox?</p> 
+					<p class="fragment">Because we can use the <code>:checked</code> selector as an animation trigger state!</p>
+					<p class="fragment">If it's checked, we'll show the mobile menu</p>				
+				</section>
+				
+				<section>
+					<h3>The checkbox <code>&lt;input></code>'s <code>&lt;label></code></h3>
+					<pre class="fragment html">
+						<code>&lt;label>Toggle the checkbox!&lt;/label></code>
+					</pre>
+					<p class="fragment">The <code>&lt;label></code> element is used for labeling form elements, and is the <span class="blue">clickable text</span> for toggling a checkbox</p>
+					<p class="fragment">To link a label with a checkbox, use the <span class="green">for=""</span> attribute. The <span class="green">for</span> value should be the same as the checkbox's <span class="green">id</span> value, for example:</p>
+					<pre class="fragment html">
+<code>&lt;input type="checkbox" id="something" />
+&lt;label for="something">Toggle the checkbox!&lt;/label></code>
+					</pre>
+					<div class="fragment">
+						<p data-height="72" data-theme-id="0" data-slug-hash="ojKBKr" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/ojKBKr/'>Associating a label with a checkbox</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					</div>
+				</section>
+				
+				<section>
+					<h3>Sibling Selectors</h3>
+					<p class="fragment">In the <span class="green">HTML</span>, we'll place our checkbox before the menu's <code>&lt;ul></code></p>
+					<p class="fragment">Then, in the <span class="green">CSS</span>, we'll show the <code>&lt;ul></code> if the checkbox is checked &mdash; we can do this with a sibling selector!</p>
+					<pre class="css fragment">
+<code>.our-checkbox ~ .our-unordered-list {
+    max-height: 0;
+}</code>
+					</pre>
+					<p class="fragment"><small>The above targets an element with class <span class="green">our-unordered-list</span> if it is preceded by a sibling element with class <span class="green">our-checkbox</span></small></p>
+					<div class="fragment">
+						<p data-height="268" data-theme-id="0" data-slug-hash="PPMpwG" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/PPMpwG/'>:checked and the sibling selector</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					</div>
+				</section>
+				
+				<section>
+					<h3>Putting It All Together</h3>
+					<p class="fragment">Now that the label is clickable, we don't need to see that ugly checkbox &mdash; hide it with <code>display:none;</code></p>
+					<p class="fragment">We're going to use <code>max-height:0;</code> and <code>overflow:hidden;</code> on the <span class="orange">before state</span> of our navigation menu's <code>&lt;ul></code></p>
+					<p class="fragment">When the box is checked, we'll animate <code>max-height</code> to become <code>100vh</code>.</p>
+					<div class="fragment">
+						<p data-height="96" data-theme-id="0" data-slug-hash="xwvqbB" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/xwvqbB/'>:checked and the sibling selector</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					</div>
+				</section>
+				
+				<section>
+					<h2>Let's Develop It!</h2>
+					<p>Let's make a mobile menu!</p>
+					<p class="fragment"><small><br /><a href="http://codepen.io/anythingcodes/pen/Zbdajo?editors=110" target="_blank">CSS for reference &raquo;</a></small></p>
+				</section>
+			</section>
+			
+			<section>		
+				<section data-background="#f05b62">
+					<h1 style="color: #fafafa;font-size:3.7em">Opacity and Shadows</h1>
+					<p style="color:#fafafa;">Press the down arrow or spacebar to view</p>
+				</section>
+				<section>
+					<h3>Animation Recap</h3>
+					<ul>
+						<li class="fragment">Add <code>transition</code> to the <span class="blue">before state</span></li>
+						<li class="fragment"><span class="green">Remember:</span> <code>transition</code> accepts two values,<br /><u class="fragment"> the CSS property </u> and <u class="fragment"> the duration </u> of the animation</li>
+					</ul>
+					<table class="data fragment" style="margin:1em auto;width:100%;">
+						<tr>
+							<th style="padding:0;">Before Selector</th>
+							<th style="padding:0">After Selector</th>
+						</tr>
+						<tr style="padding:0;">
+							<td class="fragment" style="padding:0;">
+								<pre class="css">
+<code style="padding:5px">selector {
+    width: 100px;
+    transition: width 2s;
+}</code>
+								</pre>
+							</td>
+							<td class="fragment" style="padding:0;">
+								<pre class="css">
+	<code style="padding:5px">selector:hover {
+		width: 500px;
+	}</code>
+								</pre>
+							</td>
+						</tr>
+					</table>
+				</section>
+			
+				<section>
+					<h3>Animating Multiple Properties</h3>
+
+					<p class="fragment">To animate multiple properties, separate each effect with a comma</p>
+					<pre class="css fragment">
+<code>selector {
+    transition: width 2s, background 5s;
+}</code>
+					</pre>
+					<div class="fragment">
+						<p data-height="128" data-theme-id="0" data-slug-hash="GpLwGr" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/GpLwGr/'>Animating Multiple Properties - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					</div>
+				</section>
+				<section>
+					<h3>Animating Multiple Properties</h3>
+					<p class="blue">Method 2: All Properties</p>
+					<p class="fragment">Use <code>all</code> to seamlessly transition all properties from before to after states at the <span class="green">same duration</span></p>
+					<pre class="css fragment">
+<code>selector {
+    transition: all 3s;
+}</code>
+						</pre>
+					<div class="fragment">
+						<p data-height="131" data-theme-id="0" data-slug-hash="gayQdW" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/gayQdW/'>Transitions Using 'all' - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					</div>
+					<div class="fragment">
+						<p style="color:firebrick"><small><br />Sounds great, right? However, <code>all</code> has performance drawbacks, so use it sparingly! (<a href="http://codepen.io/anythingcodes/pen/NGmEoY/?editors=110" target="_blank">Example &raquo;</a>)</small></p>
+					</div>
+				</section>
+				<section>
+					<h3>Property: <em>box-shadow</em></h3>
+					<p>The <code>box-shadow</code> CSS3 property is often used to give a 3D effect when an element is hovered over</p>
+					<pre class="css fragment">
+<code>selector {
+    box-shadow: horizontalShadow verticalShadow blurDistance color;
+    box-shadow: 10px 10px 5px grey;
+}</code>
+					</pre>
+					<div class="fragment">
+						<p data-height="200" data-theme-id="0" data-slug-hash="zvQBKm" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/zvQBKm/'>CSS3 Generator: box-shadow </a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					</div>
+					<p class="fragment">Don't worry about memorizing this &mdash; use a <a href="http://css3gen.com/box-shadow/" target="_blank">generator</a> instead!</p>
+				</section>
+				<section>
+					<h3>Property: <em>opacity</em></h3>
+					<p><code>opacity</code> changes the opacity of the <span class="green">whole element</span></p>
+					<pre class="css">
+<code>selector {
+    opacity: 0.5;
+}</code>
+					</pre>
+					<p class="fragment">The value can be a number between <span class="blue">0 (translucent)</span> and <span class="blue">1.0 (opaque)</span></p>
+					<div class="fragment">
+						<p data-height="268" data-theme-id="0" data-slug-hash="WQBGBq" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/WQBGBq/'>Opacity vs. RBGA</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					</div>
+				</section>
+				<section>
+					<h3><em>opacity</em> in Hover States</h3>
+					<p class="fragment"><code>opacity</code> is commonly used in hover states to reveal transparent content</p>
+					<div class="fragment">
+						<p data-height="337" data-theme-id="0" data-slug-hash="XmwNdM" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/XmwNdM/'>Opacity and Hover - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					</div>
+				</section>
+			
+				<section>
+					<h2>Let's Develop It!</h2>
+					<p>You may have noticed that one of these things is not like the other. That's because one is a hover state!</p>
+					<p>Let's animate multiple properties (for example, <code>box-shadow</code> and <code>opacity</code>) for the hover states in the <span class="blue">About</span> section.</p>
+					<p><img src="img/home-hover.jpg" alt="Hover state for home image" /></p>
+					<div class="fragment">
+						<p><strong>Solution:</strong></p>
+						<p data-height="100" data-theme-id="0" data-slug-hash="wKVJYy" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/wKVJYy/'>Box-Shadow and Opacity for hover states</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					</div>
+				</section>
+			</section>
+					
+			<section>
+				<h3>Now what?</h3>
+				<p><img src="img/nowwhat.jpg" style="margin:0;" alt="Now what?" /></p>
+				<p class="fragment blue">Useful Frontend Skills:</p>
+				<ul>
+					<li class="fragment"><strong class="orange">Practice! &#9786;</strong>
+						<ul>
+							<li class="fragment">Try to recreate themes on <a href="http://365psd.com/free-psd/templates-themes" target="_blank">365PSD.com</a>, Pinterest, etc.</li>
+							<li class="fragment">You can also <a href="http://goo.gl/forms/3EddHtI95K" target="_blank">TA for Girl Develop It!</a></li>
+						</ul>
+					</li>
+					<li class="fragment">Photoshop</li>
+					<li class="fragment">Javascript</li>					
+					<li class="fragment">Version Control (e.g. Git)</li>
+				</ul>				
+			</section>
+			<section>
+				<h3>Now what?</h3>
+				<p class="fragment blue">Useful Sites to Join or Follow:</p>
+				<ul>
+					<li class="fragment"><a href="http://github.com/" target="_blank">GitHub</a> &mdash; see the next <em>Bonus Material</em> slide</li>
+					<li class="fragment"><a href="http://stackoverflow.com" target="_blank">StackOverflow</a> &mdash; try answering some questions!</li>
+					<li class="fragment"><a href="http://codepen.io" target="_blank">CodePen</a> &mdash; try joining a live coding session!</li>
+					<li class="fragment"><a href="https://www.codecademy.com/" target="_blank">CodeAcademy</a></li>
+					<li class="fragment">... and any of the inspirational sites listed on <a href="http://anything.codes" target="_blank">http://anything.codes</a></li>
+				</ul>
+				<p class="fragment green"><small><br />Also, GDI is a super nationwide network of ladies!</small></p>
+			</section>
+			
+			<!-- Getting Your Site Online -->
+			<section>
+				<section data-background="#00A9B4">
+					<h3 style="color: #fafafa;">Bonus Material:</h3>
+					<h1 style="color: #fafafa;"><br />Getting Your Site Online</h1>
+					<p style="color:#fafafa;">Press the down arrow or spacebar to view</p>
+				</section>
+				<section>
+					<h3>Method 1: GitHub</h3>
+					<p class="fragment"><a href="http://github.com" target="_blank">GitHub</a> is <span class="orange">free</span> and a great intro to <span class="orange">version control</span></p>
+					<p class="fragment">A <span class="orange">version control system</span> records changes to a file or set of files over time so that you can keep track of changes and roll back to previous revisions</p>
+					<p class="fragment blue">Almost every web agency uses a version control system</p>
+					<p class="fragment"><br /><a href="http://anything.codes">http://anything.codes</a> is hosted for free on GitHub! <a href="https://github.com/anythingcodes/anythingcodes.github.io" target="_blank">See?</a></p>
+				</section>
+				
+				<!-- GitHub -->
+				<section>
+					<h3>Method 1: GitHub</h3>
+					<ol style="font-size:85%;line-height:1.3;">					
+						<li class="fragment">Create an account on <a href="http://github.com" target="_blank">GitHub.com</a></li>
+						<li class="fragment"><a href="https://desktop.github.com/" target="_blank">Download GitHub Desktop</a>, then open it and login</li>
+						<li class="fragment"><img src="img/GitHub-add-repository.png" alt="Adding a repository" style="float:right;max-width:50%;"/>Click the plus sign and, under the <em>Add</em> tab, browse to the <span class="orange">project</span> folder you used for this class</li>
+						<li class="fragment">An error message will display; click <span class="blue">create a repository</span></li>
+						<li class="fragment"><img src="img/GitHub-create.png" alt="The create repo screen"  style="float:right;max-width:50%;" />Change the <em>Name</em> to <span class="orange"><em>yourusername</em>.github.io</span> (substitute <em>yourusername</em> with your GitHub username)</li>
+						<li class="fragment">Click <span class="blue">Create repository</span> (Don't worry about changing <em>Local path</em> or <em>Git ignore</em>)</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Method 1: GitHub</h3>
+					<ol style="font-size:80%;line-height:1.3;" start="7">
+						<li class="fragment">Click <em>Changes</em>, where you should see a list of project files.</li>
+						<li class="fragment">Enter a <em>Summary</em> and click <span class="blue">Commit to master</span><br /><img src="img/GitHub-commit.png" alt="Committing changes to GitHub"/></li>					
+					</ol>
+				</section>
+				<section>
+					<h3>Method 1: GitHub</h3>
+					<ol style="font-size:80%;line-height:1.3;" start="9">
+						<li class="fragment"><img src="img/GitHub-publish-screen.png" alt="The publish menu" style="float:right;max-width:50%;" />Click <em>Publish</em> at the top, making sure <em>Name</em> is in the correct format (<span class="orange"><em>yourusername</em>.github.io</span>, except with your username)</li>
+						<li class="fragment">Within a few minutes, your site will be live at <span class="blue">http://<em>yourusername</em>.github.io</span> (substituting your GitHub username for <em>yourusername</em>). Check it out!</li>
+						<li class="fragment">Any time you make changes to your project files, open GitHub Desktop, <em>Commit</em> (step 8) and then click the <img src="img/GitHub-sync.png" style="border:none;box-shadow:none;margin:0;" /> button to publish your changes.</li>
+					</ol>
+					<div class="fragment" style="font-size:75%;line-height:1.3;">
+						<p class="blue">More info:</p>
+						<p><a href="https://pages.github.com/" target="_blank">GitHub Documentation &raquo;</a></p>
+						<p><a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/" target="_blank">Setting up a domain (like http://anything.codes) with GitHub &raquo;</a></p>
+					</div>
+				</section>
+
+				<!-- Method 2: Hosting -->
+				<section>
+					<h3>Method 2: Hosting + Domain</h3>
+					<p class="fragment">There are two paid services involved:</p>
+					<ol style="font-size:80%;line-height:1.3;">
+						<li class="fragment"><span class="blue fragment">Web Hosting</span><span class="fragment">: A computer (a.k.a. server) where your site's files are located, which is visible to the outside world using a browser</span>
+							<ul>
+								<li class="fragment">To publish changes to your site, you upload individual files from your computer to the server using a <span class="green">File Transfer Protocol (FTP) program</span> such as <a href="https://filezilla-project.org/download.php?type=client" target="_blank">Filezilla</a></li>
+								<li class="fragment">The web hosting company will give you FTP info</li>
+							</ul>
+						</li>
+						<li class="fragment"><span class="blue fragment">Domain Name</span><span class="fragment">: The name you type in to the browser (e.g. anything.codes or girldevelopit.com)</span>
+							<ul>
+								<li class="fragment">Buying a domain is often called <span class="green">registering</span>, so companies that sell domain names are often called <span class="green">Domain Name Registrars</span></li>
+							</ul>
+						</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Method 2: Hosting + Domain</h3>
+					<p class="fragment">You can buy <span class="blue">hosting</span> from one company and <span class="blue">a domain name</span> from another, but it's usually less of a hassle to buy both from the same company</p>
+					<p class="fragment">I use <a href="https://www.1and1.com/web-hosting" target="_blank">1&amp;1's Starter package</a>, since it includes hosting and one domain name</p>
+					<p class="fragment"><br />When it comes to <span class="blue">hosting</span>, <span class="green"><strong>don't be fooled by the extra bells and whistles</strong></span> &mdash; if you aren't sure what something is, you probably don't need it</p>
+				</section>
+				<section>
+					<h3>Method 2: Hosting + Domains</h3>
+					<p class="orange fragment">Why are there two separate services?</p>
+					<p class="fragment">First, your files need to be stored on a <span class="blue">web host</span>, which is a computer (a.k.a. server)</p>
+					<p class="fragment">When you <span class="blue">register a domain</span>, it doesn't 'point' to the server where your files are located</p>
+					<p class="fragment">This is why your web host may give you a <span class="green">Domain Name System (or DNS)</span> address, which is the IP address of the computer (a.k.a. server) where your files are located</p> 
+					<p class="fragment">The <span class="green">Domain Name System (DNS)</span> is a huge list that links your domain name (e.g. anything.codes) to where your files are located (using the <span class="green">IP address</span> of the server where your files are located)</p>
+				</section>
+			</section>
+			
+			<section>
+				<h3>Answers to Questions</h3>
+				<ul>
+					<li class="fragment">Best Content Management System (CMS) to use for a client who doesn't code</li>
+					<li class="fragment">Bootstrap</li>
+					<li class="fragment">Building Your Portfolio &amp; Reputation
+						<ul>
+							<li><a href="http://www.joyceakiko.com/ultimate-guide-2015/" target="_blank"><em>The Ultimate Guide for Getting Freelance-Ready When You're a Self-Taught Coder</em> &raquo;</a></li>
+						</ul>
+						<div class="fragment">
+						<p class="blue">Freelance Sites:</p>
+							<ul>
+								<li><a href="https://www.powertofly.com/">Power to Fly</a></li>
+								<li><a href="http://www.guru.com/">Guru</a></li>
+								<li><a href="http://www.elance.com/">Elance</a></li>
+								<li><a href="https://www.fiverr.com/">Fiverr</a></li>
+								<li>... and try to make your own portfolio site!</li>
+							</ul>
+						</div>
+					</li>
+				</ul>					
+			</section>			
+			
+			<!-- Thank you! -->
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Thank you all!</h1>
+            	<p style="color:#fafafa;">You are all awesome! Please keep in touch!</p>
+			</section>
+			
+			
+			
+			<!-- BEGIN UNEDITED -->			
+			
+			<!--<section>
+				<h3>P.S.</h3>
+				<p>Pseudoelements <a href="https://css-tricks.com/pseudo-element-roundup/" target="_blank">are awesome</a></p>
+				<p><br /><small><a href="http://www.smashingmagazine.com/2011/07/learning-to-use-the-before-and-after-pseudo-elements-in-css/" target="_blank">Learning to use the <code>:before</code> and <code>:after</code> pseudoelements in CSS &raquo;</a></small></p>
+			</section>-->	
+			
+			
+			<!-- BEGIN UNEDITED -->
+			
+			<!--<section>
+				<h3>Other Media Queries</h3>
+				<ol>
+					<li class="fragment">Targeting minimum viewport widths:
+						<pre class="css">
+<code>@media screen and (min-width: 1200px) {
+    selector {
+    }
+}</code>
+						</pre>
+					</li>
+					<li class="fragment">Targeting device orientation and/or viewport size:
+						<pre class="css">
+<code>@media screen and (orientation: landscape) and (max-device-width: 1024px) {
+    selector {
+    }
+}</code>
+						</pre>
+						<p><small>The alternative to <em>landscape</em> is <em>portrait</em></small></p>
+					</li>
+				</ol>
+			</section>
+			<section>
+				<h3>Other Media Queries</h3>
+				<ol start="3">
+					<li class="fragment">Targeting devices between viewport sizes:
+						<pre class="css">
+<code>@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    selector {
+    }
+}</code>
+						</pre>
+					</li>
+					<li class="fragment">Styling on-paper printed pages:
+						<pre class="css">
+<code>@media print {
+    selector {
+    }
+}</code>
+						</pre>
+					</li>
+				</ol>
+			</section>
+
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">Additional Animation Effects</h1>
+            </section>
+			<section>
+				<h3>Property: <em>transition-delay</em></h3>
+				<p>Use <code>transition-delay</code> to delay when an animation begins</p>
+				<pre class="css fragment">
+<code>selector {
+    transition: width 1s;
+    transition-delay: 3s;
+}</code>
+				</pre>
+				<div class="fragment">
+					<p data-height="338" data-theme-id="0" data-slug-hash="PPgxEp" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/PPgxEp/'>Transition Delays</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+
+			<section>
+				<h3>Property:<br/><em>transition-timing-function</em></h3>
+				<p class="fragment">The <span class="blue">timing function</span> changes how fast or slow the animation is at parts of the animation</p>
+				<pre class="css fragment" style="font-size:15px">
+<code>selector {
+    transition: width 3.5s;
+    transition-timing-function: ease;
+    transition-timing-function: linear;
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(n,n,n,n);
+}</code>
+				</pre>
+				<div class="fragment">
+					<p data-height="290" data-theme-id="0" data-slug-hash="JYVwgr" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/JYVwgr/'>Transition Timing Functions</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+				<p class="fragment"><small><strong>Fun fact</strong>: The <span class="blue">timing function</span> is sometimes called the <span class="blue">speed curve</span></small></p>
+			</section>
+			<section>
+				<h3>Property:<br /><em>transition-timing-function</em></h3>
+				<p class="blue">Additional Notes</p>
+				<p class="fragment">If you don't specify a timing function, <span class="orange">ease</span> is used</p>
+				<p class="fragment">With <span class="orange">cubic-bezier</span>, you can create your own timing function</p>
+				<p class="fragment">Use <a href="http://cubic-bezier.com/" target="_blank">cubic-bezier.com</a> to make your own timing function, and compare it to the built-in timing functions (such as <span class="green">ease</span> and <span class="green">linear</span>)</p>
+			</section>
+
+			<section>
+				<h3>Property: <em>transform</em></h3>
+				<p class="fragment">Use <code>transform</code> to rotate, scale, skew, change the perspective, and <a href="http://www.w3schools.com/cssref/css3_pr_transform.asp" target="_blank">much more</a></p>
+				<pre class="css fragment">
+<code>selector {
+    transform: translate3d(0, -3px, 0);
+    transform: rotate(360deg);
+    /* and more! */
+}</code>
+				</pre>
+				<p class="fragment"><code>transform</code> has too many values to list &mdash; use <a href="http://www.css3maker.com/css3-transform.html" target="_blank">CSS3Maker</a> or <a href="http://css3please.com/" target="_blank">CSS3, please!</a> to generate them</p>
+				<p class="fragment">A transformation is often animated with <code>transition</code></p>
+				<div class="fragment">
+					<p data-height="179" data-theme-id="0" data-slug-hash="YyMBVR" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/YyMBVR/'>Transition + Transform - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>-->
+
+        </div>
+        <footer>
+            <div class="copyright">
+                Intermediate HTML &amp; CSS&nbsp; | &nbsp;Boston Chapter &nbsp;| &nbsp;
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+                </a>
+            </div>
+        </footer>
+    </div>
+
+	<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                condition: function() {
+                    return !!document.querySelector('pre code');
+                },
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/accessibility-helper/js/accessibility-helper.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+
+</body>
+
+</html>
