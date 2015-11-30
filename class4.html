@@ -10,7 +10,7 @@
     <meta name="author" content="Liz Shaw">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/simple.css" id="theme">
@@ -101,6 +101,10 @@
 				
 			</section>
 			
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">So how does a grid system work?</h1>
+            </section>
+			
 			<section>
 				<h3>Recap: Grid System</h3>
 				<p class="fragment">Use the <span class="blue">row</span> class on each row of content:</p>
@@ -123,76 +127,8 @@
     &lt;/div>
 &lt;/section></code>
 				</pre>
-			</section>			
+			</section>		
 			
-			<!-- Let's Develop It! -->
-			<section>
-				<h2>Let's Develop It!</h2>
-				<p>Let's get semantic! Use the grid system with HTML5 elements to make our <span class="blue">Africa</span> page.</p>
-				<ol style="font-size:90%;line-height:1.2;">
-                    <li><img src="img/africa-grid.png" alt="Africa design" class="right" style="max-width:50%;box-shadow:none;" />Open <span class="orange">africa.html</span> and structure the <span class="green">sidebar</span> and the <span class="green">article area</span> using HTML5 elements:
-					<pre class="html" style="margin-top:1em">
-<code>&lt;main>
-
-    &lt;aside>	
-        &lt;nav>
-        &lt;/nav>
-    &lt;/aside>
-	
-    &lt;article>
-    &lt;/article>
-	
-&lt;/main></code>
-					</pre>
-					</li>
-					<li>Add grid classes to the HTML</li>
-					<li>Let's also add a <span class="orange">sidebar</span> class to the sidebar HTML so we can style that later!</li>
-				</ol>					
-			</section>
-			<section>
-				<h2>Let's Develop It!</h2>
-				<p>Use the grid system with HTML5 elements to make our <span class="blue">Diet</span> page</p>
-				<ol style="font-size:90%;line-height:1.2;">
-                    <li><img src="img/diet-grid.png" alt="Diet design" class="right" style="max-width:50%;box-shadow:none;" />Open <span class="orange">diet.html</span> and structure the <span class="green">sidebar</span> and the <span class="green">article area</span> using HTML5 elements:
-					<pre class="html" style="margin-top:1em">
-<code>&lt;main>
-
-    &lt;article>
-    &lt;/article>
-	
-    &lt;aside>	
-        &lt;nav>
-        &lt;/nav>
-    &lt;/aside>
-	
-&lt;/main></code>
-					</pre>
-					</li>
-					<li>Add grid classes to the HTML</li>
-					<li>Let's add a <span class="orange">sidebar</span> class to the sidebar HTML, then style it with <code>background-color</code> (e.g. <span class="green">#D2CCFC</span> from the design)</li>
-				</ol>					
-			</section>
-			<section>
-				<h2>Let's Develop It!</h2>
-				<p>Use the grid system with HTML5 elements to make our <span class="blue">Stripes</span> page</p>
-				<ol>
-                    <li><img src="img/stripes-grid.png" alt="Stripes design" class="right" style="max-width:50%;box-shadow:none;" />Open <span class="orange">stripes.html</span> and structure the <span class="green">article area</span> using HTML5 elements:
-					<pre class="html" style="margin-top:1em">
-<code>&lt;main>
-
-    &lt;article>
-    &lt;/article>
-	
-&lt;/main></code>
-					</pre>
-					</li>
-					<li>Add grid classes to the HTML</li>
-				</ol>					
-			</section>			
-			
-			<section data-background="#f05b62">
-                <h1 style="color: #fafafa;font-size:3.7em">So how does a grid system work?</h1>
-            </section>
 			
 			<!-- Floating -->
 			<section>
@@ -295,6 +231,24 @@
 			</section>
 						
 			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Use the grid system with HTML5 elements to make our <span class="blue">Stripes</span> page</p>
+				<ol>
+                    <li><img src="img/stripes-grid.png" alt="Stripes design" class="right" style="max-width:50%;box-shadow:none;" />Open <span class="orange">stripes.html</span> and structure the <span class="green">article area</span> using HTML5 elements:
+					<pre class="html" style="margin-top:1em">
+<code>&lt;main>
+
+    &lt;article>
+    &lt;/article>
+	
+&lt;/main></code>
+					</pre>
+					</li>
+					<li>Add grid classes to the HTML</li>
+				</ol>					
+			</section>			
+												
+			<section>
 				<h3>Selector: <em>:nth-child(n)</em></h3>
 				<pre class="css">
 <code>selector:nth-child(n) {
@@ -364,6 +318,31 @@
 				<h3>P.S.</h3>
 				<p>Pseudoelements (<code>:after</code> and <code>:before</code>) <a href="https://css-tricks.com/pseudo-element-roundup/" target="_blank">are awesome</a></p>
 				<p><br /><small><a href="http://www.smashingmagazine.com/2011/07/learning-to-use-the-before-and-after-pseudo-elements-in-css/" target="_blank">Learning to use the <code>:before</code> and <code>:after</code> pseudoelements in CSS &raquo;</a></small></p>
+			</section>
+			
+			<!-- Let's Develop It! -->
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Let's get semantic! Use the grid system with HTML5 elements to make our <span class="blue">Africa</span> and <span class="blue">Diet</span> pages.</p>
+				<ol style="font-size:90%;line-height:1.2;">
+                    <li><img src="img/africa-grid.png" alt="Africa design" class="right" style="max-width:50%;box-shadow:none;" /><img src="img/diet-grid.png" alt="Diet design" class="right" style="max-width:50%;box-shadow:none;" />Open each file and structure the <span class="green">sidebar</span> and the <span class="green">article area</span> using HTML5 elements, such as:
+					<pre class="html" style="margin-top:1em">
+<code>&lt;main>
+
+    &lt;aside>	
+        &lt;nav>
+        &lt;/nav>
+    &lt;/aside>
+	
+    &lt;article>
+    &lt;/article>
+	
+&lt;/main></code>
+					</pre>
+					</li>
+					<li>Add grid classes to the HTML</li>
+					<li>Let's also add a <span class="orange">sidebar</span> class to the sidebar HTML so we can style that later!</li>
+				</ol>					
 			</section>
 			
 			<section>
