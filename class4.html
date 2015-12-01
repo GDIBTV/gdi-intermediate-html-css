@@ -10,7 +10,7 @@
     <meta name="author" content="Liz Shaw">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/simple.css" id="theme">
@@ -57,7 +57,7 @@
                     <small>Class 4</small>
                 </p>
             </section>
-						
+
 			<!-- Pizza!-->
 			<section>
 			  <h3>Pizza!</h3>
@@ -65,27 +65,27 @@
 				  <img src="img/pizza.gif" alt="Vader and Solo with pizza" />
 				</p>
 			  <p>Help yourself to some pizza in the kitchen!</p>
-			  
+
 			  <p><br /><strong>Got a minute?</strong><br />Take our special topics workshops survey!<br /><a href="http://tinyurl.com/gdispecialtopics" target="_blank">http://tinyurl.com/gdispecialtopics</a></p>
 			</section>
-			
+
 			<!-- Housekeeping -->
 			<section data-background="#f05b62">
                 <h1 style="color: #fafafa;font-size:3.7em">First, some housekeeping</h1>
             </section>
-			
+
 			<section>
 				<h2>Let's Develop It!</h2>
 				<ol>
 					<li>Open <span class="orange">styles.css</span> in your text editor and change <code>:first-of-type</code> to <code>:first-child</code></li>
 					<li>Open <span class="orange">index.html</span> in your text editor and change <code>:first-of-type</code> to <code>:first-child</code></li>
 				</ol>
-				<p><br />Now if you view <span class="orange">index.html</span> in your browser, it should look jacked up <span class="blue">&#9786;</span> &mdash; let's fix that!</p> 				
+				<p><br />Now if you view <span class="orange">index.html</span> in your browser, it should look jacked up <span class="blue">&#9786;</span> &mdash; let's fix that!</p>
 				<table class="data" style="font-size:70%;line-height:1.2;margin-top:1em">
 					<tr>
 						<th>Selector</th>
 						<th>Definition</th>
-						<th>Example</th>						
+						<th>Example</th>
 					</tr>
 					<tr>
 						<td style="padding:0;white-space:nowrap"><code>:first-of-type</code></td>
@@ -93,18 +93,18 @@
 						<td style="padding:0"><a href="http://codepen.io/anythingcodes/pen/BoXQjP?editors=110" target="_blank">Example &raquo;</a></td>
 					</tr>
 					<tr>
-						<td style="padding:0"><code>:first-child</code></td>						
+						<td style="padding:0"><code>:first-child</code></td>
 						<td style="padding:.2em">The <code>:first-child</code> selector styles the first child of its parent element, regardless of type</td>
 						<td style="padding:0"><a href="http://codepen.io/anythingcodes/pen/KdONML?editors=110" target="_blank">Example &raquo;</a></td>
 					</tr>
 				</table>
-				
+
 			</section>
-			
+
 			<section data-background="#f05b62">
                 <h1 style="color: #fafafa;font-size:3.7em">So how does a grid system work?</h1>
             </section>
-			
+
 			<section>
 				<h3>Recap: Grid System</h3>
 				<p class="fragment">Use the <span class="blue">row</span> class on each row of content:</p>
@@ -127,9 +127,9 @@
     &lt;/div>
 &lt;/section></code>
 				</pre>
-			</section>		
-			
-			
+			</section>
+
+
 			<!-- Floating -->
 			<!--<section>
 				<h3>Recap: Floating</h3>
@@ -147,13 +147,13 @@
 				<p class="fragment">The <code>clear</code> property prevents floated elements from appearing on a specific side (<span class="orange">left</span>, <span class="orange">right</span>, or <span class="orange">both</span>)</p>
 				<div class="fragment"><p data-height="100" data-theme-id="0" data-slug-hash="KdOrYq" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/KdOrYq/'>Clearing - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p></div>
 			</section>
-			
+
 			<section>
 				<h3>Grids Under The Hood</h3>
 				<div style="position:relative;">
 					<div style="width:40%;float:left;font-size:75%;line-height:1.15">
 						<p class="fragment"><strong>Each <span class="blue">row</span>:</strong></p>
-						<ul style="display:block;">					
+						<ul style="display:block;">
 							<li class="fragment">Has columns</li>
 						</ul>
 						<p class="fragment"><br /><strong>Each <span class="blue">column</span>:</strong></p>
@@ -191,7 +191,9 @@
 						<img class="fragment" src="img/rows-columns-5.png" alt="Floated Columns" style="box-shadow:none;position:absolute;top:0;left:0;width:100%;z-index:3;max-width:100%;max-height:none;"/>
 						<img src="img/rows-columns-6.png" alt="Floated Columns with Clearfix" style="box-shadow:none;position:absolute;top:0;left:0;width:100%;z-index:4;max-width:100%;max-height:none;" class="fragment" />
 					</div>
-					
+                    <div class="fragment" style="position:absolute;top: 63vh;right:5vw;width:100%;text-align:right;">
+						<p><a href='http://codepen.io/anythingcodes/pen/JYQQbB/' target="_blank">Example &raquo;</a></p>
+					</div>
 				</div>
 			</section>
 			<section>
@@ -210,9 +212,9 @@
 				</div>
 				<p class="fragment green"><small><strong>Tip:</strong> If you don't have the <code>content</code> property, <code>:after</code> won't work. <code>visibility</code> and <code>height</code> are optional, but address problems in older browsers.</small></p>
 				<p class="fragment">Since <code>:after</code> acts as the last item in our row (after the columns), it clears the float at that point and sets the row height properly</p>
-				<p class="fragment"><span class="blue">Memorize this &#9786;</span> &mdash; it comes up all the time!</p>				
-			</section>				
-			
+				<p class="fragment"><span class="blue">Memorize this &#9786;</span> &mdash; it comes up all the time!</p>
+			</section>
+
 			<!--<section>
 				<h2>Let's Develop It!</h2>
 				<p><small>Let's add some space between our <span class="green">About</span> section's images and the &lt;p>!</small></p>
@@ -229,7 +231,7 @@
 				</ol>
 				<p><img src="img/about-paragraph.png" alt="About margin/padding" style="max-height:50vh;" /></p>
 			</section>-->
-						
+
 			<section>
 				<h2>Let's Develop It!</h2>
 				<p>Use the grid system with HTML5 elements to make our <span class="blue">Stripes</span> page</p>
@@ -240,14 +242,14 @@
 
     &lt;article>
     &lt;/article>
-	
+
 &lt;/main></code>
 					</pre>
 					</li>
 					<li>Add grid classes to the HTML</li>
-				</ol>					
-			</section>			
-												
+				</ol>
+			</section>
+
 			<section>
 				<h3>Selector: <em>:nth-child()</em></h3>
 				<pre class="css">
@@ -258,18 +260,18 @@
 				<p>The <span class="blue">:nth-child()</span> selector allows you to pick specific child elements to style</p>
 				<p class="fragment">You can use a keyword (e.g. <span class="orange">even</span> or <span class="orange">odd</span>), number (e.g. <span class="orange">2</span>), or formula (e.g. <span class="orange">3n + 3</span>)</p>
 				<div class="fragment">
-					<p data-height="100" data-theme-id="0" data-slug-hash="vNoLZK" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/vNoLZK/'>The nth-child Selector</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>				
+					<p data-height="100" data-theme-id="0" data-slug-hash="vNoLZK" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/vNoLZK/'>The nth-child Selector</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 				</div>
 			</section>
 			<section>
-				<h2>Let's Develop It!</h2>				
+				<h2>Let's Develop It!</h2>
 				<ol>
 					<li><img src="img/stripes-grid.png" alt="Stripes design" style="float:right;max-width:25vw;" />Open <span class="orange">stripes.html</span> and add a &lt;div> for each blog post</li>
 					<li>Add an image to each &lt;div> (use <span class="green">http://placehold.it/455x186</span>), then add a headline, date, and descriptive paragraph</li>
 					<li>Use the <code>:nth-child(even)</code> and <code>:nth-child(odd)</code> selectors to alternate each blog post's background color</li>
 				</ol>
 			</section>
-			
+
 			<section data-background="#d2ccfc" style="color:#5C4884;">
 				<h1 style="color:#5C4884;">Homework 1:</h1>
 				<ol style="font-size:90%;line-height:1">
@@ -279,9 +281,9 @@
 				</ol>
 				<p><small><br />Homework solutions will be emailed on Sunday</small></p>
 			</section>
-			
-			
-			
+
+
+
 			<!-- Let's Develop It! -->
 			<section>
 				<h2>Let's Develop It!</h2>
@@ -291,22 +293,22 @@
 					<pre class="html" style="margin-top:1em">
 <code>&lt;main>
 
-    &lt;aside>	
+    &lt;aside>
         &lt;nav>
         &lt;/nav>
     &lt;/aside>
-	
+
     &lt;article>
     &lt;/article>
-	
+
 &lt;/main></code>
 					</pre>
 					</li>
 					<li>Add grid classes to the HTML</li>
 					<li>Let's also add a <span class="orange">sidebar</span> class to the sidebar and style that!</li>
-				</ol>					
+				</ol>
 			</section>
-			
+
 			<section>
 				<h3>The <em>:before</em> Selector</h3>
 				<p class="fragment">As a counterpart to <code>:after</code>, <code>:before</code> injects content at the beginning of an element:</p>
@@ -330,13 +332,13 @@
 					<p data-height="129" data-theme-id="0" data-slug-hash="LpwyWy" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/LpwyWy/'>The :before Pseudoelement with Images</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 				</div>
 			</section>
-			
+
 			<section>
 				<h3>P.S.</h3>
 				<p>Pseudoelements (<code>:after</code> and <code>:before</code>) <a href="https://css-tricks.com/pseudo-element-roundup/" target="_blank">are awesome</a></p>
 				<p><br /><small><a href="http://www.smashingmagazine.com/2011/07/learning-to-use-the-before-and-after-pseudo-elements-in-css/" target="_blank">Learning to use the <code>:before</code> and <code>:after</code> pseudoelements in CSS &raquo;</a></small></p>
 			</section>
-			
+
 			<section data-background="#d2ccfc" style="color:#5C4884;">
 				<h1 style="color:#5C4884;">Homework 2:</h1>
 				<p>Try to style your sidebar like the design!</p>
@@ -348,18 +350,18 @@
 				</ol>
 				<p><small><br />Homework solutions will be emailed on Sunday</small></p>
 			</section>
-			
+
 			<section>
 				<h3>Sidebar Heights</h3>
 				<p>We commonly see sidebars that take up the entire height of the main content area:</p>
 				<p><img src="workshop-files/designs/africa.png" style="max-height:40vh" alt="Africa design" /></p>
 				<p>This is possible with <code>float</code>s, but hardly fun!</p>
 			</section>
-			
+
 			<section data-background="#f05b62">
                 <h1 style="color: #fafafa;font-size:3.7em">Why Floats?</h1>
             </section>
-			
+
 			<section>
 				<h3>Why Floats?</h3>
 				<p class="fragment"><span class="green">Browser support</span> &mdash; effectively all browsers support the float property (IE6+, Firefox 2+, Chrome 1+, etc.)</p>
@@ -369,11 +371,11 @@
 					<p><small>Hurray!</small></p>
 				</div>
 			</section>
-			
+
 			<section data-background="#f05b62">
                 <h1 style="color: #fafafa;font-size:3.7em">Introducing Flexbox</h1>
             </section>
-			
+
 			<section>
 				<h3>Flexbox</h3>
 				<p class="fragment"><span class="blue">Flexbox</span>: <span class="orange">Flex</span>ible <span class="orange">Box</span> Model, the latest and greatest CSS3 offering</p>
@@ -381,7 +383,7 @@
 				<p class="fragment">The central idea is that flexbox keeps your layout <span class="green">fluid</span> by doing a lot of the <span class="green">math</span> for you!</p>
 				<p class="fragment"><strong>Example:</strong> Use flexbox on a parent container. Its children will <span class="green">automatically have the same height</span> &mdash; set child dimensions only if you need to!</p>
 			</section>
-			
+
 			<section>
 				<h3>Using Flexbox</h3>
 				<p class="fragment">Set <code>display:flex;</code> on a parent container.</p>
@@ -395,13 +397,13 @@
 					<p data-height="200" data-theme-id="0" data-slug-hash="epqgvE" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/epqgvE/'>Using Flexbox</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 				</div>-->
 			</section>
-			
+
 			<section>
 				<h2>Let's Develop It!</h2>
 				<p>Let's solve our sidebar height problem using flexbox!</p>
 				<p><img src="workshop-files/designs/africa.png" style="max-height:40vh" alt="Africa design" /></p>
 			</section>
-			
+
 			<section>
 				<h3>Flexbox is magical</h3>
 				<p class="fragment">You can do <strong>a lot more</strong> with flexbox, including:</p>
@@ -409,10 +411,10 @@
 					<li class="fragment">Reordering elements at different breakpoints</li>
 					<li class="fragment">Calculating widths dynamically (awesome for Content Management System, or CMS, work <span style="color:red;">&#10084;</span>)</li>
 					<li class="fragment">Easier vertical alignment</li>
-				</ul>				
+				</ul>
 				<p class="fragment blue"><br />Articles &amp; Examples:<br /><a href="http://chriswrightdesign.com/experiments/using-flexbox-today/" target="_blank">'Using Flexbox Today' by Chris Wright &raquo;</a><br /><a href="https://philipwalton.github.io/solved-by-flexbox/" target="_blank">'Solved by Flexbox' by Philip Walton &raquo;</a></small></p>
 			</section>
-			
+
 			<section>
 				<h3>What are the drawbacks?</h3>
 				<p class="fragment">Flexbox is so new that you will need to use <span class="blue">vendor prefixes</span> until the simple non-prefixed <code>display:flex;</code> is supported in a browser:</p>
@@ -447,13 +449,13 @@
 				<p class="fragment">A variety of polyfills exist for other modern CSS3 properties and HTML5 elements</p>
 				<p class="fragment">Use <a href="http://caniuse.com/" target="_blank">caniuse.com</a> to check if a certain HTML5 or CSS3 feature is supported. If not, google for a polyfill!</p>
 			</section>
-			
+
 			<section>
 				<section data-background="#f05b62">
 					<h1 style="color: #fafafa;font-size:3.7em">Mobile Menus</h1>
 					<p style="color:#fafafa;">Press the down arrow or spacebar to view</p>
 				</section>
-				
+
 				<section>
 					<h3>Mobile Menus</h3>
 					<p>We can use CSS3 to make a nifty mobile menu!</p>
@@ -467,13 +469,13 @@
 						<li class="fragment">About hiding elements at different breakpoints</li>
 						<li class="fragment"><span class="green">A <strong>lot!</strong> (good job! &#128077; )</span></li>
 					</ol>
-					<p class="fragment blue"><br />We need to know:</p>	
+					<p class="fragment blue"><br />We need to know:</p>
 					<ol style="display:inline;margin:0;font-size:90%;line-height:1.2;">
 						<li class="fragment">About the checkbox <code>&lt;input></code>s, <code>&lt;label></code>s, and the <code>:checked</code> selector</li>
 						<li class="fragment">About sibling selectors</li>
 					</ol>
 				</section>
-				
+
 				<section>
 					<h3>The checkbox <code>&lt;input></code></h3>
 					<p class="fragment"><img src="img/inputs.png" class="right" alt="form inputs" />The <code>&lt;input></code> element specifies an input field, usually in a form</p>
@@ -481,11 +483,11 @@
 					<pre class="html fragment">
 	<code>&lt;input type="checkbox" /></code>
 					</pre>
-					<p class="fragment blue">Why a checkbox?</p> 
+					<p class="fragment blue">Why a checkbox?</p>
 					<p class="fragment">Because we can use the <code>:checked</code> selector as an animation trigger state!</p>
-					<p class="fragment">If it's checked, we'll show the mobile menu</p>				
+					<p class="fragment">If it's checked, we'll show the mobile menu</p>
 				</section>
-				
+
 				<section>
 					<h3>The checkbox <code>&lt;input></code>'s <code>&lt;label></code></h3>
 					<pre class="fragment html">
@@ -501,7 +503,7 @@
 						<p data-height="72" data-theme-id="0" data-slug-hash="ojKBKr" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/ojKBKr/'>Associating a label with a checkbox</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 					</div>
 				</section>
-				
+
 				<section>
 					<h3>Sibling Selectors</h3>
 					<p class="fragment">In the <span class="green">HTML</span>, we'll place our checkbox before the menu's <code>&lt;ul></code></p>
@@ -516,7 +518,7 @@
 						<p data-height="268" data-theme-id="0" data-slug-hash="PPMpwG" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/PPMpwG/'>:checked and the sibling selector</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 					</div>
 				</section>
-				
+
 				<section>
 					<h3>Putting It All Together</h3>
 					<p class="fragment">Now that the label is clickable, we don't need to see that ugly checkbox &mdash; hide it with <code>display:none;</code></p>
@@ -526,20 +528,20 @@
 						<p data-height="96" data-theme-id="0" data-slug-hash="xwvqbB" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/xwvqbB/'>:checked and the sibling selector</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 					</div>
 				</section>
-				
+
 				<section>
 					<h2>Let's Develop It!</h2>
 					<p>Let's make a mobile menu!</p>
 					<p class="fragment"><small><br /><a href="http://codepen.io/anythingcodes/pen/Zbdajo?editors=110" target="_blank">CSS for reference &raquo;</a></small></p>
 				</section>
 			</section>
-			
+
 			<section>
 				<section data-background="#f05b62">
 					<h1 style="color: #fafafa;font-size:3.7em">Masonry Layouts</h1>
 					<p style="color:#fafafa;">Press the down arrow or spacebar to view</p>
 				</section>
-				
+
 				<section>
 					<h3>Properties:<br /><em>column-count</em> and <em>column-gap</em></h3>
 					<p class="fragment"><img src="img/masonry.jpg" class="right" alt="A masonry layout" /><span class="blue">Masonry</span> layouts have become popular lately, largely thanks to sites with <span class="blue">infinite scrolling</span> such as Pinterest</p>
@@ -570,10 +572,10 @@
 					<h3>Masonry Layout Demo</h3>
 					<p data-height="368" data-theme-id="0" data-slug-hash="bVXEvL" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/bVXEvL/'>CSS Masonry Layout</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 					<p>Feel free to copy this to your <span class="orange">diet.html</span> page!</p>
-				</section>		
+				</section>
 			</section>
-			
-			<section>		
+
+			<section>
 				<section data-background="#f05b62">
 					<h1 style="color: #fafafa;font-size:3.7em">Opacity and Shadows</h1>
 					<p style="color:#fafafa;">Press the down arrow or spacebar to view</p>
@@ -608,7 +610,7 @@
 						</tr>
 					</table>
 				</section>
-			
+
 				<section>
 					<h3>Animating Multiple Properties</h3>
 
@@ -672,7 +674,7 @@
 						<p data-height="337" data-theme-id="0" data-slug-hash="XmwNdM" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/XmwNdM/'>Opacity and Hover - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 					</div>
 				</section>
-			
+
 				<section>
 					<h2>Let's Develop It!</h2>
 					<p>You may have noticed that one of these things is not like the other. That's because one is a hover state!</p>
@@ -684,7 +686,7 @@
 					</div>
 				</section>
 			</section>
-					
+
 			<section>
 				<h3>Now what?</h3>
 				<p><img src="img/nowwhat.jpg" style="margin:0;" alt="Now what?" /></p>
@@ -697,9 +699,9 @@
 						</ul>
 					</li>
 					<li class="fragment">Photoshop</li>
-					<li class="fragment">Javascript</li>					
+					<li class="fragment">Javascript</li>
 					<li class="fragment">Version Control (e.g. Git)</li>
-				</ul>				
+				</ul>
 			</section>
 			<section>
 				<h3>Now what?</h3>
@@ -713,7 +715,7 @@
 				</ul>
 				<p class="fragment green"><small><br />Also, GDI is a super nationwide network of techie ladies!</small></p>
 			</section>
-			
+
 			<!-- Getting Your Site Online -->
 			<section>
 				<section data-background="#00A9B4">
@@ -728,11 +730,11 @@
 					<p class="fragment blue">Almost every web agency uses a version control system</p>
 					<p class="fragment"><br /><a href="http://anything.codes">http://anything.codes</a> is hosted for free on GitHub! <a href="https://github.com/anythingcodes/anythingcodes.github.io" target="_blank">See?</a></p>
 				</section>
-				
+
 				<!-- GitHub -->
 				<section>
 					<h3>Method 1: GitHub</h3>
-					<ol style="font-size:85%;line-height:1.3;">					
+					<ol style="font-size:85%;line-height:1.3;">
 						<li class="fragment">Create an account on <a href="http://github.com" target="_blank">GitHub.com</a></li>
 						<li class="fragment"><a href="https://desktop.github.com/" target="_blank">Download GitHub Desktop</a>, then open it and login</li>
 						<li class="fragment"><img src="img/GitHub-add-repository.png" alt="Adding a repository" style="float:right;max-width:50%;"/>Click the plus sign and, under the <em>Add</em> tab, browse to the <span class="orange">project</span> folder you used for this class</li>
@@ -745,7 +747,7 @@
 					<h3>Method 1: GitHub</h3>
 					<ol style="font-size:80%;line-height:1.3;" start="7">
 						<li class="fragment">Click <em>Changes</em>, where you should see a list of project files.</li>
-						<li class="fragment">Enter a <em>Summary</em> and click <span class="blue">Commit to master</span><br /><img src="img/GitHub-commit.png" alt="Committing changes to GitHub"/></li>					
+						<li class="fragment">Enter a <em>Summary</em> and click <span class="blue">Commit to master</span><br /><img src="img/GitHub-commit.png" alt="Committing changes to GitHub"/></li>
 					</ol>
 				</section>
 				<section>
@@ -791,11 +793,11 @@
 					<p class="orange fragment">Why are there two separate services?</p>
 					<p class="fragment">First, your files need to be stored on a <span class="blue">web host</span>, which is a computer (a.k.a. server)</p>
 					<p class="fragment">When you <span class="blue">register a domain</span>, it doesn't 'point' to the server where your files are located</p>
-					<p class="fragment">This is why your web host may give you a <span class="green">Domain Name System (or DNS)</span> address, which is the IP address of the computer (a.k.a. server) where your files are located</p> 
+					<p class="fragment">This is why your web host may give you a <span class="green">Domain Name System (or DNS)</span> address, which is the IP address of the computer (a.k.a. server) where your files are located</p>
 					<p class="fragment">The <span class="green">Domain Name System (DNS)</span> is a huge list that links your domain name (e.g. anything.codes) to where your files are located (using the <span class="green">IP address</span> of the server where your files are located)</p>
 				</section>
 			</section>
-			
+
 			<section>
 				<h3>Answers to Questions</h3>
 				<ul>
@@ -816,24 +818,24 @@
 							</ul>
 						</div>
 					</li>
-				</ul>					
-			</section>			
-			
+				</ul>
+			</section>
+
 			<!-- Thank you! -->
 			<section data-background="#f05b62">
                 <h1 style="color: #fafafa;">Thank you all!</h1>
             	<p style="color:#fafafa;">You are all awesome! Please keep in touch!</p>
 			</section>
-			
-			
-			
-			<!-- BEGIN UNEDITED -->			
-			
-			<!---->	
-			
-			
+
+
+
 			<!-- BEGIN UNEDITED -->
-			
+
+			<!---->
+
+
+			<!-- BEGIN UNEDITED -->
+
 			<!--<section>
 				<h3>Other Media Queries</h3>
 				<ol>
