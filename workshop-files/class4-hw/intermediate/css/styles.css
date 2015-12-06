@@ -1,0 +1,362 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Custom CSS */
+body {
+    font-family: 'Lato', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', serif;
+}
+h1 {
+    background-image: url('../images/z.png');
+    background-size: contain;
+    width: 44px;
+    height: 44px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+h3 {
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+img {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Grid System */
+.row {
+	clear: both;
+	padding: 0;
+	margin: 0 auto;
+	max-width: 1170px;
+}
+.row:after {
+	content: "";
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	display: block;
+}
+.column {
+	float: left;
+	margin: 0 0 0 2.56%;
+	min-height: 1px;
+}
+.column:first-child {
+	margin-left: 0;
+}
+.span_12_of_12 {
+	width: 100%;
+}
+.span_11_of_12 {
+  	width: 91.45%;
+}
+.span_10_of_12 {
+  	width: 82.90%;
+}
+.span_9_of_12 {
+  	width: 74.36%;
+}
+.span_8_of_12 {
+  	width: 65.81%;
+}
+.span_7_of_12 {
+  	width: 57.26%;
+}
+.span_6_of_12 {
+  	width: 48.72%;
+}
+.span_5_of_12 {
+  	width: 40.17%;
+}
+.span_4_of_12 {
+  	width: 31.62%;
+}
+.span_3_of_12 {
+  	width: 23.08%;
+}
+.span_2_of_12 {
+  	width: 14.53%;
+}
+.span_1_of_12 {
+  	width: 5.986%;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.54);
+    height: 68px;
+    border-bottom: 1px solid #878d8f;
+}
+nav {
+    float: right;
+}
+nav li {
+    display: inline;
+}
+nav li a {
+    padding: 26px 10px;
+    display: inline-block;
+    transition: background 2s;
+}
+nav li a:hover {
+    background: fuchsia;
+}
+
+/* Button Styles */
+.fancy-button {
+    background-image: linear-gradient(rebeccapurple, violet);
+    display: inline-block;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Banner */
+#banner {
+    background-image: url('../images/zebra-hero.jpg');
+    height: 483px;
+    background-size: cover;
+    padding-top: 91px;
+    text-align: center;
+    color: white;
+}
+#banner img {
+    width:100px;
+    border-radius: 50%;
+}
+#banner h2 {
+    font-size: 3em;
+    margin: 20px;
+}
+#banner span {
+    border: 3px solid white;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Footer */
+footer {
+    background: #8a80c3;
+    padding: 33px;
+    text-align: center;
+    color: white;
+}
+footer li {
+    display: inline-block;
+    padding: 10px;
+}
+
+/* About */
+#about {
+    text-align: center;
+    margin: 2em auto;
+}
+#about img {
+    border: 4px solid rebeccapurple;
+    border-radius: 50%;
+}
+
+/* Mission */
+#mission {
+    text-align: center;
+    background-color: #d2ccfc;
+    padding: 2em 0;
+    margin: 2em auto;
+}
+#mission .column {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+
+/* Blogs */
+.blog {
+    margin: 1em 0;
+	padding: 1em; /* Post-Class Optional Styling */
+}
+.blog:nth-child(odd) {
+    background-color: #bebebe;
+}
+.blog:nth-child(even) {
+    background-color: #e8cfcf;
+}
+.blog:nth-child(odd) img {
+    float: left;
+	margin-right: 1em; /* Post-Class Optional Styling */
+}
+.blog:nth-child(even) img {
+    float: right;
+	margin-left: 1em; /* Post-Class Optional Styling */
+}
+.blog:after { /* Post-Class HW1 */
+	content: ''; /* Post-Class HW1 */
+	clear: both; /* Post-Class HW1 */
+	display: block; /* Post-Class HW1 */
+	visibility: hidden; /* Post-Class HW1 */
+	height: 0; /* Post-Class HW1 */
+} /* Post-Class HW1 */
+.blog .date { /* Post-Class Optional Styling */
+	font-style: italic; /* Post-Class Optional Styling */
+	margin-bottom: 1em; /* Post-Class Optional Styling */
+} /* Post-Class Optional Styling */
+.blog .excerpt { /* Post-Class Optional Styling */
+	font-style: italic; /* Post-Class Optional Styling */
+} /* Post-Class Optional Styling */
+
+/* Sidebar */
+.sidebar {
+    background-color: #d2ccfc;
+	padding: 1em; /* Post-Class Optional Styling */
+}
+.sidebar li a:before { /* Post-Class HW2 */
+	content: url('../images/li-content.png'); /* Post-Class HW2 */
+	margin-right: 8px; /* Post-Class HW2 */
+} /* Post-Class HW2 */
+.sidebar nav { /* Post-Class HW2 */
+	float: none; /* Post-Class HW2 */
+} /* Post-Class HW2 */
+.sidebar li { /* Post-Class HW2 */
+	display: block; /* Post-Class HW2 */
+	margin: 2em 0; /* Post-Class HW2 */
+} /* Post-Class HW2 */
+.sidebar h4 { /* Post-Class HW2 */
+	font-size: 1.2em; /* Post-Class HW2 */
+	margin-top: 1.3em; /* Post-Class HW2 */
+	margin-bottom: 1.3em; /* Post-Class HW2 */
+	text-align: center; /* Post-Class HW2 */
+	font-weight: bold; /* Post-Class HW2 */
+} /* Post-Class HW2 */
+.sidebar nav li a { /* Post-Class HW2 */
+	padding: 0; /* Post-Class HW2 */
+	font-weight: bold; /* Post-Class HW2 */
+} /* Post-Class HW2 */
+.sidebar nav li a:hover { /* Post-Class Optional Styling */
+	background: transparent; /* Post-Class Optional Styling */
+} /* Post-Class Optional Styling */
+
+/* Main Content */
+main {
+    display: flex;
+}
+main article { /* Post-Class Optional Styling */
+	padding: 1em 0; /* Post-Class Optional Styling */
+} /* Post-Class Optional Styling */
+.mobile-only {
+    display: none;
+}
+#toggler {
+    display: none;
+}
+
+/* Masonry Layout for Diet page -- Post-Class Bonus Content */
+.masonry { /* Post-Class Bonus Content */
+    -moz-column-count: 3; /* Post-Class Bonus Content */
+    -webkit-column-count: 3; /* Post-Class Bonus Content */
+    column-count: 3; /* Post-Class Bonus Content */
+    -moz-column-gap: 1em; /* Post-Class Bonus Content */
+    -webkit-column-gap: 1em; /* Post-Class Bonus Content */
+    column-gap: 1em; /* Post-Class Bonus Content */
+} /* Post-Class Bonus Content */
+.brick { /* Post-Class Bonus Content */
+    display: inline-block; /* Post-Class Bonus Content */
+    width: 100%; /* Post-Class Bonus Content */
+    margin: 0 0 1em 0; /* Post-Class Bonus Content */
+} /* Post-Class Bonus Content */
+.brick img { /* Post-Class Bonus Content */
+	width: 100%; /* Post-Class Bonus Content */
+} /* Post-Class Bonus Content */
+
+/* Opacity and Shadows for Home page -- Post-Class Bonus Content */
+.about-item { /* Post-Class Bonus Content */
+	position: relative; /* Post-Class Bonus Content */
+} /* Post-Class Bonus Content */
+.about-headline { /* Post-Class Bonus Content */
+	color: white; /* Post-Class Bonus Content */
+	background: rebeccapurple; /* Post-Class Bonus Content */
+	position: absolute; /* Post-Class Bonus Content */
+	top: 0; /* Post-Class Bonus Content */
+	left: 0; /* Post-Class Bonus Content */
+	width: 100%; /* Post-Class Bonus Content */
+	padding-top: 40%; /* Post-Class Bonus Content */
+	height: 60%; /* Post-Class Bonus Content */
+	border-radius: 100%; /* Post-Class Bonus Content */
+	opacity: 0; /* Post-Class Bonus Content */
+	box-shadow: none; /* Post-Class Bonus Content */
+	transition: opacity 1s, box-shadow 1.5s; /* Post-Class Bonus Content */
+} /* Post-Class Bonus Content */
+.about-item a:hover .about-headline { /* Post-Class Bonus Content */
+	opacity: 0.8; /* Post-Class Bonus Content */
+	box-shadow: 0 8px 15px slategrey; /* Post-Class Bonus Content */
+} /* Post-Class Bonus Content */
+
+/* Mobile Breakpoint */
+@media screen and (max-width: 600px){
+    .column, .column:first-child {
+        width: 90%;
+        margin: 1em 5%;
+		box-sizing: border-box; /* Post-Class Optional Styling -- this is what we used for the homepage circular 'About' images to keep them in their containers, despite borders and padding. */
+    }
+	main { /* Post-Class Optional Styling */
+		display: block; /* Post-Class Optional Styling */
+		/* This makes our inner pages' columns 'stack' at mobile. You could also use flex-direction:column; if you want to keep your page cutting-edge :) Just remember to use vendor prefixes. */
+	} /* Post-Class Optional Styling */
+    .mobile-only {
+        display: inline-block;
+    }
+    header nav {
+        text-align: right;
+		position: absolute; /* Post-Class Optional Styling */
+		width: 100%; /* Post-Class Optional Styling */
+		top: 0; /* Post-Class Optional Styling */
+		right: 0; /* Post-Class Optional Styling */
+		z-index: -1; /* Post-Class Optional Styling */
+		/* There are a LOT of ways you could have styled the mobile menu differently -- this is one of many! The z-index is so that we can still click on our 'Z' logo to go home. Try removing z-index to see what I mean! */
+    }
+	header nav li { /* Post-Class Optional Styling */
+		display: block; /* Post-Class Optional Styling */
+	} /* Post-Class Optional Styling */
+	header nav li a { /* Post-Class Optional Styling */
+		width: 90%; /* Post-Class Optional Styling */
+		padding: 26px 5%; /* Post-Class Optional Styling */
+		/* This makes our whole <a> element clickable! Check it out in Chrome by opening the mobile menu and hovering over an <a> tag in the Inspector. */
+	} /* Post-Class Optional Styling */
+    label[for="toggler"] {
+        padding: 26px 10px;
+    }
+    #toggler ~ ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s;
+        background-color: fuchsia;
+    }
+    #toggler:checked ~ ul {
+        max-height: 100vh;
+    }
+	.blog:nth-child(even) img { /* Post-Class Optional Styling */
+		float: none; /* Post-Class Optional Styling */
+		margin-left: 0; /* Post-Class Optional Styling */
+	} /* Post-Class Optional Styling */
+	.blog:nth-child(odd) img { /* Post-Class Optional Styling */
+		float: none; /* Post-Class Optional Styling */
+		margin-right: 0; /* Post-Class Optional Styling */
+	} /* Post-Class Optional Styling */
+	.blog h4 { /* Post-Class Optional Styling */
+		margin-top: 1em; /* Post-Class Optional Styling */
+	} /* Post-Class Optional Styling */
+}
