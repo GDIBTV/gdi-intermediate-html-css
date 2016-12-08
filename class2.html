@@ -543,6 +543,173 @@ selector {
 				<p>Let's add a transition to our navigation menu links!</p>
 			</section>
 
+						<section>
+				<h3>Animation Recap</h3>
+				<ul>
+					<li class="fragment">Add <code>transition</code> to the <span class="blue">before state</span></li>
+					<li class="fragment"><span class="green">Remember:</span> <code>transition</code> accepts two values,<br /><u class="fragment"> the CSS property </u> and <u class="fragment"> the duration </u> of the animation</li>
+				</ul>
+				<table class="data fragment" style="margin:1em auto;width:100%;">
+                    <tr>
+                        <th style="padding:0;">Before Selector</th>
+                        <th style="padding:0">After Selector</th>
+                    </tr>
+                    <tr style="padding:0;">
+                        <td class="fragment" style="padding:0;">
+                            <pre class="css">
+<code style="padding:5px">selector {
+    width: 100px;
+    transition: width 2s;
+}</code>
+                            </pre>
+                        </td>
+                        <td class="fragment" style="padding:0;">
+                            <pre class="css">
+<code style="padding:5px">selector:hover {
+    width: 500px;
+}</code>
+                            </pre>
+                        </td>
+                    </tr>
+                </table>
+			</section>
+
+			<section>
+				<h3>Animating Multiple Properties</h3>
+
+				<p class="fragment">To animate multiple properties, separate each effect with a comma</p>
+				<pre class="css fragment">
+<code>selector {
+    transition: width 2s, background 5s;
+}</code>
+                </pre>
+				<div class="fragment">
+					<p data-height="128" data-theme-id="0" data-slug-hash="GpLwGr" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/GpLwGr/'>Animating Multiple Properties - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+			<section>
+				<h3>Animating Multiple Properties</h3>
+				<p class="blue">Method 2: All Properties</p>
+				<p class="fragment">Use <code>all</code> to seamlessly transition all properties from before to after states at the <span class="green">same duration</span></p>
+				<pre class="css fragment">
+<code>selector {
+    transition: all 3s;
+}</code>
+					</pre>
+				<div class="fragment">
+					<p data-height="131" data-theme-id="0" data-slug-hash="gayQdW" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/gayQdW/'>Transitions Using 'all' - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+				<div class="fragment">
+					<p style="color:firebrick"><small><br />Sounds great, right? However, <code>all</code> has performance drawbacks, so use it sparingly! (<a href="http://codepen.io/anythingcodes/pen/NGmEoY/?editors=110" target="_blank">Example &raquo;</a>)</small></p>
+				</div>
+			</section>
+			<section>
+				<h3>Property: <em>box-shadow</em></h3>
+				<p>The <code>box-shadow</code> CSS3 property is often used to give a 3D effect when an element is hovered over</p>
+				<pre class="css fragment">
+<code>selector {
+    box-shadow: horizontalShadow verticalShadow blurDistance color;
+    box-shadow: 10px 10px 5px grey;
+}</code>
+				</pre>
+				<div class="fragment">
+					<p data-height="200" data-theme-id="0" data-slug-hash="zvQBKm" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/zvQBKm/'>CSS3 Generator: box-shadow </a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+				<p class="fragment">Don't worry about memorizing this &mdash; use a <a href="http://css3gen.com/box-shadow/" target="_blank">generator</a> instead!</p>
+			</section>
+			<section>
+				<h3>Property: <em>opacity</em></h3>
+				<p><code>opacity</code> changes the opacity of the <span class="green">whole element</span></p>
+				<pre class="css">
+<code>selector {
+    opacity: 0.5;
+}</code>
+				</pre>
+				<p class="fragment">The value can be a number between <span class="blue">0 (translucent)</span> and <span class="blue">1.0 (opaque)</span></p>
+				<div class="fragment">
+					<p data-height="268" data-theme-id="0" data-slug-hash="WQBGBq" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/WQBGBq/'>Opacity vs. RBGA</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+			<section>
+				<h3><em>opacity</em> in Hover States</h3>
+				<p class="fragment"><code>opacity</code> is commonly used in hover states to reveal transparent content</p>
+				<div class="fragment">
+					<p data-height="337" data-theme-id="0" data-slug-hash="XmwNdM" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/XmwNdM/'>Opacity and Hover - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>You may have noticed that one of these things is not like the other. That's because one is a hover state!</p>
+				<p>Let's animate multiple properties (for example, <code>box-shadow</code> and <code>opacity</code>) for the hover states in the <span class="blue">About</span> section.</p>
+				<p><img src="img/home-hover.jpg" alt="Hover state for home image" /></p>
+			</section>
+
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;font-size:3.7em">Additional Animation Effects</h1>
+            </section>
+			<section>
+				<h3>Property: <em>transition-delay</em></h3>
+				<p>Use <code>transition-delay</code> to delay when an animation begins</p>
+				<pre class="css fragment">
+<code>selector {
+    transition: width 1s;
+    transition-delay: 3s;
+}</code>
+				</pre>
+				<div class="fragment">
+					<p data-height="338" data-theme-id="0" data-slug-hash="PPgxEp" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/PPgxEp/'>Transition Delays</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+
+			<section>
+				<h3>Property:<br/><em>transition-timing-function</em></h3>
+				<p class="fragment">The <span class="blue">timing function</span> changes how fast or slow the animation is at parts of the animation</p>
+				<pre class="css fragment" style="font-size:15px">
+<code>selector {
+    transition: width 3.5s;
+    transition-timing-function: ease;
+    transition-timing-function: linear;
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(n,n,n,n);
+}</code>
+				</pre>
+				<div class="fragment">
+					<p data-height="290" data-theme-id="0" data-slug-hash="JYVwgr" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/JYVwgr/'>Transition Timing Functions</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+				<p class="fragment"><small><strong>Fun fact</strong>: The <span class="blue">timing function</span> is sometimes called the <span class="blue">speed curve</span></small></p>
+			</section>
+			<section>
+				<h3>Property:<br /><em>transition-timing-function</em></h3>
+				<p class="blue">Additional Notes</p>
+				<p class="fragment">If you don't specify a timing function, <span class="orange">ease</span> is used</p>
+				<p class="fragment">With <span class="orange">cubic-bezier</span>, you can create your own timing function</p>
+				<p class="fragment">Use <a href="http://cubic-bezier.com/" target="_blank">cubic-bezier.com</a> to make your own timing function, and compare it to the built-in timing functions (such as <span class="green">ease</span> and <span class="green">linear</span>)</p>
+			</section>
+
+			<section>
+				<h3>Property: <em>transform</em></h3>
+				<p class="fragment">Use <code>transform</code> to rotate, scale, skew, change the perspective, and <a href="http://www.w3schools.com/cssref/css3_pr_transform.asp" target="_blank">much more</a></p>
+				<pre class="css fragment">
+<code>selector {
+    transform: translate3d(0, -3px, 0);
+    transform: rotate(360deg);
+    /* and more! */
+}</code>
+				</pre>
+				<p class="fragment"><code>transform</code> has too many values to list &mdash; use <a href="http://www.css3maker.com/css3-transform.html" target="_blank">CSS3Maker</a> or <a href="http://css3please.com/" target="_blank">CSS3, please!</a> to generate them</p>
+				<p class="fragment">A transformation is often animated with <code>transition</code></p>
+				<div class="fragment">
+					<p data-height="179" data-theme-id="0" data-slug-hash="YyMBVR" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/YyMBVR/'>Transition + Transform - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+			</section>
+
+
+
+			<!-- BEGIN UNEDITED -->
+
+
 			<!-- Inspo -->
             <section>
                 <h3>Animation Inspiration</h3>
@@ -554,27 +721,6 @@ selector {
 				<p><a href="http://tympanus.net/codrops/2012/02/21/accordion-with-css3/" target="_blank">Accordion using <code>:checked</code> &raquo;</a></p>
 				<p><a href="http://codepen.io/shayhowe/pen/zCkBv?editors=110" target="_blank">Mobile menu using <code>:checked</code> &raquo;</a></p>
 			</section>
-			<!--<section>
-				<h3>Animating Multiple Properties</h3>
-				<p>To animate multiple properties, separate each effect with a comma</p>
-				<pre class="css">
-<code>selector {
-    transition: border .3s, width 4s;
-}</code>
-                </pre>
-				<p class="fragment">Use <code>all</code> to seamlessly transition all properties from <span class="green">before</span> to <span class="green">after</span> states at the same duration</p>
-				<pre class="css fragment">
-<code>selector {
-    transition: all 4s;
-}</code>
-                </pre>
-			</section>-->
-
-
-
-			<!-- BEGIN UNEDITED -->
-
-
 
 
 
